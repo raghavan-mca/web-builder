@@ -53,7 +53,7 @@ class auth_services {
                             from: config.EMAIL,
                             to: payload.email,
                             subject: 'Verification Mail From Aristostech',
-                            text: `http://${config.DOMAIN}:${config.port}/validationmail?username=${payload.username}&email=${payload.email}`
+                            text: `http://localhost:2022/validationmail?username=${payload.username}&email=${payload.email}`
                         };
 
                         let mail_checker = await transporter.sendMail(mailOptions)
@@ -107,7 +107,7 @@ class auth_services {
                             from: config.EMAIL,
                             to: payload.email,
                             subject: 'Verification Mail From Aristostech',
-                            text: `http://${config.DOMAIN}:${config.port}/validationmail?username=${payload.username}&email=${payload.email}`
+                            text: `http://localhost:2022/validationmail?username=${payload.username}&email=${payload.email}`
                         };
 
                         let mail_checker = await transporter.sendMail(mailOptions)
@@ -302,7 +302,7 @@ class auth_services {
                     from: config.EMAIL,
                     to: payload.email,
                     subject: 'Password Reset Mail From Aristostech',
-                    text: `http://${config.DOMAIN}:${config.port}/resetpassword?username=${find_user[0].username}&email=${payload.email}`
+                    text: `http://localhost:2022/resetpassword?username=${find_user[0].username}&email=${payload.email}`
                 };
 
                 let mail_checker = await transporter.sendMail(mailOptions)
