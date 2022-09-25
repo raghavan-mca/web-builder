@@ -1,0 +1,7 @@
+PORT = 2022
+HOST= localhost
+USERNAME_DB= root
+PASSWORD= asterisk
+DB= node_db
+EMAIL=project.aristostech@gmail.com
+WEB_DOMAIN=localhost
