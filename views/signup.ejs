@@ -1,0 +1,61 @@
+<%- include('header.ejs') %>
+	<div class="auth-box">
+		<div class="auth-lft">
+			
+		</div>
+
+		<div class="auth-rgt">
+			<div class="auth-container">
+				<div>
+					LOGO
+				</div>
+				<div class="auth-head">
+					Register
+				</div>
+				<div>
+					  <form>
+							<div class="auth-fld">
+								<input id="username" type="text" name="user_username" class="auth-fld-inp" required>
+								<label for="username" class="auth-fld-lbl">
+									UserName
+								</label>
+								<div id="user_err">
+									<div></div>
+								</div>
+							</div>
+							<div class="auth-fld">
+								<input id="email" type="text" name="user_email" class="auth-fld-inp" required>
+								<label for="email" class="auth-fld-lbl">
+									Email
+								</label>
+								<div id="email_err">
+									<div></div>
+									
+								</div>
+							</div>
+						</div>
+						<div class="auth-btn" onclick="registerUser(this);">
+							<span>
+								Next
+							</span>
+						</div>
+						<div class="auth-sec">
+							<span>
+								Already Existing User?								
+							</span>
+							<a href="/signin-auth" class="clnk">
+								Sign In
+							</a>
+						</div>
+					</form>
+
+			</div>
+			<div class="auth-notify" id="auth_notify">
+				<div class="auth-notify-lbl">
+					
+				</div>
+			</div>
+		</div>
+
+	</div>
+<%- include('footer.ejs') %>

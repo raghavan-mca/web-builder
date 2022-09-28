@@ -9,7 +9,7 @@ const { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, sig
 initializeApp(authfirebase);
 const auth = getAuth();
 
-
+const path = require('path');
 
 
 
@@ -163,7 +163,6 @@ class auth_services {
                         'statuscode': 200,
                         'message': "success",
                         'data': find_user
-
                     }
                     return output
                 }
@@ -432,8 +431,6 @@ class auth_services {
                 return error
             }
         }
-
-
     }
 }
 module.exports = auth_services
