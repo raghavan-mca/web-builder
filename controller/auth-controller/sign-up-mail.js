@@ -21,7 +21,7 @@ class signupMail {
                 next(apiError.internal({
                     'statusCode': 500,
                     'ErrorMessage': user_signup_mail.ErrorMessage,
-                    'Error': 'badImplementation'
+                    'Message': 'badImplementation'
 
                 }))
                 return
@@ -30,7 +30,7 @@ class signupMail {
                 next(apiError.badRequest({
                     'statusCode': 400,
                     'ErrorMessage': 'invalid data',
-                    'Error': 'badRequest'
+                    'Message': 'badRequest'
 
 
                 }))
@@ -38,7 +38,9 @@ class signupMail {
             } else if (user_signup_mail.length === 0) {
                 return res.status(200).send({
                     'statuscode': 204,
-                    'data': user_signup_mail
+                    'data': user_signup_mail,
+                    'Message': 'success'
+
                 })
             }
             else {

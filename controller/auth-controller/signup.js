@@ -18,7 +18,7 @@ class signupcls {
                 next(apiError.internal({
                     'statusCode': 500,
                     'ErrorMessage': user_signup.ErrorMessage,
-                    'Error': 'badImplementation'
+                    'Message': 'badImplementation'
 
                 }))
                 return
@@ -27,7 +27,7 @@ class signupcls {
                 next(apiError.badRequest({
                     'statusCode': 400,
                     'ErrorMessage': 'invalid data',
-                    'Error': 'badRequest'
+                    'Message': 'badRequest'
 
 
                 }))
@@ -35,13 +35,15 @@ class signupcls {
             } else if (user_signup.length === 0) {
                 return res.status(200).send({
                     'statuscode': 204,
-                    'data': user_signup
+                    'data': user_signup,
+                    'Message': 'success'
                 })
             }
             else {
                 return res.status(200).send({
                     'statuscode': 200,
-                    'data': user_signup
+                    'data': user_signup,
+                    'Message': 'success'
                 })
             }
         }

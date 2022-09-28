@@ -19,7 +19,7 @@ class forget_mail_validate {
                 next(apiError.internal({
                     'statusCode': 500,
                     'ErrorMessage': forget_mail.ErrorMessage,
-                    'Error': 'badImplementation'
+                    'Message': 'badImplementation'
 
                 }))
                 return
@@ -28,7 +28,7 @@ class forget_mail_validate {
                 next(apiError.badRequest({
                     'statusCode': 400,
                     'ErrorMessage': 'invalid data',
-                    'Error': 'badRequest'
+                    'Message': 'badRequest'
 
 
                 }))
@@ -36,7 +36,8 @@ class forget_mail_validate {
             } else if (forget_mail.length === 0) {
                 return res.status(200).send({
                     'statuscode': 204,
-                    'data': forget_mail
+                    'data': forget_mail, 
+                    'Message': 'success'
                 })
             }
             else {

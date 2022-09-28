@@ -18,7 +18,7 @@ class signin_user {
                 next(apiError.internal({
                     'statusCode': 500,
                     'ErrorMessage': usersignin.ErrorMessage,
-                    'Error': 'badImplementation'
+                    'Message': 'badImplementation'
 
                 }))
                 return
@@ -27,7 +27,7 @@ class signin_user {
                 next(apiError.badRequest({
                     'statusCode': 400,
                     'ErrorMessage': 'invalid data',
-                    'Error': 'badRequest'
+                    'Message': 'badRequest'
 
 
                 }))
@@ -35,13 +35,15 @@ class signin_user {
             } else if (usersignin.length === 0) {
                 return res.status(200).send({
                     'statuscode': 204,
-                    'data': usersignin
+                    'data': usersignin,
+                    'Message': 'success'
                 })
             }
             else {
                 return res.status(200).send({
                     'statuscode': 200,
-                    'data': usersignin
+                    'data': usersignin,
+                    'Message': 'success'
                 })
             }
         }

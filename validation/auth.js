@@ -6,6 +6,9 @@ module.exports = {
         body:joi.object({
             username:joi.string().required(),
             email:joi.string().required(),
+            business_name:joi.string().required(),
+            business_nature:joi.string().required(),
+            terms:joi.string().required()
         })
     },
     signup_mail:{

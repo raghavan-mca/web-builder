@@ -18,7 +18,7 @@ class resetpassword {
                 next(apiError.internal({
                     'statusCode': 500,
                     'ErrorMessage': reset_user_password.ErrorMessage,
-                    'Error': 'badImplementation'
+                    'Message': 'badImplementation'
 
                 }))
                 return
@@ -27,7 +27,7 @@ class resetpassword {
                 next(apiError.badRequest({
                     'statusCode': 400,
                     'ErrorMessage': 'invalid data',
-                    'Error': 'badRequest'
+                    'Message': 'badRequest'
 
 
                 }))
@@ -35,13 +35,15 @@ class resetpassword {
             } else if (reset_user_password.length === 0) {
                 return res.status(200).send({
                     'statuscode': 204,
-                    'data': reset_user_password
+                    'data': reset_user_password,
+                    'Message': 'success'
                 })
             }
             else {
                 return res.status(200).send({
                     'statuscode': 200,
-                    'data': reset_user_password
+                    'data': reset_user_password,
+                    'Message': 'success'
                 })
             }
         }
