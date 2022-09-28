@@ -40,10 +40,13 @@ class forget_mail_validate {
                 })
             }
             else {
-                return res.status(200).send({
-                    'statuscode': 200,
-                    'data': forget_mail
-                })
+                return res.render('create-password', {create_password: "dn", reset_password: "", email: forget_mail.data[0].email});
+                // return res.render('create-password', {create_password: "dn", reset_password: ""});
+
+                // return res.status(200).send({
+                //     'statuscode': 200,
+                //     'data': forget_mail
+                // })
             }
         }
     }
