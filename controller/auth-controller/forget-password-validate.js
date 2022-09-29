@@ -25,14 +25,13 @@ class forget_mail_validate {
                 return
 
             } else if (forget_mail.code === 400) {
-                next(apiError.badRequest({
-                    'statusCode': 400,
-                    'ErrorMessage': 'invalid data',
-                    'Message': 'badRequest'
+                // next(apiError.badRequest({
+                //     'statusCode': 400,
+                //     'ErrorMessage': 'invalid data',
+                //     'Message': 'badRequest'
+                // }))
+                return res.render('forgot-password', {notify_err: 'Something Went Wrong, Please Try Again...', notify_sh: 'auth-notify-show'});                
 
-
-                }))
-                return
             } else if (forget_mail.length === 0) {
                 return res.status(200).send({
                     'statuscode': 204,

@@ -8,7 +8,8 @@ class forgotPasswordAuth {
     async forgotPasswordAuth(req, res, next) {
         //ARJ - PAGES ROUTER
 
-            return res.render('forgot-password', {forgot_password_form: "", reset_password_form: "dn", email: ""});
+            return res.render('forgot-password', {notify_err: '', notify_sh: ''});                
+
 
             // return res.sendFile(fileName, options, (err) => {
             //     if(err) {

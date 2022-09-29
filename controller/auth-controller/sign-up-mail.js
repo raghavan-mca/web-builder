@@ -44,10 +44,10 @@ class signupMail {
                 })
             }
             else {
-                if(user_signup_mail.message == 'Expired') {
+                if(user_signup_mail.message == 'Verification Link Expired') {
                     return res.render('signup-link', {link_expired: "auth-notify-show", user_exists: ""});
                 }
-                else if(user_signup_mail.message == 'Already Exit') {
+                else if(user_signup_mail.message == 'User Already exist') {
                     return res.render('signup-link', {link_expired: "", user_exists: "auth-notify-show"});
                 }
                 else {
