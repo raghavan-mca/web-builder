@@ -1,7 +1,12 @@
 <%- include('header.ejs') %>
 	<div class="auth-box">
-		<div class="auth-lft">
-			
+	<div class="auth-lft">
+			<div class="auth-lft-imgb">
+				<img src="../images/Sprinkle.svg" class="auth-lft-img">
+			</div>
+			<div class="auth-lft-txt">
+				Sign In Now to get your Free Buisness Card
+			</div>
 		</div>
 
 		<div class="auth-rgt">
@@ -19,9 +24,7 @@
 								<label for="username" class="auth-fld-lbl">
 									UserName
 								</label>
-								<div id="user_err">
-									<div></div>
-								</div>
+								
 							</div>
 							<div class="auth-fld">
 								<input id="email" type="text" name="user_email" class="auth-fld-inp" required>
@@ -30,6 +33,36 @@
 								</label>
 								<div id="email_err">
 									<div></div>
+								</div>
+							</div>
+							<div class="auth-fld">
+								<input id="business_name" type="text" name="user_business_name" class="auth-fld-inp" required>
+								<label for="business_name" class="auth-fld-lbl">
+									Business Name
+								</label>
+								<div id="business_name_err">
+									<div></div>
+								</div>
+							</div>
+							<div class="auth-fld">
+								<input id="business_nature" type="text" name="user_business_nature" class="auth-fld-inp" required>
+								<label for="business_nature" class="auth-fld-lbl">
+									Business Nature
+								</label>
+								<div id="business_nature_err">
+									<div></div>
+								</div>
+							</div>
+							<div class="auth-fld">
+								<div class="auth-fr">
+									<label class="auth-checkbox"> 
+										<input type="checkbox" name="">
+										<div class="auth-check">
+										</div>
+										<div>
+											I Accept the Terms
+										</div>
+									</label>
 									
 								</div>
 							</div>
@@ -52,12 +85,12 @@
 			</div>
 			<div class="auth-notify bg-red <%= link_expired %>" name="auth_notify">
 				<div class="auth-notify-lbl">
-					Link Expired
+					Verification Link Already Expired
 				</div>
 			</div>
 			<div class="auth-notify bg-green <%= user_exists %>" name="auth_notify">
 				<div class="auth-notify-lbl">
-					User Already Exists
+					User Account Already Exists
 				</div>
 			</div>
 		</div>

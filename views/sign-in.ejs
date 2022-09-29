@@ -2,21 +2,34 @@
 
 	<div class="auth-box">
 		<div class="auth-lft">
-			
+			<div class="auth-lft-imgb">
+				<img src="../images/Sprinkle.svg" class="auth-lft-img">
+			</div>
+			<div class="auth-lft-txt">
+				Sign In Now to get your Free Buisness Card
+			</div>
 		</div>
 
 		<div class="auth-rgt">
 			<div class="auth-container">
-				<div>
+				<div style="text-align: center;"> 
 					LOGO
 				</div>
+				<div class="auth-sec">
+							<span>
+								New User ?								
+							</span>
+							<a href="/signup-auth" class="clnk">
+								Sign Up Now
+							</a>
+						</div>
 				<div class="auth-head">
 					Sign In
 				</div>
 				<div>
 					<form >
 						<div class="auth-fld">
-								<input id="email" type="text" name="user_useremail" class="auth-fld-inp" required>
+								<input id="email" type="text" name="user_email" class="auth-fld-inp" required>
 								<label for="email" class="auth-fld-lbl">
 									Email
 								</label>
@@ -27,37 +40,27 @@
 								<label for="password" class="auth-fld-lbl">
 									Password
 								</label>
-								
+								<div class="auth-fld-sec auth-fp-sec">
+									<a href="/forgot-password-auth" class="clnk">
+										Forgot Password
+									</a>
+								</div>
 							</div>
 
-							<div>
-								<a href="/forgot-password-auth" class="clnk">
-									Forgot Password
-								</a>
-							</div>
+							
 						
 						</div>
-						<div class="auth-btn" onclick="signIn(this);">
+						<div class="auth-btn auth-disable" onclick="signIn(this);">
 							<span>
 								Sign In
 							</span>
 						</div>
 
-						<div class="auth-sec">
-							<span>
-								New User ?								
-							</span>
-							<a href="/signup-auth" class="clnk">
-								Sign Up Now
-							</a>
-						</div>
+						
 					</form>
 
 			</div>
 			<div class="auth-notify" id="auth_notify">
-				<div class="auth-notify-lbl">
-					
-				</div>
 			</div>
 		</div>
 
