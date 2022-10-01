@@ -13,20 +13,19 @@ class company_listing {
         }
         else if (payload) {
             const company_listing_create = await company_listing_services.createcompanylisting(payload)
-            console.log(company_listing_create)
-            if (company_listing_create.code === 500) {
+            if (company_listing_create.statuscode === 500) {
                 next(apiError.internal({
-                    'statusCode': 500,
-                    'ErrorMessage': company_listing_create.ErrorMessage,
+                    'statuscode': 500,
+                    'errormessage': company_listing_create.errormessage,
                     'Error': 'badImplementation'
 
                 }))
                 return
 
-            } else if (company_listing_create.code === 400) {
+            } else if (company_listing_create.statuscode === 400) {
                 next(apiError.badRequest({
-                    'statusCode': 400,
-                    'ErrorMessage': 'invalid data',
+                    'statuscode': 400,
+                    'errormessage': 'invalid_data',
                     'Error': 'badRequest'
 
 

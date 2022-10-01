@@ -5,6 +5,8 @@ module.exports = {
     USERNAME_DB: process.env.USERNAME_DB,
     PASSWORD: process.env.PASSWORD,
     DB: process.env.DB,
-    EMAIL:process.EMAIL,
-    DOMAIN:process.WEB_DOMAIN
+    EMAIL:process.env.EMAIL,
+    MAIL_PASS:process.env.MAIL_PASS,
+    DOMINE_URL:process.env.DOMINE_URL,
+    ENCRYPT_KEY:process.env.ENCRYPT_KEY
 }

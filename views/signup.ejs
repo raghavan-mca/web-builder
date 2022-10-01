@@ -1,0 +1,157 @@
+<%- include('header.ejs') %>
+	<div class="auth-box">
+		<div class="auth-lft">
+			<div class="auth-lft-imgb">
+				<img src="../images/Sprinkle.svg" class="auth-lft-img">
+			</div>
+			<div class="auth-lft-txt">
+				Sign In Now to get your Free Buisness Card
+			</div>
+			
+		</div>
+
+		<div class="auth-rgt">
+			<div class="auth-container">
+				<div style="text-align: center;">
+					LOGO
+				</div>
+				<div class="auth-sec">
+					<span>
+						Already Existing User?								
+					</span>
+					<a href="/signin-auth" class="clnk">
+						Sign In
+					</a>
+				</div>
+				<div class="auth-head">
+					Register
+				</div>
+				<div>
+					  <form class="form_data">
+							<div class="auth-fld">
+								<input id="username" type="text" name="user_username" class="auth-fld-inp" required>
+								<label for="username" class="auth-fld-lbl">
+									UserName
+								</label>
+								
+							</div>
+							<div class="auth-fld">
+								<input id="email" type="text" name="user_email" class="auth-fld-inp" required>
+								<label for="email" class="auth-fld-lbl">
+									Email
+								</label>
+								
+							</div>
+							<div class="auth-fld">
+								<input id="business_name" type="text" name="user_business_name" class="auth-fld-inp" required>
+								<label for="business_name" class="auth-fld-lbl">
+									Business Name
+								</label>
+								
+							</div>
+							<div class="auth-fld">
+								<input id="business_nature" type="text" name="user_business_nature" class="auth-fld-inp dn" required>
+								<label for="business_nature" class="auth-fld-lbl">
+									Business Nature
+								</label>
+								<div class="auth-sel-box" onclick="selectBoxOpen(this);">
+									<div class="auth-sel-head">
+										<div class="auth-sel-lbl" id="business_nature_val">
+											
+										</div>
+										<div class="auth-sel-arr">
+										</div>
+									</div>
+									<div class="auth-sel-opts dn">
+										<div class="auth-sel-opt" onclick="selectBoxOptionSelected(this);">
+											<div class="auth-sel-txt">
+												Manufacture/ Export
+											</div>
+										</div>
+										<div class="auth-sel-opt" onclick="selectBoxOptionSelected(this);">
+											<div class="auth-sel-txt">
+												Trader
+											</div>
+										</div>
+										<div class="auth-sel-opt" onclick="selectBoxOptionSelected(this);">
+											<div class="auth-sel-txt">
+												Service Provider
+											</div>
+										</div>
+										<div class="auth-sel-opt" onclick="selectBoxOptionSelected(this);">
+											<div class="auth-sel-txt">
+												Freelancer
+											</div>
+										</div>
+										
+										
+									</div>
+								</div>
+							</div>
+							<div class="auth-fld">
+								<div class="auth-fr">
+									<label class="auth-checkbox" onclick="termsConditionsCheck(this);"> 
+										<input type="checkbox" id="tc_check" name="">
+										<div class="auth-check">
+										</div>
+										<div>
+											<span>
+												I Accept the
+											</span>
+											<a class="clnk" href="#">Terms</a>
+										</div>
+									</label>
+									
+								</div>
+							</div>
+						</div>
+						<div class="auth-btn " onclick="registerUser(this);">
+							<span>
+								Next
+							</span>
+						</div>
+						
+					</form>
+
+			</div>
+			<div class="auth-notify" id="auth_notify">
+			</div>
+		</div>
+
+	</div>
+
+<%- include('footer.ejs') %>
+<!-- <script type="text/javascript">
+		$('.auth-fld-inp').on('keyup',  function() {
+			let email_valid, user_name_valid, business_name_valid, business_nature_valid;
+		    targetInput = event.target.value;
+		    targetInputName = event.target.attributes[2].value;
+		    console.log(targetInput.length);
+		    if(targetInputName == 'user_username' || targetInputName == 'user_business_name' || targetInputName == 'user_business_nature') {
+		        if(targetInput == '' || (targetInput.length < 3)) {
+		            $(event.target).parents('.auth-fld').children('.auth-ired').remove();       
+		            $(event.target).parents('.auth-fld').append("<div class='auth-ired'>Miniumum 3 Characters Required</div>");     
+		        }
+		        else if(targetInputName == 'user_email') {
+			        var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+			        if(targetInput == '' || (targetInput.length < 3)) {
+			            $(event.target).parents('.auth-fld').children('.auth-ired').remove();       
+			            $(event.target).parents('.auth-fld').append("<div class='auth-ired'>Miniumum 3 Characters Required</div>");        
+			        }
+			        else if(regex.test(targetInput) !== true) {
+			            $(event.target).parents('.auth-fld').children('.auth-ired').remove();       
+			            $(event.target).parents('.auth-fld').append("<div class='auth-ired'>Please Enter Valid Email</div>");        
+			        }
+			        else {
+			            $(event.target).parents('.auth-fld').children('.auth-ired').remove();       
+			        }
+			    }
+		        else {
+		            $('.auth-btn').removeClass('auth-disable');
+		            $(event.target).parents('.auth-fld').children('.auth-ired').remove();       
+		        }
+		    }
+		});
+
+	</script> -->
