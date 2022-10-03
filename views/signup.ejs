@@ -29,30 +29,47 @@
 				<div>
 					  <form class="form_data">
 							<div class="auth-fld">
-								<input id="username" type="text" name="user_username" class="auth-fld-inp" required>
+								<input id="username" type="text" name="user_username" class="auth-fld-inp" required autocomplete="off">
 								<label for="username" class="auth-fld-lbl">
-									UserName
+									<span class="auth-fld-txt">
+										UserName										
+									</span>
+									<span class="auth-req">
+										*
+									</span>
 								</label>
-								
+								<div class="auth-fld-close dn" onclick="fldClear(this);">
+								</div>
 							</div>
 							<div class="auth-fld">
-								<input id="email" type="text" name="user_email" class="auth-fld-inp" required>
+								<input id="email" type="text" name="user_email" class="auth-fld-inp" required autocomplete="off">
 								<label for="email" class="auth-fld-lbl">
-									Email
+									<span class="auth-fld-txt">
+										Email
+									</span>
+									<span class="auth-req">
+										*
+									</span>
 								</label>
-								
+								<div class="auth-fld-close dn" onclick="fldClear(this);">
+								</div>
 							</div>
 							<div class="auth-fld">
-								<input id="business_name" type="text" name="user_business_name" class="auth-fld-inp" required>
+								<input id="business_name" type="text" name="user_business_name" class="auth-fld-inp" required autocomplete="off">
 								<label for="business_name" class="auth-fld-lbl">
-									Business Name
+									<span class="auth-fld-txt">
+										Business Name
+									</span>
 								</label>
-								
+								<div class="auth-fld-close dn" onclick="fldClear(this);">
+								</div>
 							</div>
 							<div class="auth-fld">
 								<input id="business_nature" type="text" name="user_business_nature" class="auth-fld-inp dn" required>
-								<label for="business_nature" class="auth-fld-lbl">
-									Business Nature
+								<label for="business_nature" class="auth-fld-lbl" style="pointer-events: none;">
+									<span class="auth-fld-txt">
+										Business Nature
+									</span>
 								</label>
 								<div class="auth-sel-box" onclick="selectBoxOpen(this);">
 									<div class="auth-sel-head">
@@ -64,24 +81,16 @@
 									</div>
 									<div class="auth-sel-opts dn">
 										<div class="auth-sel-opt" onclick="selectBoxOptionSelected(this);">
-											<div class="auth-sel-txt">
-												Manufacture/ Export
-											</div>
+											<div class="auth-sel-txt">Manufacture/ Export</div>
 										</div>
 										<div class="auth-sel-opt" onclick="selectBoxOptionSelected(this);">
-											<div class="auth-sel-txt">
-												Trader
-											</div>
+											<div class="auth-sel-txt">Trader</div>
 										</div>
 										<div class="auth-sel-opt" onclick="selectBoxOptionSelected(this);">
-											<div class="auth-sel-txt">
-												Service Provider
-											</div>
+											<div class="auth-sel-txt">Service Provider</div>
 										</div>
 										<div class="auth-sel-opt" onclick="selectBoxOptionSelected(this);">
-											<div class="auth-sel-txt">
-												Freelancer
-											</div>
+											<div class="auth-sel-txt">Freelancer</div>
 										</div>
 										
 										
@@ -105,7 +114,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="auth-btn " onclick="registerUser(this);">
+						<div class="auth-btn auth-disable" onclick="registerUser(this);">
 							<span>
 								Next
 							</span>
@@ -116,6 +125,7 @@
 			</div>
 			<div class="auth-notify" id="auth_notify">
 			</div>
+			
 		</div>
 
 	</div>

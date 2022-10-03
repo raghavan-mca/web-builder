@@ -24,7 +24,7 @@ app.use(apierrorHandler)
 
 app.use((req, res, next) => {
     res.status(404).send({
-        'statuscode': 404,
+        'StatusCode': 404,
         'error': 'Not found'
     });
 })

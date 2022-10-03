@@ -5,6 +5,6 @@ PASSWORD=
 DB= node_db
 EMAIL=project.aristostech@gmail.com
 MAIL_PASS=lethwnxqiacfgtvf
-DOMINE_URL=http://localhost:2022,
+DOMINE_URL=http://localhost:2022
 ENCRYPT_KEY= lethwnxqiacfgtvf
 
