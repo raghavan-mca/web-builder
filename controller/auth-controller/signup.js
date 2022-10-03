@@ -28,7 +28,6 @@ class signupcls {
                     'errormessage': 'invalid_data',
                     'message': 'badRequest'
 
-
                 }))
                 return
             } else if (user_signup.length === 0) {

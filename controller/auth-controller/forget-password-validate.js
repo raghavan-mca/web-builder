@@ -23,12 +23,12 @@ class forget_mail_validate {
                 return
 
             } else if (forget_mail.statuscode === 400) {
-                // next(apiError.badRequest({
-                //     'statuscode': 400,
-                //     'errormessage': 'invalid_data',
-                //     'message': 'badRequest'
-                // }))
-                return res.render('forgot-password', {notify_err: 'Something Went Wrong, Please Try Again...', notify_sh: 'auth-notify-show'});                
+                next(apiError.badRequest({
+                    'statuscode': 400,
+                    'errormessage': 'invalid_data',
+                    'message': 'badRequest'
+                }))
+                // return res.render('forgot-password', {notify_err: 'Something Went Wrong, Please Try Again...', notify_sh: 'auth-notify-show', page_title: "Forgot Password"});                
 
             } else if (forget_mail.length === 0) {
                 return res.status(200).send({
@@ -38,7 +38,16 @@ class forget_mail_validate {
                 })
             }
             else {
-                return res.render('create-password', {create_password: "dn", reset_password: "", email: forget_mail.data[0].email});
+                if(forget_mail.message == 'verification_link_expired') {
+                    return res.render('forgot-password-link', {link_expired: "db", user_exists: "dn", page_title: "Sign Up"});
+                }
+                else if(forget_mail.message == 'user_already_exist') {
+                    return res.render('forgot-password-link', {link_expired: "dn", user_exists: "db", page_title: "Sign In"});
+                }
+                else {
+                    return res.render('create-password', {create_password: "dn", reset_password: "", email: forget_mail.data[0].email, page_title: "Create Password"});
+                    
+                }
                 // return res.render('create-password', {create_password: "dn", reset_password: ""});
 
                 // return res.status(200).send({

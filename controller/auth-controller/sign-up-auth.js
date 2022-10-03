@@ -8,7 +8,7 @@ class signUpAuth {
     async signupAuth(req, res, next) {
         //ARJ - PAGES ROUTER
 
-            return res.render('signup');
+            return res.render('signup', {page_title: "Sign Up"});
 
             // return res.sendFile(fileName, options, (err) => {
             //     if(err) {

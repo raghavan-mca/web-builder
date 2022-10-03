@@ -42,36 +42,18 @@ class signupMail {
                 })
             }
             else {
-                if(user_signup_mail.message == 'Verification Link Expired') {
-                    return res.render('signup-link', {link_expired: "auth-notify-show", user_exists: ""});
+                if(user_signup_mail.message == 'verification_link_expired') {
+                    console.log(user_signup_mail);
+                    return res.render('signup-link', {link_expired: "db", user_exists: "dn", page_title: "Sign Up"});
                 }
-                else if(user_signup_mail.message == 'User Already exist') {
-                    return res.render('signup-link', {link_expired: "", user_exists: "auth-notify-show"});
+                else if(user_signup_mail.message == 'user_already_exist') {
+                    console.log(user_signup_mail);
+
+                    return res.render('signup-link', {link_expired: "dn", user_exists: "db", page_title: "Sign In"});
                 }
                 else {
-                    return res.render('create-password',  {create_password: "", reset_password: "dn", email: user_signup_mail.data[0].email});
-                    // let cp_options = {
-                    //     root: path.join(__dirname + '../../../public/pages/')
-                    // };
-                    // let cp_fileName = "create-password.html";
-
-                    // console.log("CREATE PASSWORD ROUTE");
-                    // return res.sendFile(cp_fileName, cp_options, (err) => {
-                    //     if(err) {
-                    //         next(err);
-                    //         console.log(err);
-                    //     }
-                    //     else {
-                    //         console.log("File Loaded");
-                    //         console.log(user_signup_mail);
-                    //         // next();
-                    //     }
-                    // });
-
-                    // res.status(200).send({
-                    //     'statuscode': 200,
-                    //     'data': user_signup_mail
-                    // })
+                    console.log(user_signup_mail);
+                    return res.render('create-password',  {create_password: "", reset_password: "dn", email: user_signup_mail.data[0].email, page_title: "Create Password"});
                     
                 }
 

@@ -8,7 +8,7 @@ class signInAuth {
     async signinAuth(req, res, next) {
         //ARJ - PAGES ROUTER
             
-            return res.render('sign-in');
+            return res.render('sign-in', {page_title: "Sign In"});
 
     }
 }

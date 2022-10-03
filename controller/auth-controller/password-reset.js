@@ -18,7 +18,6 @@ class resetpassword {
                     'statuscode': 500,
                     'errormessage': reset_user_password.errormessage,
                     'message': 'badImplementation'
-
                 }))
                 return
 
@@ -27,8 +26,6 @@ class resetpassword {
                     'statuscode': 400,
                     'errormessage': 'invalid_data',
                     'message': 'badRequest'
-
-
                 }))
                 return
             } else if (reset_user_password.length === 0) {
@@ -39,6 +36,7 @@ class resetpassword {
                 })
             }
             else {
+            
                 return res.status(200).send({
                     'statuscode': 200,
                     'data': reset_user_password,
