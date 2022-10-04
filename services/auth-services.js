@@ -6,6 +6,7 @@ var nodemailer = require('nodemailer');
 let authfirebase = require('../configurations/firebase')
 const { initializeApp } = require("firebase/app");
 const { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } = require("firebase/auth");
+const { date } = require('joi');
 initializeApp(authfirebase);
 const auth = getAuth();
 
@@ -14,6 +15,7 @@ const auth = getAuth();
 class auth_services {
     async signup(payload) {
         try {
+            let timestamp=new Date().getTime().toString()
             let find_user = await db.raw(`select * from aristostech_users where username = '${payload.username}' AND email = '${payload.email}' AND validate = 0`).then(function (res) {
                 if (res[0].length > 0) {
                     return true
@@ -31,7 +33,7 @@ class auth_services {
                     }
                 })
                 if (delete_invalid_user) {
-                    let insert_user = await db.raw(`INSERT INTO aristostech_users ( username, email, validate, business_name,business_nature,terms ) VALUES('${payload.username}', '${payload.email}', 0, '${payload.business_name}','${payload.business_nature}','${payload.terms}')`).then(function (res) {
+                    let insert_user = await db.raw(`INSERT INTO aristostech_users (password_timestamp, username, email, validate, business_name,business_nature,terms ) VALUES('${timestamp}','${payload.username}', '${payload.email}', 0, '${payload.business_name}','${payload.business_nature}','${payload.terms}')`).then(function (res) {
 
                         if (res[0].affectedRows > 0) {
                             return true
@@ -50,7 +52,8 @@ class auth_services {
                             from: config.EMAIL,
                             to: payload.email,
                             subject: 'Verification Mail From Aristostech',
-                            text: `${config.DOMINE_URL}/validationmail?username=${payload.username}&email=${payload.email}`
+                            text: `${config.DOMINE_URL}/validationmail?username=${payload.username}&email=${payload.email}&password_timestamp=${timestamp}
+                            `
                         };
 
                         let mail_checker = await transporter.sendMail(mailOptions)
@@ -85,7 +88,7 @@ class auth_services {
                 })
 
                 if (find_user) {
-                    let insert_user = await db.raw(`INSERT INTO aristostech_users ( username, email, validate, business_name,business_nature,terms ) VALUES('${payload.username}', '${payload.email}', 0, '${payload.business_name}','${payload.business_nature}','${payload.terms}')`).then(function (res) {
+                    let insert_user = await db.raw(`INSERT INTO aristostech_users (password_timestamp, username, email, validate, business_name,business_nature,terms ) VALUES('${timestamp}','${payload.username}', '${payload.email}', 0, '${payload.business_name}','${payload.business_nature}','${payload.terms}')`).then(function (res) {
                         if (res[0].affectedRows > 0) {
                             return true
                         }
@@ -104,7 +107,8 @@ class auth_services {
                             from: config.EMAIL,
                             to: payload.email,
                             subject: 'Verification Mail From Aristostech',
-                            text: `${config.DOMINE_URL}/validationmail?username=${payload.username}&email=${payload.email}`
+                            text: `${config.DOMINE_URL}/validationmail?username=${payload.username}&email=${payload.email}&password_timestamp=${timestamp}
+                            `
                         };
 
                         let mail_checker = await transporter.sendMail(mailOptions)
@@ -126,6 +130,7 @@ class auth_services {
                 }
             }
         } catch (err) {
+            console.log(err)
             let err_function = new Error(err)
             if (err_function.name === 'Error') {
                 let error = {
@@ -138,7 +143,7 @@ class auth_services {
     }
     async signupmail(query) {
         try {
-            let find_user = await db.raw(`select * from aristostech_users where username = '${query.username}' AND email = '${query.email}' AND validate = 0`).then(function (res) {
+            let find_user = await db.raw(`select * from aristostech_users where username = '${query.username}' AND email = '${query.email}' AND validate = 0 AND password_timestamp=${query.password_timestamp}`).then(function (res) {
                 return res[0]
             })
             if (find_user.length > 0) {
@@ -148,7 +153,7 @@ class auth_services {
                 var millisecond = new Date().getTime() - result
 
                 const minutes = Math.floor(millisecond / 60000);
-                if (minutes > 3) {
+                if (minutes > 1) {
                     let output = {
                         'statuscode': 200,
                         'message': "verification_link_expired"
@@ -197,6 +202,7 @@ class auth_services {
     }
     async createPassword(payload) {
         try {
+            let timestamp=new Date().getTime().toString()
             const passphrase = config.ENCRYPT_KEY;
             let encrypt = CryptoJS.AES.encrypt(payload.password, passphrase).toString();
             let find_user = await db.raw(`select * from aristostech_users where email = '${payload.email}' AND validate = 0`).then(function (res) {
@@ -211,11 +217,12 @@ class auth_services {
 
                 let account_created = await createUserWithEmailAndPassword(auth, payload.email, payload.password)
                 if (account_created) {
-                    let update_user_detail = await db.raw(`UPDATE aristostech_users SET validate='1',password="${encrypt}",uid='${account_created.user.uid}' WHERE email="${account_created.user.email}"`).then(function (res) {
+                    let update_user_detail = await db.raw(`UPDATE aristostech_users SET password_timestamp='${timestamp.toString()}', validate='1',password="${encrypt}",uid='${account_created.user.uid}' WHERE email="${account_created.user.email}"`).then(function (res) {
                         if (res[0].affectedRows > 0) {
                             return true
                         }
                     })
+                    console.log(update_user_detail)
                     if (update_user_detail) {
                         const output = {
                             'statuscode': 200,
@@ -239,6 +246,7 @@ class auth_services {
                 return output
             }
         } catch (err) {
+            console.log(err)
             let err_function = new Error(err)
             if (err_function.name === 'Error') {
                 let error = {
@@ -355,14 +363,21 @@ class auth_services {
                     }
                     return output
                 }
+            } else {
+                let output = {
+                    'statuscode': 200,
+                    'message': "verification_link_expired"
+
+                }
+                return output
             }
-            let output = {
-                'statuscode': 400,
-                'message': "Not found",
+            // let output = {
+            //     'statuscode': 400,
+            //     'message': "Not found",
 
 
-            }
-            return output
+            // }
+            // return output
         } catch (err) {
             let err_function = new Error(err)
             if (err_function.name === 'Error') {
@@ -392,7 +407,10 @@ class auth_services {
                     )
 
                     if (change_password) {
-                        let update_user_detail = await db.raw(`UPDATE aristostech_users SET password='${encrypt}' WHERE email="${payload.email}"`).then(function (res) {
+                        let timestamp = new Date().getTime()
+
+                        let update_user_detail = await db.raw(`UPDATE aristostech_users SET password='${encrypt}',password_timestamp='${timestamp.toString()}' WHERE email="${payload.email}"`).then(function (res) {
+
                             if (res[0].affectedRows > 0) {
                                 return true
                             }
@@ -411,7 +429,6 @@ class auth_services {
             }
 
         } catch (err) {
-
             let err_function = new Error(err)
             if (err_function.name === 'Error') {
                 let error = {

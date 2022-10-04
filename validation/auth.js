@@ -15,6 +15,7 @@ module.exports = {
         query: joi.object({
             username: joi.string().required(),
             email: joi.string().required(),
+            password_timestamp:joi.string().required(),
         })
     },
     reset_mail: {
