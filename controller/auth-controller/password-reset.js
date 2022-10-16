@@ -13,35 +13,34 @@ class resetpassword {
         }
         else if (payload) {
             const reset_user_password = await signup_service_.password_reset(payload)
-            console.log(reset_user_password)
-            if (reset_user_password.code === 500) {
+            if (reset_user_password.statuscode === 500) {
                 next(apiError.internal({
-                    'statusCode': 500,
-                    'ErrorMessage': reset_user_password.ErrorMessage,
-                    'Error': 'badImplementation'
-
+                    'statuscode': 500,
+                    'errormessage': reset_user_password.errormessage,
+                    'message': 'badImplementation'
                 }))
                 return
 
-            } else if (reset_user_password.code === 400) {
+            } else if (reset_user_password.statuscode === 400) {
                 next(apiError.badRequest({
-                    'statusCode': 400,
-                    'ErrorMessage': 'invalid data',
-                    'Error': 'badRequest'
-
-
+                    'statuscode': 400,
+                    'errormessage': 'invalid_data',
+                    'message': 'badRequest'
                 }))
                 return
             } else if (reset_user_password.length === 0) {
                 return res.status(200).send({
                     'statuscode': 204,
-                    'data': reset_user_password
+                    'data': reset_user_password,
+                    'message': 'success'
                 })
             }
             else {
+            
                 return res.status(200).send({
                     'statuscode': 200,
-                    'data': reset_user_password
+                    'data': reset_user_password,
+                    'message': 'success'
                 })
             }
         }

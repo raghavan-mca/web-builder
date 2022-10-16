@@ -1,0 +1,59 @@
+<%- include('header.ejs') %>
+<div class="auth-box">
+    <div class="auth-lft">
+        <div class="auth-lft-imgb">
+            <img src="../images/Sprinkle.svg" class="auth-lft-img">
+        </div>
+        <div class="auth-lft-txt">
+            Sign In Now to get your Free Buisness Card
+        </div>
+    </div>
+    <div class="auth-rgt">
+        <div class="auth-container">
+            <div style="text-align: center;">
+                LOGO
+            </div>
+            
+
+            	<div class="auth-info-box bg-red <%= link_expired %>" name="auth_notify">
+	                <div class="auth-close">
+	                </div>
+	                <div class="auth-notify-lbl">
+	                    Verification Link Already Expired
+	                </div>
+	                <div class="auth-notify-sublbl">
+	                    Redirecting to Sign Up ...
+	                </div>
+            	</div>
+
+            	<div class="auth-info-box bg-green <%= user_exists %>" name="auth_notify">
+	                <div class="auth-tick">
+	                </div>
+	                <div class="auth-notify-lbl">
+	                    User Account Already Exists
+	                </div>
+	                <div class="auth-notify-sublbl">
+	                    Redirecting to Sign In...
+	                </div>
+	            </div>
+
+
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+setTimeout(() => {
+    $(".auth-notify").removeClass("auth-notify-show");
+    let db = '', dn;
+    // console.log(user_exists);
+
+    db = <%= user_exists %>;
+    if(db === 'db') {
+    	window.location.assign('/signup-auth');
+    }
+    else {
+    	window.location.assign('/signin-auth');
+    }
+}, 3000)
+</script>
+<%- include('footer.ejs') %>

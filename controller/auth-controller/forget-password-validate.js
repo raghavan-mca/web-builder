@@ -13,37 +13,47 @@ class forget_mail_validate {
         }
         else if (query) {
             const forget_mail = await signup_service_.forget_password_validate(query)
-            console.log(forget_mail)
-            console.log(forget_mail)
-            if (forget_mail.code === 500) {
+            if (forget_mail.statuscode === 500) {
                 next(apiError.internal({
-                    'statusCode': 500,
-                    'ErrorMessage': forget_mail.ErrorMessage,
-                    'Error': 'badImplementation'
+                    'statuscode': 500,
+                    'errormessage': forget_mail.errormessage,
+                    'message': 'badImplementation'
 
                 }))
                 return
 
-            } else if (forget_mail.code === 400) {
+            } else if (forget_mail.statuscode === 400) {
                 next(apiError.badRequest({
-                    'statusCode': 400,
-                    'ErrorMessage': 'invalid data',
-                    'Error': 'badRequest'
-
-
+                    'statuscode': 400,
+                    'errormessage': 'invalid_data',
+                    'message': 'badRequest'
                 }))
-                return
+                // return res.render('forgot-password', {notify_err: 'Something Went Wrong, Please Try Again...', notify_sh: 'auth-notify-show', page_title: "Forgot Password"});                
+
             } else if (forget_mail.length === 0) {
                 return res.status(200).send({
                     'statuscode': 204,
-                    'data': forget_mail
+                    'data': forget_mail, 
+                    'message': 'success'
                 })
             }
             else {
-                return res.status(200).send({
-                    'statuscode': 200,
-                    'data': forget_mail
-                })
+                if(forget_mail.message == 'verification_link_expired') {
+                    return res.render('forgot-password-link', {link_expired: "db", user_exists: "dn", page_title: "Sign Up"});
+                }
+                else if(forget_mail.message == 'user_already_exist') {
+                    return res.render('forgot-password-link', {link_expired: "dn", user_exists: "db", page_title: "Sign In"});
+                }
+                else {
+                    return res.render('create-password', {create_password: "dn", reset_password: "", email: forget_mail.data[0].email, page_title: "Create Password"});
+                    
+                }
+                // return res.render('create-password', {create_password: "dn", reset_password: ""});
+
+                // return res.status(200).send({
+                //     'statuscode': 200,
+                //     'data': forget_mail
+                // })
             }
         }
     }
