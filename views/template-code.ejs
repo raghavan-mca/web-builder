@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        AristosTech - Template
+    </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="../styles/card-templates.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <% if(domain_data.data.api.substring(22, 28) ==='ps_001') { %>
+    <div class="abc-hexa-bg">
+        
+        <div class="bcard-parent ">
+            <div class="bcard-box bcard-temp-1">
+                <a id="Home"></a>
+                <div class="bcard-profbox">
+                     <div class="bcard-prof bcard-comp">
+                        <img src="<%= domain_data.data.f_company_img %>" name="f_company_img" data-field-name="Company Logo" class="bcard-profimg bcard-compimg">
+                    </div>
+                    <div class="bcard-prof">
+                        <img src="<%= domain_data.data.f_prof_img %>" name="f_prof_img" data-field-name="Profile" class="bcard-profimg">
+                    </div>
+                    <div class="bcard-prof-sec">
+                        <div>
+                            <span class="bcard-prof-btxt" name="f_prof_name" data-field-name="Profile Name" data-multiline="false">
+                                <%= domain_data.data.f_prof_name %>
+                            </span>
+                            <span class="bcard-prof-smtxt" name="f_prof_profession" data-field-name="Profession" data-multiline="false">
+                                    <%= domain_data.data.f_prof_profession %>
+                                </span>
+                        </div>
+                        <div class="bcard-act">
+                            <div class="bcard-acticon ico-fb">
+                                <a target="_blank" name="f_fb" href="<%= domain_data.data.f_fb %>" data-sm="true" data-field-name='Facebook'>
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                            </div>
+                            <div class="bcard-acticon ico-whatsapp">
+                                <a target="_blank" name="f_whatsapp" href="https://wa.me/+<%= domain_data.data.f_whatsapp %>" data-sm="true" data-field-name='Whatsapp'>
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </a>
+                            </div>
+                            <div class="bcard-acticon ico-insta">
+                                <a target="_blank" name="f_insta" href="<%= domain_data.data.f_insta %>" data-sm="true" data-field-name='Instagram'>
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                            </div>
+                            <div class="bcard-acticon ico-tw">
+                                <a target="_blank" name="f_twitter" href="<%= domain_data.data.f_twitter %>" data-sm="true" data-field-name='Twitter'>
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+                            </div>
+                            <div class="bcard-acticon ico-linked">
+                                <a target="_blank" name="f_linked" href="<%= domain_data.data.f_linked %>" data-sm="true" data-field-name='Linked In'>
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bcard-cont">
+                    <div class="bcard-sec">
+                        <div class="bcard-padd">
+                            <div class="bcard-frow-subsec">
+                                <span class="bcard-btxt" name="f_comp_name" data-field-name="Company Name" data-multiline="false">
+                                    <%= domain_data.data.f_comp_name %>
+                                </span>
+                                
+                            </div>
+                            <a target="_blank" name="f_phone" href="tel:+<%= domain_data.data.f_phone %>" data-sm="true" data-field-name='Phone No' class="bcard-frow-sec">
+                                <div class="bcard-smico-sec">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div class="bcard-sub-txt">
+                                    <%= domain_data.data.f_phone %>
+                                </div>
+                            </a>
+                            <a target="_blank" name="f_website" href="<%= domain_data.data.f_website %>" data-sm="true" data-field-name='Website' class="bcard-frow-sec">
+                                <div class="bcard-smico-sec">
+                                    <i class="fa-solid fa-globe"></i>
+                                </div>
+                                <div class="bcard-sub-txt">
+                                    <%= domain_data.data.f_website %>
+                                </div>
+                            </a>
+                            <a target="_blank" name="f_email" href="mailto:<%= domain_data.data.f_email %>" data-sm="true" data-field-name='Email' class="bcard-frow-sec">
+                                <div class="bcard-smico-sec">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div class="bcard-sub-txt">
+                                    <%= domain_data.data.f_email %>
+                                </div>
+                            </a>
+                            <a target="_blank" name="f_location" href="<%= domain_data.data.f_location %>" data-sm="true" data-field-name='Location' class="bcard-frow-sec">
+                                <div class="bcard-smico-sec">
+                                    <i class="fa-sharp fa-solid fa-location-dot"></i>
+                                </div>
+                                <div class="bcard-sub-txt">
+                                    <%= domain_data.data.f_location %>
+                                </div>
+                            </a>
+                            <div class="bcard-ph-sec">
+                                <div class="bcard-sec-btn">
+                                    Add to Contacts
+                                </div>
+                                <a target="_blank" id="share_wa" class="bcard-sec-btn" href="#">
+                                    Share on Whatsapp
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bcard-sec">
+                        <a id="About">
+                            <span class="bcard-btxt" name="f_about_title" data-field-name="About Title" data-multiline="false">
+                                <%= domain_data.data.f_about_title %>
+                            </span>
+                            <div class="bcard-sub-sec">
+                                <div>
+                                    <span class="bcard-sub-lbl" name="f_about_txt_1" data-field-name="About Section 1" data-multiline="false">
+                                        <%= domain_data.data.f_about_txt_1 %>
+                                    </span>
+                                </div>
+                                <div>
+                                    <span class="bcard-sub-lbl" name="f_about_txt_2" data-field-name="About Section 2" data-multiline="true">
+                                        <%= domain_data.data.f_about_txt_2 %>
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="bcard-sec">
+                        <a id="Services">
+                            <span class="bcard-btxt" name="f_services_title" data-field-name="Services Title" data-multiline="false">
+                                <%= domain_data.data.f_services_title %>
+                            </span>
+                            <div class="bcard-sub-sec">
+                                <div>
+                                    <span class="bcard-sub-lbl" name="f_services_txt_1" data-field-name="Services Section 1" data-multiline="false">
+                                        <%= domain_data.data.f_services_txt_1 %>
+                                    </span>
+                                </div>
+                                <div>
+                                    <span class="bcard-sub-lbl" name="f_services_txt_2" data-field-name="Services Section 2" data-multiline="true">
+                                        <%= domain_data.data.f_services_txt_2 %>
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="bcard-sec">
+                        <a id="Enquiry">
+                            <div class="bcard-btxt">
+                                Contact Us
+                            </div>
+                           <div class="bcard-sub-sec">
+                                <div class="bcard-frm-sec">
+                                    <div class="bcard-frm-btxt">
+                                        FirstName
+                                    </div>
+                                    <div class="bcard-frm-inpb">
+                                        <input placeholder="FirstName" id="fn" type="text" class="bcard-frm-inp" />
+                                    </div>
+                                </div>
+                                <div class="bcard-inp-sec">
+                                    <div class="bcard-frm-sec bcard-frm-half">
+                                        <div class="bcard-frm-btxt">
+                                            Mobile Number
+                                        </div>
+                                        <div class="bcard-frm-inpb">
+                                            <input min="10" max="10" placeholder="Mobile No" id="pno" type="number" class="bcard-frm-inp" />
+                                        </div>
+                                    </div>
+                                    <div class="bcard-frm-sec bcard-frm-half">
+                                        <div class="bcard-frm-btxt">
+                                            Email
+                                        </div>
+                                        <div class="bcard-frm-inpb">
+                                            <input placeholder="Email" id="femail" type="email" class="bcard-frm-inp" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bcard-frm-sec">
+                                    <div class="bcard-frm-btxt">
+                                        Message
+                                    </div>
+                                    <div>
+                                        <textarea placeholder="Message" id="fmess" type="text" class="bcard-frm-ml"></textarea>
+                                    </div>
+                                </div>
+                                <div class="bcard-btn pn" id="submit_data" data-api="<%= domain_data.data.api %>" onclick="submitData(this);">
+                                    Submit
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="bcard-sec bcard-ft">
+                        <span class="bcard-ft-btxt" name="f_address" data-field-name="Address" data-multiline="true">
+                            <%= domain_data.data.f_address %>
+                        </span>
+                        <span class="bcard-ft-btxt" name="f_phno" data-field-name="Contact" data-multiline="false">
+                            <%= domain_data.data.f_phno %>
+                        </span>
+                        <span class="bcard-ft-lbl" name="f_copyright" data-field-name="Copyright" data-multiline="false">
+                            <%= domain_data.data.f_copyright %>
+                        </span>
+                    </div>
+                    <div class="bcard-copyrgt-ft">
+                        Designed & Developed by
+                        <div class="bcard-ft-logo">
+                            <div class="bcard-ft-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bcard-opt-fix">
+                <a href="#Home" class="bcard-opt">
+                    <div class="bcard-opt-ico">
+                        <i class="fa-solid fa-house-chimney"></i>
+                    </div>
+                    <div class="bcard-opt-txt">
+                        Home
+                    </div>
+                </a>
+                <a href="#About" class="bcard-opt">
+                    <div class="bcard-opt-ico">
+                        <i class="fa-solid fa-circle-info"></i>
+                    </div>
+                    <div class="bcard-opt-txt">
+                        About
+                    </div>
+                </a>
+                <a href="#Services" class="bcard-opt">
+                    <div class="bcard-opt-ico">
+                        <i class="fa-solid fa-hand-holding-hand"></i>
+                    </div>
+                    <div class="bcard-opt-txt">
+                        Services
+                    </div>
+                </a>
+                <a href="#Enquiry" class="bcard-opt">
+                    <div class="bcard-opt-ico">
+                        <i class="fa-solid fa-comment"></i>
+                    </div>
+                    <div class="bcard-opt-txt">
+                        Enquiry
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        :root {
+                --primary: #3794e9;
+                --primary-lt: #f1f8ff;
+                --primary-dk:  #002f5a;
+                --white:#ffffff;
+                --gry-lt:  #f9f9f9;
+                --gry: #efefef;
+                --gry-dk:  #6e6e6e;
+            }
+
+            * {
+                margin: 0px;
+                padding: 0px;
+                box-sizing: border-box;
+            }
+
+            html {
+                font-size: 15px;
+            }
+
+            body {
+                padding: 0px;
+                margin: 0px;
+            }
+
+
+            </style>
+    <% } %>
+    <% if(domain_data.data.api.substring(22, 28) ==='me_001') { %>
+    <div class="abc-hexa-bg">
+
+        <div class="bcard-parent">
+            <div class="bcard-box bcard-temp-2" data-theme="me_001">
+                <a id="Home"></a>
+                <div class="bcard-profbox">
+                    <div class="bcard-prof">
+                        <img src="<%= domain_data.data.f_prof_img %>" name="f_prof_img" data-field-name="Profile" class="bcard-profimg">
+                    </div>
+                    
+                    <div class="bcard-prof-sec bcard-profbg">
+                        <div class="bcard-prof bcard-comp">
+                            <img src="<%= domain_data.data.f_company_img %>" name="f_company_img" data-field-name="Company Logo" class="bcard-profimg bcard-compimg">
+                        </div>
+                        <div>
+                            <span class="bcard-prof-btxt" name="f_prof_name" data-field-name="Profile Name" data-multiline="false">
+                                <%= domain_data.data.f_prof_name %>
+                            </span>
+                            <span class="bcard-prof-smtxt" name="f_prof_profession" data-field-name="Profession" data-multiline="false">
+                                    <%= domain_data.data.f_prof_profession %>
+                                </span>
+                        </div>
+                        <div class="bcard-act">
+                            <div class="bcard-acticon ico-fb">
+                                <a target="_blank" name="f_fb" href="<%= domain_data.data.f_fb %>" data-sm="true" data-field-name='Facebook'>
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                            </div>
+                            <div class="bcard-acticon ico-whatsapp">
+                                <a target="_blank" name="f_whatsapp" href="https://wa.me/<%= domain_data.data.f_whatsapp %>" data-sm="true" data-field-name='Whatsapp'>
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </a>
+                            </div>
+                            <div class="bcard-acticon ico-insta">
+                                <a target="_blank" name="f_insta" href="<%= domain_data.data.f_insta %>" data-sm="true" data-field-name='Instagram'>
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                            </div>
+                            <div class="bcard-acticon ico-tw">
+                                <a target="_blank" name="f_twitter" href="<%= domain_data.data.f_twitter %>" data-sm="true" data-field-name='Twitter'>
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bcard-cont">
+                    <div class="bcard-sec">
+                        <div class="bcard-secbg-me">
+                        </div>
+                        <div class="bcard-padd">
+                            <div class="bcard-frow-subsec">
+                                <span class="bcard-btxt" name="f_company_name" data-field-name="Company Name" data-multiline="false">
+                                    <%= domain_data.data.f_company_name %>
+                                </span>
+                                
+                            </div>
+                            <a target="_blank" name="f_phone" href="tel:<%= domain_data.data.f_phone %>" data-sm="true" data-field-name='Phone No' class="bcard-frow-sec">
+                                <div class="bcard-smico-sec">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div class="bcard-sub-txt">
+                                    <%= domain_data.data.f_phone %>
+                                </div>
+                            </a>
+                            <a target="_blank" name="f_website" href="<%= domain_data.data.f_website %>" data-sm="true" data-field-name='Website' class="bcard-frow-sec">
+                                <div class="bcard-smico-sec">
+                                    <i class="fa-solid fa-globe"></i>
+                                </div>
+                                <div class="bcard-sub-txt">
+                                    <%= domain_data.data.f_website %>
+                                </div>
+                            </a>
+                            <a target="_blank" name="f_email" href="mailto:<%= domain_data.data.f_email %>" data-sm="true" data-field-name='Email' class="bcard-frow-sec">
+                                <div class="bcard-smico-sec">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div class="bcard-sub-txt">
+                                    <%= domain_data.data.f_email %>
+                                </div>
+                            </a>
+                            <a target="_blank" name="f_location" href="<%= domain_data.data.f_location %>" data-sm="true" data-field-name='Location' class="bcard-frow-sec">
+                                <div class="bcard-smico-sec">
+                                    <i class="fa-sharp fa-solid fa-location-dot"></i>
+                                </div>
+                                <div class="bcard-sub-txt">
+                                    <%= domain_data.data.f_location %>
+                                </div>
+                            </a>
+                            <div class="bcard-ph-sec">
+                                <div class="bcard-sec-btn">
+                                    Add to Contacts
+                                </div>
+                                <a target="_blank" id="share_wa" class="bcard-sec-btn" href="#">
+                                    Share on Whatsapp
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bcard-sec">
+                        <a id="About">
+                            <span class="bcard-btxt" name="f_about_title" data-field-name="About Title" data-multiline="false">
+                                <%= domain_data.data.f_about_title %>
+                            </span>
+                            <div class="bcard-sub-sec">
+                                <div>
+                                    <span class="bcard-sub-lbl" name="f_about_txt_1" data-field-name="About Section 1" data-multiline="false">
+                                        <%= domain_data.data.f_about_txt_1 %>
+                                    </span>
+                                </div>
+                                <div>
+                                    <span class="bcard-sub-lbl" name="f_about_txt_2" data-field-name="About Section 2" data-multiline="true">
+                                        <%= domain_data.data.f_about_txt_2 %>
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="bcard-sec">
+                        <a id="Services">
+                            <span class="bcard-btxt" name="f_services_title" data-field-name="Services Title" data-multiline="false">
+                                <%= domain_data.data.f_services_title %>
+                            </span>
+                            <div class="bcard-sub-sec">
+                                <div>
+                                    <span class="bcard-sub-lbl" name="f_services_txt_1" data-field-name="Services Section 1" data-multiline="false">
+                                        <%= domain_data.data.f_services_txt_1 %>
+                                    </span>
+                                </div>
+                                <div>
+                                    <span class="bcard-sub-lbl" name="f_services_txt_2" data-field-name="Services Section 2" data-multiline="true">
+                                        <%= domain_data.data.f_services_txt_2 %>
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="bcard-sec">
+                        <a id="Products">
+                            <span class="bcard-btxt" name="f_products_title" data-field-name="Products Title" data-multiline="false">
+                                <%= domain_data.data.f_products_title %>
+                            </span>
+                            <div class="bcard-prod-cont">
+                                <div class="bcard-prod-imgb">
+                                    <img class="bcard-prod-img" name="f_prod_img1" data-field-name="Watches" src='<%= domain_data.data.f_prod_img1 %>' />
+                                </div>
+                                <div class="bcard-prod-imgb">
+                                    <img class="bcard-prod-img" name="f_prod_img2" data-field-name="Smart Watches" src='<%= domain_data.data.f_prod_img2 %>' />
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="bcard-sec">
+                        <a id="Enquiry">
+                            <div class="bcard-btxt">
+                                Contact Us
+                            </div>
+                            <div class="bcard-sub-sec">
+                                <div class="bcard-frm-sec">
+                                    <div class="bcard-frm-btxt">
+                                        FirstName
+                                    </div>
+                                    <div class="bcard-frm-inpb">
+                                        <input placeholder="FirstName" id="fn" type="text" class="bcard-frm-inp" />
+                                    </div>
+                                </div>
+                                <div class="bcard-inp-sec">
+                                    <div class="bcard-frm-sec bcard-frm-half">
+                                        <div class="bcard-frm-btxt">
+                                            Mobile Number
+                                        </div>
+                                        <div class="bcard-frm-inpb">
+                                            <input min="10" max="10" placeholder="Mobile No" id="pno" type="number" class="bcard-frm-inp" />
+                                        </div>
+                                    </div>
+                                    <div class="bcard-frm-sec bcard-frm-half">
+                                        <div class="bcard-frm-btxt">
+                                            Email
+                                        </div>
+                                        <div class="bcard-frm-inpb">
+                                            <input placeholder="Email" id="femail" type="email" class="bcard-frm-inp" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bcard-frm-sec">
+                                    <div class="bcard-frm-btxt">
+                                        Message
+                                    </div>
+                                    <div>
+                                        <textarea placeholder="Message" id="fmess" type="text" class="bcard-frm-ml"></textarea>
+                                    </div>
+                                </div>
+                                <div class="bcard-btn pn" id="submit_data" data-api="<%= domain_data.data.api %>" onclick="submitData(this);">
+                                    Submit
+                                </div>
+                            </div>
+                    </a>
+                </div>
+                <div class="bcard-sec bcard-ft">
+                    <span class="bcard-ft-btxt" name="f_address" data-field-name="Address" data-multiline="true">
+                        <%= domain_data.data.f_address %>
+                    </span>
+                    <span class="bcard-ft-btxt" name="f_phno" data-field-name="Contact" data-multiline="false">
+                        <%= domain_data.data.f_phno %>
+                    </span>
+                    <span class="bcard-ft-lbl" name="f_copyright" data-field-name="Copyright" data-multiline="false">
+                        <%= domain_data.data.f_copyright %>
+                    </span>
+                </div>
+                <div class="bcard-copyrgt-ft">
+                    Designed & Developed by
+                    <div class="bcard-ft-logo">
+                        <div class="bcard-ft-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="bcard-opt-fix">
+                <a href="#Home" class="bcard-opt">
+                    <div class="bcard-opt-ico">
+                        <i class="fa-solid fa-house-chimney"></i>
+                    </div>
+                    <div class="bcard-opt-txt">
+                        Home
+                    </div>
+                </a>
+                <a href="#About" class="bcard-opt">
+                    <div class="bcard-opt-ico">
+                        <i class="fa-solid fa-circle-info"></i>
+                    </div>
+                    <div class="bcard-opt-txt">
+                        About
+                    </div>
+                </a>
+                <a href="#Services" class="bcard-opt">
+                    <div class="bcard-opt-ico">
+                        <i class="fa-solid fa-hand-holding-hand"></i>
+                    </div>
+                    <div class="bcard-opt-txt">
+                        Services
+                    </div>
+                </a>
+                <a href="#Enquiry" class="bcard-opt">
+                    <div class="bcard-opt-ico">
+                        <i class="fa-solid fa-comment"></i>
+                    </div>
+                    <div class="bcard-opt-txt">
+                        Enquiry
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <style>
+        :root {
+                --primary: #3794e9;
+                --primary-lt: #f1f8ff;
+                --primary-dk:  #002f5a;
+                --white:#ffffff;
+                --gry-lt:  #f9f9f9;
+                --gry: #efefef;
+                --gry-dk:  #6e6e6e;
+            }
+
+            * {
+                    margin: 0px;
+                    padding: 0px;
+                    box-sizing: border-box;
+                            }
+
+                html {
+                    font-size: 15px;
+                }
+
+                body {
+                    padding: 0px;
+                    margin: 0px;
+                }
+
+                
+                .bcard-temp-2[data-theme="me_001"]{
+                    --primary: #ffbf42;
+                    --primary-dk: #0b416f;
+                    --primary-lt:  #fffbf5;
+                }
+            </style>
+    <% } %>
+    <% if(domain_data.data.api.substring(22, 28) ==='sp_001') { %>
+    <div class="abc-hexa-bg">
+
+    <div class="bcard-parent">
+        <div class="bcard-box bcard-temp-3" data-theme="sp_001">
+            <a id="Home"></a>
+
+            <div class="bcard-prof bcard-comp">
+                <img src="<%= domain_data.data.f_company_img %>" name="f_company_img" data-field-name="Company Logo" class="bcard-profimg bcard-compimg">
+            </div>
+            <div class="bcard-profbox">
+                <div class="bcard-prof">
+                    <img src="<%= domain_data.data.f_prof_img %>" name="f_prof_img" data-field-name="Profile" class="bcard-profimg">
+                </div>
+                <div class="bcard-prof-sec">
+                    <div>
+                        <span class="bcard-prof-btxt" name="f_prof_name" data-field-name="Profile Name" data-multiline="false">
+                            <%= domain_data.data.f_prof_name %>
+                        </span>
+                        <span class="bcard-prof-smtxt" name="f_prof_profession" data-field-name="Profession" data-multiline="false">
+                                <%= domain_data.data.f_prof_profession %>
+                            </span>
+                    </div>
+                    <div class="bcard-act">
+                        <div class="bcard-acticon ico-fb">
+                            <a target="_blank" name="f_fb" href="<%= domain_data.data.f_fb %>" data-sm="true" data-field-name='Facebook'>
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                        </div>
+                        <div class="bcard-acticon ico-whatsapp">
+                            <a target="_blank" name="f_whatsapp" href="https://wa.me/<%= domain_data.data.f_whatsapp %>" data-sm="true" data-field-name='Whatsapp'>
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </a>
+                        </div>
+                        <div class="bcard-acticon ico-insta">
+                            <a target="_blank" name="f_insta" href="<%= domain_data.data.f_insta %>" data-sm="true" data-field-name='Instagram'>
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                        <div class="bcard-acticon ico-tw">
+                            <a target="_blank" name="f_twitter" href="<%= domain_data.data.f_twitter %>" data-sm="true" data-field-name='Twitter'>
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                        </div>
+                        <div class="bcard-acticon ico-linked">
+                            <a target="_blank" name="f_linked" href="<%= domain_data.data.f_linked %>" data-sm="true" data-field-name='Linked In'>
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bcard-cont">
+                <div class="bcard-sec-full">
+                    <div class="bcard-temp-3bg">
+                    </div>
+                    <div class="bcard-padd">
+                        <div class="bcard-frow-subsec">
+                            <span class="bcard-btxt" name="f_company_name" data-field-name="Company Name" data-multiline="false">
+                                <%= domain_data.data.f_company_name %>
+                            </span>
+                            
+                        </div>
+                        <a target="_blank" name="f_phone" href="tel:<%= domain_data.data.f_phone %>" data-sm="true" data-field-name='Phone No' class="bcard-frow-sec">
+                            <div class="bcard-smico-sec">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="bcard-sub-txt">
+                                <%= domain_data.data.f_phone %>
+                            </div>
+                        </a>
+                        <a target="_blank" name="f_website" href="<%= domain_data.data.f_website %>" data-sm="true" data-field-name='Website' class="bcard-frow-sec">
+                            <div class="bcard-smico-sec">
+                                <i class="fa-solid fa-globe"></i>
+                            </div>
+                            <div class="bcard-sub-txt">
+                                <%= domain_data.data.f_website %>
+                            </div>
+                        </a>
+                        <a target="_blank" name="f_email" href="mailto:<%= domain_data.data.f_email %>" data-sm="true" data-field-name='Email' class="bcard-frow-sec">
+                            <div class="bcard-smico-sec">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="bcard-sub-txt">
+                                <%= domain_data.data.f_email %>
+                            </div>
+                        </a>
+                        <a target="_blank" name="f_location" href="<%= domain_data.data.f_location %>" data-sm="true" data-field-name='Location' class="bcard-frow-sec">
+                            <div class="bcard-smico-sec">
+                                <i class="fa-sharp fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="bcard-sub-txt">
+                                <%= domain_data.data.f_location %>
+                            </div>
+                        </a>
+                        <div class="bcard-ph-sec">
+                            <div class="bcard-sec-btn">
+                                Add to Contacts
+                            </div>
+                            <a target="_blank" id="share_wa" class="bcard-sec-btn" href="#">
+                                Share on Whatsapp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bcard-sec">
+                    <a id="About">
+                        <span class="bcard-btxt" name="f_about_title" data-field-name="About Title" data-multiline="false">
+                            <%= domain_data.data.f_about_title %>
+                        </span>
+                        <div class="bcard-sub-sec">
+                            <div>
+                                <span class="bcard-sub-lbl" name="f_about_txt_1" data-field-name="About Section 1" data-multiline="false">
+                                    <%= domain_data.data.f_about_txt_1 %>
+                                </span>
+                            </div>
+                            <div>
+                                <span class="bcard-sub-lbl" name="f_about_txt_2" data-field-name="About Section 2" data-multiline="true">
+                                    <%= domain_data.data.f_about_txt_2 %>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="bcard-sec">
+                    <a id="Services">
+                        <span class="bcard-btxt" name="f_services_title" data-field-name="Services Title" data-multiline="false">
+                            <%= domain_data.data.f_services_title %>
+                        </span>
+                        <div class="bcard-sub-sec">
+                            <div>
+                                <span class="bcard-sub-lbl" name="f_services_txt_1" data-field-name="Services Section 1" data-multiline="false">
+                                    <%= domain_data.data.f_services_txt_1 %>
+                                </span>
+                            </div>
+                            <div>
+                                <span class="bcard-sub-lbl" name="f_services_txt_2" data-field-name="Services Section 2" data-multiline="true">
+                                    <%= domain_data.data.f_services_txt_2 %>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="bcard-sec">
+                    <a id="Enquiry">
+                        <div class="bcard-btxt">
+                            Contact Us
+                        </div>
+                        <div class="bcard-sub-sec">
+                            <div class="bcard-frm-sec">
+                                <div class="bcard-frm-btxt">
+                                    FirstName
+                                </div>
+                                <div class="bcard-frm-inpb">
+                                    <input placeholder="FirstName" id="fn" type="text" class="bcard-frm-inp" />
+                                </div>
+                            </div>
+                            <div class="bcard-inp-sec">
+                                <div class="bcard-frm-sec bcard-frm-half">
+                                    <div class="bcard-frm-btxt">
+                                        Mobile Number
+                                    </div>
+                                    <div class="bcard-frm-inpb">
+                                        <input min="10" max="10" placeholder="Mobile No" id="pno" type="number" class="bcard-frm-inp" />
+                                    </div>
+                                </div>
+                                <div class="bcard-frm-sec bcard-frm-half">
+                                    <div class="bcard-frm-btxt">
+                                        Email
+                                    </div>
+                                    <div class="bcard-frm-inpb">
+                                        <input placeholder="Email" id="femail" type="email" class="bcard-frm-inp" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bcard-frm-sec">
+                                <div class="bcard-frm-btxt">
+                                    Message
+                                </div>
+                                <div>
+                                    <textarea placeholder="Message" id="fmess" type="text" class="bcard-frm-ml"></textarea>
+                                </div>
+                            </div>
+                            <div class="bcard-btn pn" id="submit_data" data-api="<%= domain_data.data.api %>" onclick="submitData(this);">
+                                Submit
+                            </div>
+                        </div>
+                </a>
+            </div>
+            <div class="bcard-sec bcard-ft">
+                <span class="bcard-ft-btxt" name="f_address" data-field-name="Address" data-multiline="true">
+                    <%= domain_data.data.f_address %>
+                </span>
+                <span class="bcard-ft-btxt" name="f_phno" data-field-name="Contact" data-multiline="false">
+                    <%= domain_data.data.f_phno %>
+                </span>
+                <span class="bcard-ft-lbl" name="f_copyright" data-field-name="Copyright" data-multiline="false">
+                    <%= domain_data.data.f_copyright %>
+                </span>
+            </div>
+            <div class="bcard-copyrgt-ft">
+                Designed & Developed by
+                <div class="bcard-ft-logo">
+                    <div class="bcard-ft-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bcard-opt-fix">
+        <a href="#Home" class="bcard-opt">
+            <div class="bcard-opt-ico">
+                <i class="fa-solid fa-house-chimney"></i>
+            </div>
+            <div class="bcard-opt-txt">
+                Home
+            </div>
+        </a>
+        <a href="#About" class="bcard-opt">
+            <div class="bcard-opt-ico">
+                <i class="fa-solid fa-circle-info"></i>
+            </div>
+            <div class="bcard-opt-txt">
+                About
+            </div>
+        </a>
+        <a href="#Services" class="bcard-opt">
+            <div class="bcard-opt-ico">
+                <i class="fa-solid fa-hand-holding-hand"></i>
+            </div>
+            <div class="bcard-opt-txt">
+                Services
+            </div>
+        </a>
+        <a href="#Enquiry" class="bcard-opt">
+            <div class="bcard-opt-ico">
+                <i class="fa-solid fa-comment"></i>
+            </div>
+            <div class="bcard-opt-txt">
+                Enquiry
+            </div>
+        </a>
+    </div>
+    </div>
+</div>
+    <style>
+        :root {
+                --primary: #3794e9;
+                --primary-lt: #f1f8ff;
+                --primary-dk:  #002f5a;
+                --white:#ffffff;
+                --gry-lt:  #f9f9f9;
+                --gry: #efefef;
+                --gry-dk:  #6e6e6e;
+            }
+
+            * {
+                margin: 0px;
+                padding: 0px;
+                box-sizing: border-box;
+            }
+
+            html {
+                font-size: 15px;
+            }
+
+            body {
+                padding: 0px;
+                margin: 0px;
+            }
+
+            .bcard-temp-3[data-theme="sp_001"]{
+                --primary:  #00d3d3;
+                --primary-dk: #006860;
+                --primary-lt:  #e8fffd;
+            }
+            </style>
+    <% } %>
+
+    <% if(domain_data.data.api.substring(22, 28) ==='ts_001') { %>
+    <div class="abc-hexa-bg">
+
+    <div class="bcard-parent">
+        <div class="bcard-box bcard-temp-4" data-theme="ts_001">
+            <a id="Home"></a>
+            <div class="bcard-profbox">
+                <div class="bcard-prof bcard-comp">
+                    <img src="<%= domain_data.data.f_company_img %>" name="f_company_img" data-field-name="Company Logo" class="bcard-profimg bcard-compimg">
+                </div>
+                <div class="bcard-prof">
+                    <img src="<%= domain_data.data.f_prof_img %>" name="f_prof_img" data-field-name="Profile" class="bcard-profimg">
+                </div>
+                <div class="bcard-prof-sec">
+                    <div>
+                        <span class="bcard-prof-btxt" name="f_prof_name" data-field-name="Profile Name" data-multiline="false">
+                            <%= domain_data.data.f_prof_name %>
+                        </span>
+                        <span class="bcard-prof-smtxt" name="f_prof_profession" data-field-name="Profession" data-multiline="false">
+                                <%= domain_data.data.f_prof_profession %>
+                            </span>
+                    </div>
+                </div>
+                <div class="bcard-act">
+                    <div class="bcard-acticon ico-fb">
+                        <a target="_blank" name="f_fb" href="<%= domain_data.data.f_fb %>" data-sm="true" data-field-name='Facebook'>
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                    </div>
+                    <div class="bcard-acticon ico-whatsapp">
+                        <a target="_blank" name="f_whatsapp" href="https://wa.me/<%= domain_data.data.f_whatsapp %>" data-sm="true" data-field-name='Whatsapp'>
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                    <div class="bcard-acticon ico-insta">
+                        <a target="_blank" name="f_insta" href="<%= domain_data.data.f_insta %>" data-sm="true" data-field-name='Instagram'>
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                    <div class="bcard-acticon ico-tw">
+                        <a target="_blank" name="f_twitter" href="<%= domain_data.data.f_twitter %>" data-sm="true" data-field-name='Twitter'>
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="bcard-cont">
+                <div class="bcard-sec">
+                    <div class="bcard-padd">
+                        <div class="bcard-frow-subsec">
+                            <span class="bcard-btxt" name="f_company_name" data-field-name="Company Name" data-multiline="false">
+                                <%= domain_data.data.f_company_name %>
+                            </span>
+                            
+                        </div>
+                        <a target="_blank" name="f_phone" href="tel:<%= domain_data.data.f_phone %>" data-sm="true" data-field-name='Phone No' class="bcard-frow-sec">
+                            <div class="bcard-smico-sec">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="bcard-sub-txt">
+                                <%= domain_data.data.f_phone %>
+                            </div>
+                        </a>
+                        <a target="_blank" name="f_website" href="<%= domain_data.data.f_website %>" data-sm="true" data-field-name='Website' class="bcard-frow-sec">
+                            <div class="bcard-smico-sec">
+                                <i class="fa-solid fa-globe"></i>
+                            </div>
+                            <div class="bcard-sub-txt">
+                                <%= domain_data.data.f_website %>
+                            </div>
+                        </a>
+                        <a target="_blank" name="f_email" href="mailto:<%= domain_data.data.f_email %>" data-sm="true" data-field-name='Email' class="bcard-frow-sec">
+                            <div class="bcard-smico-sec">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="bcard-sub-txt">
+                                <%= domain_data.data.f_email %>
+                            </div>
+                        </a>
+                        <a target="_blank" name="f_location" href="<%= domain_data.data.f_location %>" data-sm="true" data-field-name='Location' class="bcard-frow-sec">
+                            <div class="bcard-smico-sec">
+                                <i class="fa-sharp fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="bcard-sub-txt">
+                                <%= domain_data.data.f_location %>
+                            </div>
+                        </a>
+                        <div class="bcard-ph-sec">
+                            <div class="bcard-sec-btn">
+                                Add to Contacts
+                            </div>
+                            <a target="_blank" id="share_wa" class="bcard-sec-btn" href="#">
+                                Share on Whatsapp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bcard-sec">
+                    <a id="About">
+                        <span class="bcard-btxt" name="f_about_title" data-field-name="About Title" data-multiline="false">
+                            <%= domain_data.data.f_about_title %>
+                        </span>
+                        <div class="bcard-sub-sec">
+                            <div>
+                                <span class="bcard-sub-lbl" name="f_about_txt_1" data-field-name="About Section 1" data-multiline="false">
+                                    <%= domain_data.data.f_about_txt_1 %>
+                                </span>
+                            </div>
+                            <div>
+                                <span class="bcard-sub-lbl" name="f_about_txt_2" data-field-name="About Section 2" data-multiline="true">
+                                    <%= domain_data.data.f_about_txt_2 %>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="bcard-sec">
+                    <a id="Services">
+                        <span class="bcard-btxt" name="f_services_title" data-field-name="Services Title" data-multiline="false">
+                            <%= domain_data.data.f_services_title %>
+                        </span>
+                        <div class="bcard-sub-sec">
+                            <div>
+                                <span class="bcard-sub-lbl" name="f_services_txt_1" data-field-name="Services Section 1" data-multiline="false">
+                                    <%= domain_data.data.f_services_txt_1 %>
+                                </span>
+                            </div>
+                            <div>
+                                <span class="bcard-sub-lbl" name="f_services_txt_2" data-field-name="Services Section 2" data-multiline="true">
+                                    <%= domain_data.data.f_services_txt_2 %>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="bcard-sec">
+                    <a id="Products">
+                        <span class="bcard-btxt" name="f_products_title" data-field-name="Products Title" data-multiline="false">
+                            <%= domain_data.data.f_products_title %>
+                        </span>
+                        <div class="bcard-prod-cont">
+                            <div class="bcard-prod-imgb">
+                                <img class="bcard-prod-img" name="f_prod_img1" data-field-name="Watches" src='<%= domain_data.data.f_prod_img1 %>' />
+                            </div>
+                            <div class="bcard-prod-imgb">
+                                <img class="bcard-prod-img" name="f_prod_img2" data-field-name="Smart Watches" src='<%= domain_data.data.f_prod_img2 %>' />
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="bcard-sec">
+                    <a id="Enquiry">
+                        <div class="bcard-btxt">
+                            Contact Us
+                        </div>
+                        <div class="bcard-sub-sec">
+                            <div class="bcard-frm-sec">
+                                <div class="bcard-frm-btxt">
+                                    FirstName
+                                </div>
+                                <div class="bcard-frm-inpb">
+                                    <input placeholder="FirstName" id="fn" type="text" class="bcard-frm-inp" />
+                                </div>
+                            </div>
+                            <div class="bcard-inp-sec">
+                                <div class="bcard-frm-sec bcard-frm-half">
+                                    <div class="bcard-frm-btxt">
+                                        Mobile Number
+                                    </div>
+                                    <div class="bcard-frm-inpb">
+                                        <input min="10" max="10" placeholder="Mobile No" id="pno" type="number" class="bcard-frm-inp" />
+                                    </div>
+                                </div>
+                                <div class="bcard-frm-sec bcard-frm-half">
+                                    <div class="bcard-frm-btxt">
+                                        Email
+                                    </div>
+                                    <div class="bcard-frm-inpb">
+                                        <input placeholder="Email" id="femail" type="email" class="bcard-frm-inp" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bcard-frm-sec">
+                                <div class="bcard-frm-btxt">
+                                    Message
+                                </div>
+                                <div>
+                                    <textarea placeholder="Message" id="fmess" type="text" class="bcard-frm-ml"></textarea>
+                                </div>
+                            </div>
+                            <div class="bcard-btn pn" id="submit_data" data-api="<%= domain_data.data.api %>" onclick="submitData(this);">
+                                Submit
+                            </div>
+                        </div>
+                </a>
+            </div>
+            <div class="bcard-sec bcard-ft">
+                <span class="bcard-ft-btxt" name="f_address" data-field-name="Address" data-multiline="true">
+                    <%= domain_data.data.f_address %>
+                </span>
+                <span class="bcard-ft-btxt" name="f_phno" data-field-name="Contact" data-multiline="false">
+                    <%= domain_data.data.f_phno %>
+                </span>
+                <span class="bcard-ft-lbl" name="f_copyright" data-field-name="Copyright" data-multiline="false">
+                    <%= domain_data.data.f_copyright %>
+                </span>
+            </div>
+            <div class="bcard-copyrgt-ft">
+                Designed & Developed by
+                <div class="bcard-ft-logo">
+                    <div class="bcard-ft-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bcard-opt-fix">
+        <a href="#Home" class="bcard-opt">
+            <div class="bcard-opt-ico">
+                <i class="fa-solid fa-house-chimney"></i>
+            </div>
+            <div class="bcard-opt-txt">
+                Home
+            </div>
+        </a>
+        <a href="#About" class="bcard-opt">
+            <div class="bcard-opt-ico">
+                <i class="fa-solid fa-circle-info"></i>
+            </div>
+            <div class="bcard-opt-txt">
+                About
+            </div>
+        </a>
+        <a href="#Services" class="bcard-opt">
+            <div class="bcard-opt-ico">
+                <i class="fa-solid fa-hand-holding-hand"></i>
+            </div>
+            <div class="bcard-opt-txt">
+                Services
+            </div>
+        </a>
+        <a href="#Enquiry" class="bcard-opt">
+            <div class="bcard-opt-ico">
+                <i class="fa-solid fa-comment"></i>
+            </div>
+            <div class="bcard-opt-txt">
+                Enquiry
+            </div>
+        </a>
+    </div>
+    </div>
+    </div>
+    <style>
+        :root {
+                --primary: #3794e9;
+                --primary-lt: #f1f8ff;
+                --primary-dk:  #002f5a;
+                --white:#ffffff;
+                --gry-lt:  #f9f9f9;
+                --gry: #efefef;
+                --gry-dk:  #6e6e6e;
+            }
+
+            * {
+                    margin: 0px;
+                    padding: 0px;
+                    box-sizing: border-box;
+                }
+
+                html {
+                    font-size: 15px;
+                }
+
+                body {
+                    padding: 0px;
+                    margin: 0px;
+                }
+
+                .bcard-temp-4[data-theme="ts_001"]{
+                    --primary: #f58646;
+                    --primary-dk: #BA4605;
+                    --primary-lt: #FFF5EF;
+                }
+            </style>
+    <% } %>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js" integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../js/index.js"></script>
+    <script type="text/javascript">
+    console.log($('#fn').value);
+    console.log(window.location.href);
+    console.log($('#share_wa').attr('href'));
+    $('#share_wa').attr('href', 'https://api.whatsapp.com/send?text=' + window.location.href);
+    // document.addEventListener('keyup', checkValidation);
+
+    function checkValidation(e) {
+        var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        var regexPh = /^!*(\d!*){10,}$/;
+
+        // if(($('#fn').val() == '' || $('#fn').val() == undefined) || ($('#pno').val() == '' || $('#pno').val() == undefined) || ($('#femail').val() == '' || $('#femail').val() == undefined) || ($('#fmess').val() == '' || $('#fmess').val() == undefined)) {
+
+        //     $('#submit_data').addClass('pn');          
+        //     console.log('asd' + ($('#femail').val()));  
+        //     console.log('asd' + ($('#fmess').val()));      
+        // }
+        console.log($(this).attr('id'));
+        if (this.value === undefined || this.value === '') {
+            let errMess = `<div id="err_box"><div style="font-size: 13px; color: red;">Please Enter Data !!!</div></div>`;
+            $('#submit_data').addClass('pn');
+            $(this).parents('.bcard-frm-sec').children('#err_box').remove();
+            $(this).parents('.bcard-frm-sec').append(errMess);
+        } else if (this.value != undefined || this.value != '') {
+            $('#submit_data').addClass('pn');
+            $(this).parents('.bcard-frm-sec').children('#err_box').remove();
+
+            if ($(this).attr('id') === 'femail') {
+
+                if (regex.test(this.value) === false) {
+                    let errMess = `<div id="err_box"><div style="font-size: 13px; color: red;">Please Enter Valid Email !!!</div></div>`;
+                    $(this).parents('.bcard-frm-sec').children('#err_box').remove();
+                    $(this).parents('.bcard-frm-sec').append(errMess);
+                    $('#submit_data').addClass('pn');
+                } else {
+                    $(this).parents('.bcard-frm-sec').children('#err_box').remove();
+                }
+            } else if ($(this).attr('id') === 'pno') {
+
+                if (regexPh.test(this.value) === false) {
+                    let errMess = `<div id="err_box"><div style="font-size: 13px; color: red;">Please Enter Valid Phone Number !!!</div></div>`;
+                    $(this).parents('.bcard-frm-sec').children('#err_box').remove();
+                    $(this).parents('.bcard-frm-sec').append(errMess);
+                    $('#submit_data').addClass('pn');
+                } else {
+                    $(this).parents('.bcard-frm-sec').children('#err_box').remove();
+                }
+            }
+
+            if (($('#fn').val() != '' && $('#fn').val() != undefined) && ($('#pno').val() != '' && $('#pno').val() != undefined) && ($('#femail').val() != '' && $('#femail').val() != undefined && (regex.test($('#femail').val()) === true)) && ($('#fmess').val() != '' && $('#fmess').val() != undefined)) {
+                console.log($('#fn').val());
+                $('#submit_data').removeClass('pn');
+            }
+        }
+
+
+    }
+
+    $("input").on('keyup', checkValidation);
+    $("textarea").on('keyup', checkValidation);
+
+
+    function submitData(e) {
+        let contactData = {
+            first_name: $('#fn').val(),
+            phone_number: $('#pno').val(),
+            email: $('#femail').val(),
+            message: $('#fmess').val()
+        }
+        let contactObj = {
+            method: 'POST',
+            body: JSON.stringify(contactData),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }
+        fetch($(e).attr('data-api'), contactObj)
+            .then((res) => {
+                res.json()
+                    .then((res) => {
+                        console.log(res);
+                        console.log(res);
+                    })
+                    .catch((err) => {
+                        console.error(err);
+                    })
+            })
+            .catch((err) => {
+                console.error(err);
+            });
+    }
+    </script>
+</body>
+
+</html>
