@@ -15,25 +15,25 @@ class company_listing {
             } else if (payload && params) {
                 
                 const company_listing_update = await company_listing_Services.updatecompanylisting(payload,params)
-                if (company_listing_update.code === 500) {
+                if (company_listing_update.statuscode === 500) {
                     next(apiError.internal({
-                        'statusCode': 500,
-                        'ErrorMessage': company_listing_update.ErrorMessage,
+                        'statuscode': 500,
+                        'errormessage': company_listing_update.errormessage,
                         'Error': 'badImplementation'
 
                     }))
                     return
-                } else if (company_listing_update.code === 11000) {
+                } else if (company_listing_update.statuscode === 11000) {
                     next(apiError.conflict({
                         'statuscode': 409,
                         'Error': 'conflict',
-                        'ErrorMessage': 'duplicate data'
+                        'errormessage': 'duplicate data'
                     }))
                     return
-                }else if (company_listing_update.code === 400) {
+                }else if (company_listing_update.statuscode === 400) {
                     next(apiError.badRequest({
-                        'statusCode': 400,
-                        'ErrorMessage':'invalid data' ,
+                        'statuscode': 400,
+                        'errormessage':'invalid_data' ,
                         'Error': 'badRequest'
 
 
@@ -50,17 +50,17 @@ class company_listing {
 
         } catch (err) {
             
-            if (err.code === 11000) {
+            if (err.statuscode === 11000) {
                 next(apiError.conflict({
                     'statuscode': 409,
                     'Error': 'conflict',
-                    'ErrorMessage': 'duplicate data'
+                    'errormessage': 'duplicate data'
                 }))
                 return
             }
             next(apiError.internal({
-                'statusCode': 500,
-                'ErrorMessage': 'undefine error',
+                'statuscode': 500,
+                'errormessage': 'undefine error',
                 'Error': 'badImplementation'
 
             }))

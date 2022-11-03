@@ -1,28 +1,30 @@
-const signup_service = require('../../services/auth-services')
-const signup_service_ = new signup_service()
+const user_store_service = require('../../services/user-store-service')
+const user_store_service_ = new user_store_service()
 const apiError = require('../../error/api-error')
 
-class forgetMail {
-    async forgetpasswordmail(req, res, next) {
-        let payload = req.body
 
-        if (!payload) {
+class updateTemplate {
+    async Updatetemplate(req, res, next) {
+        let payload = req.body
+        
+
+        if (!payload ) {
             next(apiError.badRequest('error'))
             return
 
         }
-        else if (payload) {
-            const forget_main_ = await signup_service_.forget_password_mail(payload)
-            if (forget_main_.statuscode === 500) {
+        else if (payload ) {
+            const update_template = await user_store_service_.UpdateUserTemplate(payload)
+            if (update_template.statuscode === 500) {
                 next(apiError.internal({
                     'statuscode': 500,
-                    'errormessage': forget_main_.errormessage,
+                    'errormessage': update_template.errormessage,
                     'message': 'badImplementation'
 
                 }))
                 return
 
-            } else if (forget_main_.statuscode === 400) {
+            } else if (update_template.statuscode === 400) {
                 next(apiError.badRequest({
                     'statuscode': 400,
                     'errormessage': 'invalid_data',
@@ -31,17 +33,17 @@ class forgetMail {
 
                 }))
                 return
-            } else if (forget_main_.length === 0) {
+            } else if (update_template.length === 0) {
                 return res.status(200).send({
                     'statuscode': 204,
-                    'data': forget_main_,
+                    'data': update_template,
                     'message': 'success'
                 })
             }
             else {
                 return res.status(200).send({
                     'statuscode': 200,
-                    'data': forget_main_,
+                    'data': update_template,
                     'message': 'success'
                 })
             }
@@ -49,4 +51,4 @@ class forgetMail {
     }
 }
 
-module.exports = forgetMail
+module.exports = updateTemplate

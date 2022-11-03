@@ -1,9 +1,10 @@
-const signup_service = require('../../services/auth-services')
-const signup_service_ = new signup_service()
+const template_service = require('../../services/template-services')
+const template_service_ = new template_service()
 const apiError = require('../../error/api-error')
 
-class forgetMail {
-    async forgetpasswordmail(req, res, next) {
+
+class domainPicker {
+    async domain(req, res, next) {
         let payload = req.body
 
         if (!payload) {
@@ -12,17 +13,17 @@ class forgetMail {
 
         }
         else if (payload) {
-            const forget_main_ = await signup_service_.forget_password_mail(payload)
-            if (forget_main_.statuscode === 500) {
+            const domain_picker = await template_service_.domain_service(payload)
+            if (domain_picker.statuscode === 500) {
                 next(apiError.internal({
                     'statuscode': 500,
-                    'errormessage': forget_main_.errormessage,
+                    'errormessage': domain_picker.errormessage,
                     'message': 'badImplementation'
 
                 }))
                 return
 
-            } else if (forget_main_.statuscode === 400) {
+            } else if (domain_picker.statuscode === 400) {
                 next(apiError.badRequest({
                     'statuscode': 400,
                     'errormessage': 'invalid_data',
@@ -31,17 +32,17 @@ class forgetMail {
 
                 }))
                 return
-            } else if (forget_main_.length === 0) {
+            } else if (domain_picker.length === 0) {
                 return res.status(200).send({
                     'statuscode': 204,
-                    'data': forget_main_,
+                    'data': domain_picker,
                     'message': 'success'
                 })
             }
             else {
                 return res.status(200).send({
                     'statuscode': 200,
-                    'data': forget_main_,
+                    'data': domain_picker,
                     'message': 'success'
                 })
             }
@@ -49,4 +50,4 @@ class forgetMail {
     }
 }
 
-module.exports = forgetMail
+module.exports = domainPicker
