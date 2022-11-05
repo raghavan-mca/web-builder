@@ -4,8 +4,8 @@
     align-items: flex-start;
     padding: 0px 15px;
     flex-wrap: wrap;
-    gap: 30px;
-    column-gap: 20px;
+    gap: 25px;
+    column-gap: 15px;
 }
 
 .abc-temp-box a {
@@ -21,50 +21,19 @@
     height: 270px;
     border-radius: 12px;
     background-color: var(--white);
-    border: 1px solid var(--gry-dk);
+    border: 2px solid var(--gry);
     padding: 10px;
     padding-top: 5px;
     box-shadow: 0px 4px 25px rgb(15 42 177 / 12%);
     cursor: pointer;
-    position: relative;
     user-select: none;
     transition: all 0.1s linear;
 }
 
 .abc-temp:hover {
-    transform: scale(1.07);
-    border: 1px solid var(--sec);
-    box-shadow: 0px 10px 30px rgb(15 42 177 / 30%), 0px 0px 0px 1px var(--sec);
+    transform: scale(1.04);
+    border: 2px solid var(--sec);
     transition: all 0.1s linear;
-}
-
-.abc-temp-act{
-    width: 25px;
-    height: 25px;
-    border-radius: 100px;
-    text-align: center;
-    padding: 3px;
-}
-
-
-
-.abc-temp-act:hover{
-    background-color: var(--red-lt);
-}
-
-.abc-temp-actb{
-    padding: 1px 3px;
-    border-radius: 30px;
-    position: absolute;
-    right: -2px;
-    top: 0px;
-    background-color: var(--white);
-    display: flex;
-    flex-direction: row;
-    column-gap: 5px;
-    border: 1px solid var(--gry-dk);
-    box-shadow: -1px 6px 20px rgb(0 0 0 / 13%);
-    border-bottom-right-radius: 0px;
 }
 
 .abc-temp-img {
@@ -83,20 +52,7 @@
     object-position: top;
     border-radius: 12px;
 }
-.abc-temp-act i{
-    color: var(--red);
-    font-size: 14px;
-    position: relative;
-    top: 1px;
-}
 
-.abc-act-info i{
-    color: var(--blue);
-    font-size: 16px;
-}
-.abc-act-info:hover{
-    background-color: #e1ecff;
-}
 .abc-temp-lbl {
     font-size: var(--fs-14);
     padding: 10px 0px;
@@ -231,7 +187,6 @@
 
 .abc-fld-prof {
     width: 150px;
-    min-width: 150px;
     height: 150px;
     border-radius: 100px;
     background-color: var(--gry-lt);
@@ -273,13 +228,13 @@
     display: flex;
     flex-direction: row;
     column-gap: 10px;
-    justify-content: center;
 }
 
 .bcard-box {
     background-color: var(--white);
     border: 1px solid var(--primary);
     max-width: 650px;
+    margin: 0px auto;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0px 10px 45px rgb(0 0 0 / 18%);
@@ -294,7 +249,7 @@
 .bcard-profbox {
     width: 100%;
     height: auto;
-    padding-top: 20px;
+    padding-top: 30px;
     padding-bottom: 60px;
     border-bottom-left-radius: 300px;
     border-bottom-right-radius: 300px;
@@ -336,22 +291,8 @@
     padding: 3px;
     border: 4px solid var(--white);
 }
-.bcard-comp{
-    display: block;
-    width: 280px;
-    background-color: transparent;
-    height: auto;
-    margin: auto;
-    border-radius: 0px;
-}
-.bcard-compimg{
-    height: auto;
-    border-radius: 0px;
-    border: 0px;
-    background-color: transparent;
-}
+
 .bcard-act {
-    width: 100%;
     padding: 5px;
     display: flex;
     flex-direction: row;
@@ -366,22 +307,21 @@
 }
 
 .bcard-acticon {
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     border-radius: 100px;
     background-color: var(--white);
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: var(--white);
     cursor: pointer;
     user-select: none;
-    box-shadow: 0px 5px 10px rgb(0 0 0 / 13%),
-                0px 0px 0px 2px var(--white);
 }
 
 .bcard-acticon i {
     color: var(--white);
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .bcard-acticon:hover {
@@ -473,7 +413,7 @@
 .bcard-sub-txt {
     font-size: var(--fs-14);
     color: #383838;
-    padding-left: 4px;
+    padding-left: 10px;
 }
 
 .bcard-sub-sec {
@@ -496,7 +436,7 @@
 
 .bcard-prof-smtxt {
     font-size: var(--fs-15);
-    color: var(--white);
+    color: var(--primary-dk);
     opacity: 0.9;
     display: block;
     padding-top: 4px;
@@ -508,8 +448,8 @@
 }
 
 .bcard-frow-subsec {
-    padding-top: 10px;
-    padding-bottom: 7px;
+    padding-top: 7px;
+    padding-bottom: 10px;
     position: relative;
 }
 
@@ -773,7 +713,6 @@
     border-radius: 10px;
     font-weight: 600;
     text-transform: uppercase;
-    text-decoration: none;
 }
 
 .bcard-sec-btn:hover {
@@ -974,7 +913,7 @@ background-color: #25d366;
 
 .bcard-temp-1 {
     background-image: url('../../images/bc-001-bg.svg');
-    background-size: auto;
+    background-size: contain;
     background-repeat: no-repeat;
 }
 
@@ -1011,7 +950,7 @@ background-color: #25d366;
     padding-top: 0px;
     padding-bottom: 70px;
     align-items: flex-start;
-    gap: 10px;
+    grid-area: 10px;
     margin: 0px 7px;
 }
 
@@ -1046,9 +985,6 @@ background-color: #25d366;
     color: var(--primary-dk);
     font-size: var(--fs-17);
 }
-.bcard-temp-2 .bcard-comp{
-    width: 50%;
-}
 .bcard-temp-3 .bcard-profbox {
     display: flex;
     flex-direction: row;
@@ -1056,21 +992,14 @@ background-color: #25d366;
 }
 
 .bcard-temp-3 .bcard-prof {
-    min-width: 120px;
-    width: 120px;
-    height: 120px;
+    width: 130px;
+    height: 130px;
     margin-top: 20px;
    align-self: flex-start;
-   margin-left: 20px;
 }
-.bcard-temp-3 .bcard-comp{
-        width: 250px;
-    margin: 15px auto;
-    height: auto;
-    margin-bottom: 0;
-}
+
 .bcard-temp-3 .bcard-prof-sec {
-    width: calc(100% - 150px);
+    width: 70%;
 }
 .bcard-secbg-me{
 	    width: 800px;
@@ -1088,16 +1017,11 @@ background-color: #25d366;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 11;
-    text-align: left;
-}
-.bcard-temp-3 .bcard-prof-smtxt{
-    text-align: left;
 }
 .bcard-temp-3 .bcard-act {
     margin-top: 20px;
     position: static;
     transform: none;
-    justify-content: flex-start;
 }
 .bcard-sec-full {
 	padding: 0px;
@@ -1115,7 +1039,7 @@ background-color: #25d366;
 .bcard-temp-3bg{
 	 content: "";
     display: block;
-    width: calc(100% + 50px);
+    width: 600px;
     height: 100%;
     z-index: 0;
     position: absolute;
@@ -1137,18 +1061,13 @@ background-color: #25d366;
 	width: 200px;
 	height: 200px;
 }
-.bcard-temp-4 .bcard-comp {
-      min-width: auto;
-    width: 280px;
-    height: auto;
-}
 .bcard-temp-4 .bcard-prof-btxt{
 	background-color: var(--primary-lt);
     color: var(--primary-dk);
 		padding: 7px 10px;
-		border-radius: 8px;
-        border-bottom-left-radius: 0px;
-        border-bottom-right-radius: 0px;
+		border-radius: 7px;
+		border-top-left-radius: 30px;
+		border-bottom-right-radius:30px;
 }
 .bcard-temp-4 .bcard-cont{
 	padding-top: 10px;
@@ -1160,14 +1079,7 @@ background-color: #25d366;
 }
 
 .bcard-temp-4 .bcard-prof-sec{
-	padding-top: 10px;
-}
-.bcard-temp-4 .bcard-prof-smtxt{
-        background-color: #fff5ef;
-    color: var(--primary);
-    padding-bottom: 10px;
-           border-bottom-left-radius: 8px;
-        border-bottom-right-radius: 8px;
+	padding-top: 20px;
 }
 .bcard-ft-logo {
     width: 130px;
@@ -1213,15 +1125,14 @@ background-color: #25d366;
     font-weight: 600;
     min-width: 120px;
     padding: 7px 5px;
-    position: relative;
 }
 
 .abc-sm {
-    min-width: 50px;
+    min-width: 30px;
 }
 
 .abc-lg {
-    min-width: 400px;
+    min-width: 350px;
 }
 
 .abc-th-lbl{

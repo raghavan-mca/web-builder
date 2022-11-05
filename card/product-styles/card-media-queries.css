@@ -42,7 +42,6 @@
     	position: absolute;
     	top: 5px;
     	width: 100px;
-    	font-size: var(--fs-16);
 	}
 	.abc-prev-body{
 		height: calc(100% - 45px);
@@ -74,27 +73,8 @@
 	.abc-lnav-smenu{
 		height: 35px;
 	}
-	.bcard-copyrgt-ft{
-		border-radius: 7px;
-	}
-	.bcard-prof{
-		min-width: 120px;
-		width: 120px;
-		height: 120px;
-	}
-	.bcard-profbox{
-		padding-top: 15px;
-	}
 	html {
 		font-size: 13px !important;
-	}
-	.bcard-comp{
-		min-width: none;
-		width: 280px;
-		height: auto;
-	}
-	.bcard-temp-4 .bcard-profbox{
-		padding-bottom: 30px;
 	}
 }
 
@@ -182,94 +162,8 @@
 
 @media screen and (max-width: 550px ) {
 	.abc-edit-lft{
-		width: 100%;
-		max-width: 100%;
-	}
-	.abc-gbody{
-		/*padding: 7px;*/
-	}
-	.abc-head-lbl{
-		padding-left: 7px;
-	}
-}
-
-@media screen and (max-width:  500px) {
-	.bcard-acticon{
-		width: 25px;
-		height: 25px;
-	}
-	.bcard-acticon i{
-		font-size: 12px;
-	}
-	.bcard-sec{
-		padding: 0px 12px;
-	}
-	.bcard-ft{
-		padding-top: 25px;
-	}
-	.bcard-temp-2{
-		background-image: url('../../images/me-001-smbg.svg');
-		background-position-x: -3px;
-	}
-	.bcard-temp-2 .bcard-prof .bcard-profimg{
-		border: 2px solid var(--white);
-	}
-	.bcard-temp-2 .bcard-prof{
-		width: 77px;
-		min-width: 77px;
-		height: 77px;
-	}
-	.bcard-temp-2 .bcard-prof-sec{
-		width: calc(100% - 87px);
-		left: -2px;
-	}
-	.bcard-temp-2 .bcard-profbox{
-		padding-bottom: 30px;
-	}
-	.bcard-temp-2 .bcard-acticon{
-		width: 20px;
-		height: 20px;
-	}
-	.bcard-prod-cont{
-		gap: 8px;
-	}
-	.bcard-temp-3 .bcard-prof{
-		width: 80px;
-		min-width: 80px;
-		height: 80px;
-	}
-	.bcard-temp-3 .bcard-comp{
-		    width: 250px;
-    margin: 15px auto;
-    height: auto;
-    margin-bottom: 0;
-	}
-	.bcard-temp-3 .bcard-profbox{
-		padding-bottom: 10px;
-	}
-	.bcard-temp-3 .bcard-prof-sec{
-		width: calc(100% - 80px);
-	}
-	.bcard-temp-4 .bcard-prof{
-		width: 100px;
-		min-width: 100px;
-		height: 100px;
-	}
-	.bcard-temp-4 .bcard-comp{
-		    min-width: auto;
-    width: 200px;
-    height: auto;
-	}
-	.bcard-temp-4 .bcard-prof-sec{
-		padding-top: 0px;
-	}
-	.bcard-temp-2 .bcard-comp{
-		    min-width: none;
-    width: 65%;
-    height: auto;
-	}
-	.bcard-temp-2 .bcard-comp .bcard-profimg{
-		border:  none;
+		width: 95%;
+		max-width: 95%;
 	}
 }
 

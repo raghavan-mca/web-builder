@@ -9,10 +9,10 @@
     </title>
     <link rel="stylesheet" type="text/css" href="../product-styles/card-left-nav.css">
     <link rel="stylesheet" type="text/css" href="../product-styles/card-templates.css">
-    <link rel="stylesheet" type="text/css" href="../product-styles/card-web-templates.css">
     <link rel="stylesheet" type="text/css" href="../product-styles/card-general.css">
     <link rel="stylesheet" type="text/css" href="../product-styles/icon-styles.css">
     <link rel="stylesheet" type="text/css" href="../product-styles/card-media-queries.css">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,20 +24,27 @@
         <div class="abc-lnav">
             <div class="abc-nav-prof dn">
                 <div class="abc-ghprof">
-                    <div class="abc-ghprof-imgb">
-                        <img class="abc-ghprof-img" src="../../images/user-prof.png">
+                        <div class="abc-ghprof-imgb">
+                            <img class="abc-ghprof-img" src="../../images/user-prof.png">
+                        </div>
+                        <div>
+                            <div class="abc-ghprof-txt">
+                                John Doe
+                            </div>
+                             <div class="abc-ghprof-subtxt">
+                                johndoe12223@gmail.com
+                            </div>
+                        </div>
+                        
                     </div>
-                    <div class="user-details">
-                    </div>
-                </div>
-                <div class="abc-hlogout">
-                    <div class="abc-gprof-ico">
-                        <i class="fa-solid fa-power-off"></i>
-                    </div>
-                    <div>
-                        Logout
-                    </div>
-                </div>
+                    <div class="abc-hlogout">
+                            <div class="abc-gprof-ico">
+                                <i class="fa-solid fa-power-off"></i>
+                            </div>
+                            <div>
+                                Logout
+                            </div>
+                        </div>
             </div>
             <div class="abc-nav-logo">
                 <img src="../../images/aristos-tech-logo.png" class="abc-logo-img" />
@@ -63,18 +70,25 @@
                         <div class="abc-gburgl">
                         </div>
                     </div>
+                    
                     <div class="abc-htitle" id="page_title">
                     </div>
                 </div>
                 <div class="abc-hrgt">
                     <div class="abc-head-logo dn">
-                        <img src="../../images/aristos-tech-logo.png" class="abc-logo-img" />
+                         <img src="../../images/aristos-tech-logo.png" class="abc-logo-img" />
                     </div>
                     <div class="abc-ghprof">
                         <div class="abc-ghprof-imgb">
                             <img class="abc-ghprof-img" src="../../images/user-prof.png" />
                         </div>
-                        <div class="user-details">
+                        <div>
+                            <div class="abc-ghprof-txt">
+                                John Doe
+                            </div>
+                            <div class="abc-ghprof-subtxt">
+                                johndoe12223@gmail.com
+                            </div>
                         </div>
                         <div class="abc-hlogout">
                             <div class="abc-gprof-ico">
@@ -84,11 +98,14 @@
                                 Logout
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
             <div class="abc-gbody" id="abc_general_body">
                 <div id="template_listing" class="abc-trans-lft">
+
+                   
                 </div>
                 <div class="edit-template-cont dn" id="edit_template">
                 </div>
@@ -97,546 +114,85 @@
             </div>
         </div>
     </div>
-    <div id="contact_page"></div>
-    <div class="auth-notify" id="alerts"></div>
-    <template id="wt_001">
-        <div>
-            <div class="wt-head">
-                <div class="wt-hlogo">
-                    <img src="../../images/aristos-tech-logo-color.png" name="f_logo_1" data-field-name="Logo" class="wt-hlogo-img">
-                </div>
-                <div class="wt-burg" onclick="openLinkNav(this);">
-                    <div class="wt-burg-line"></div>
-                </div>
-                <div class="wt-hlnks">
-                    <div class="wt-hlnk" id="home" onclick="loadLink(this)">
-                        <img class="wt-lnk-ico" src="../../images/house-solid.svg">
-                        <div>
-                            Home    
-                        </div>
-                        
-                    </div>
-                    <div class="wt-hlnk" id="services" onclick="loadLink(this)">
-                        <img class="wt-lnk-ico" src="../../images/handshake.svg">
-                        <div>
-                            Services    
-                        </div>
-                    </div>
-                    <div class="wt-hlnk" id="about" onclick="loadLink(this)">
-                        <img class="wt-lnk-ico" src="../../images/circle-info.svg">
-                        <div>
-                            About    
-                        </div>
-                        
-                    </div>
-                    <div class="wt-hlnk" id="contact" onclick="loadLink(this)">
-                        <img class="wt-lnk-ico" src="../../images/phone-solid.svg">
-                        <div>
-                            Contact    
-                        </div>
-                        
-                    </div>
-                    <div class="wt-hlnk-close" onclick="openLinkNav(this);">
-                    </div>
-                </div>
-            </div>
-            <div class="wt-parent-sec" id="main_sec">
-                <div class="wt-container">
-                    <div class="wt-sec wt-sec-center">
-                        <div class="wt-sec-box">
-                            <span class="wt-lg-txt wt-xlg-txt" name="f_title_1" data-field-name="Title" data-multiline="false">
-                                One Stop Solutions Provider
-                            </span>
-                            <span class="wt-sub-txt wt-xsub-txt" name="f_des_1" data-field-name="Description" data-multiline="true">
-                                We are committed to providing our customers with exceptional service while offering our employees the best training.
-                            </span>
-                            <span class="wt-btn" name="f_btn_1" data-field-name="Button" data-multiline="false">
-                                Get Started Now
-                            </span>
-                        </div>
-                        <div class="wt-sec-box">
-                            <div class="wt-sec-imgb">
-                                <img src="../../images/web-1.svg" name="f_hero_1" data-field-name="Hero Image" class="wt-sec-img">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="wt-sec-padd wt-lt-bg">
-                        <div class="wt-sec-title">
-                            Features
-                        </div>
-                        <div class="wt-fea-sec">
-                            <div class="wt-fea-cont">
-                                <div class="wt-fea-box">
-                                    <div class="wt-fea-icob">
-                                        <img src="../../images/professional-service.svg" name="f_feature_icon__1" data-field-name="Feature Icon 1" class="wt-fea-icon">
-                                    </div>
-                                    <span class="wt-lg-txt" name="f_feature_title__1" data-field-name="Feature Title 1" data-multiline="false">
-                                        WEBSITE DEVELOPMENT
-                                    </span>
-                                    <span class="wt-sub-txt" name="f_feature_des__1" data-field-name="Feature Description 1" data-multiline="true">
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy
-                                    </span>
-                                </div>
-                                <div class="wt-fea-bg"></div>
-                            </div>
-                            <div class="wt-fea-cont">
-                                <div class="wt-fea-box">
-                                    <div class="wt-fea-icob">
-                                        <img src="../../images/professional-service.svg" name="f_feature_icon__2" data-field-name="Feature Icon 2" class="wt-fea-icon">
-                                    </div>
-                                    <span class="wt-lg-txt" name="f_feature_title__2" data-field-name="Feature Title 2" data-multiline="false">
-                                        GRAPHIC DESIGNING
-                                    </span>
-                                    <span class="wt-sub-txt" name="f_feature_des__2" data-field-name="Feature Description 2" data-multiline="true">
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy
-                                    </span>
-                                </div>
-                                <div class="wt-fea-bg"></div>
-                            </div>
-                            <div class="wt-fea-cont">
-                                <div class="wt-fea-box">
-                                    <div class="wt-fea-icob">
-                                        <img src="../../images/professional-service.svg" name="f_feature_icon__3" data-field-name="Feature Icon 3" class="wt-fea-icon">
-                                    </div>
-                                    <span class="wt-lg-txt" name="f_feature_title__3" data-field-name="Feature Title 3" data-multiline="false">
-                                        DIGITAL MARKETING
-                                    </span>
-                                    <span class="wt-sub-txt" name="f_feature_des__3" data-field-name="Feature Description 3" data-multiline="true">
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy
-                                    </span>
-                                </div>
-                                <div class="wt-fea-bg"></div>
-                            </div>
-                            <div class="wt-fea-cont">
-                                <div class="wt-fea-box">
-                                    <div class="wt-fea-icob">
-                                        <img src="../../images/professional-service.svg" name="f_feature_icon__4" data-field-name="Feature Icon 4" class="wt-fea-icon">
-                                    </div>
-                                    <span class="wt-lg-txt" name="f_feature_title__4" data-field-name="Feature Title 4" data-multiline="false">
-                                        SEO & CONTENT WRITING
-                                    </span>
-                                    <span class="wt-sub-txt" name="f_feature_des__4" data-field-name="Feature Description 4" data-multiline="true">
-                                       Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy
-                                    </span>
-                                </div>
-                                <div class="wt-fea-bg"></div>
-                            </div>
-                            <div class="wt-fea-cont">
-                                <div class="wt-fea-box">
-                                    <div class="wt-fea-icob">
-                                        <img src="../../images/professional-service.svg" name="f_feature_icon__5" data-field-name="Feature Icon 5" class="wt-fea-icon">
-                                    </div>
-                                    <span class="wt-lg-txt" name="f_feature_title__5" data-field-name="Feature Title 5" data-multiline="false">
-                                        APP DEVELOPMENT
-                                    </span>
-                                    <span class="wt-sub-txt" name="f_feature_des__5" data-field-name="Feature Description 5" data-multiline="true">
-                                       Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy
-                                    </span>
-                                </div>
-                                <div class="wt-fea-bg"></div>
-                            </div>
-                            <div class="wt-fea-cont">
-                                <div class="wt-fea-box">
-                                    <div class="wt-fea-icob">
-                                        <img src="../../images/professional-service.svg" name="f_feature_icon__6" data-field-name="Feature Icon 6" class="wt-fea-icon">
-                                    </div>
-                                    <span class="wt-lg-txt" name="f_feature_title__6" data-field-name="Feature Title 6" data-multiline="false">
-                                        UI/UX DESIGNING
-                                    </span>
-                                    <span class="wt-sub-txt" name="f_feature_des__6" data-field-name="Feature Description 6" data-multiline="true">
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy
-                                    </span>
-                                </div>
-                                <div class="wt-fea-bg"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="wt-sec-padd">
-                        <div class="wt-sec wt-sec-rev">
-                            <div class="wt-sec-box">
-                                <div class="wt-sec-imgb">
-                                    <img src="../../images/web-1.svg" name="f_sec_img__1" data-field-name="Section Image 1" class="wt-sec-img">
-                                </div>
-                                <div class="wt-img-bg">
-                                </div>
-                            </div>
-                            <div class="wt-sec-box">
-                                <span class="wt-lg-txt" name="f_sec_title__1" data-field-name="Section Title 1" data-multiline="false">
-                                    GREAT THINGS IN BUSINESS ARE NEVER DONE BY ONE PERSON. THEY’RE DONE BY A TEAM OF PEOPLE.
-                                </span>
-                                <div>
-                                    <span class="wt-sub-txt wt-point" name="f_sec_des__1" data-field-name="Description Title 1" data-multiline="true">
-                                        We started from a traditional marketing background and emerged to be a successful Digital Marketing Agency since Digitalisation has begun to evolve.
-                                    </span>
-                                    <span class="wt-sub-txt wt-point" name="f_sec_des__2" data-field-name="Description Title 2" data-multiline="true">
-                                        Aristos is dedicated to studying about and capable of understanding your business needs, Let it be Digital Marketing, SEO and Content writing, Web Designing, Graphic Designing.
-                                    </span>
-                                    <span class="wt-sub-txt wt-point" name="f_sec_des__3" data-field-name="Description Title 3" data-multiline="true">
-                                        Our marketing campaigns is designed with the client needs in mind, in order to solve the most difficult marketing problems and competition.
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="wt-parent-sec dn" id="services_sec">
-                <div class="wt-sec-padd ">
-                    <div class="wt-sec-title">
-                        Services We Offer
-                    </div>
-                    <div>
-                        <div class="wt-service-sec">
-                            <div class="wt-serv-box">
-                                <div class="wt-fea-icob">
-                                    <img src="../../images/message.svg" name="f_service_icon__1" data-field-name="Services Icon 1" class="wt-fea-icon">
-                                </div>
-                                <div class="wt-serv-subsec">
-                                    <span class="wt-lg-txt" name="f_service_title__1" data-field-name="Services Title 1" data-multiline="false">
-                                        MODERN DESIGNING
-                                    </span>
-                                    <span class="wt-sub-txt" name="f_service_des__1" data-field-name="Services Description 1" data-multiline="true">
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s,
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="wt-serv-box">
-                                <div class="wt-fea-icob">
-                                    <img src="../../images/message.svg" name="f_service_icon__2" data-field-name="Services Icon 2" class="wt-fea-icon">
-                                </div>
-                                <div class="wt-serv-subsec">
-                                    <span class="wt-lg-txt" name="f_service_title__2" data-field-name="Services Title 2" data-multiline="false">
-                                        MARKETING STRATEGY
-                                    </span>
-                                    <span class="wt-sub-txt" name="f_service_des__2" data-field-name="Services Description 2" data-multiline="true">
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s,
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="wt-service-sec">
-                            <div class="wt-serv-box">
-                                <div class="wt-fea-icob">
-                                    <img src="../../images/message.svg" name="f_service_icon__3" data-field-name="Services Icon 3" class="wt-fea-icon">
-                                </div>
-                                <div class="wt-serv-subsec">
-                                    <span class="wt-lg-txt" name="f_service_title__3" data-field-name="Services Title 3" data-multiline="false">
-                                        DIGITAL PRODUCTS
-                                    </span>
-                                    <span class="wt-sub-txt" name="f_service_des__3" data-field-name="Services Description 3" data-multiline="true">
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s,
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="wt-serv-box">
-                                <div class="wt-fea-icob">
-                                    <img src="../../images/message.svg" name="f_service_icon__4" data-field-name="Services Icon 4" class="wt-fea-icon">
-                                </div>
-                                <div class="wt-serv-subsec">
-                                    <span class="wt-lg-txt" name="f_service_title__4" data-field-name="Services Title 4" data-multiline="false">
-                                        WEBSITE DEVELOPMENT
-                                    </span>
-                                    <span class="wt-sub-txt" name="f_service_des__4" data-field-name="Services Description 4" data-multiline="true">
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s,
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="wt-parent-sec dn" id="contact_sec">
-                <div class="wt-contact">
-                    <div class="bcard-sec">
-                        <div class="wt-sec-title">
-                            Contact Us
-                        </div>
-                        <div class="bcard-sub-sec">
-                            <div class="bcard-frm-sec">
-                                <div class="bcard-frm-btxt">
-                                    FirstName
-                                </div>
-                                <div class="bcard-frm-inpb">
-                                    <input placeholder="FirstName" type="text" class="bcard-frm-inp" />
-                                </div>
-                            </div>
-                            <div class="bcard-inp-sec">
-                                <div class="bcard-frm-sec bcard-frm-half">
-                                    <div class="bcard-frm-btxt">
-                                        Mobile Number
-                                    </div>
-                                    <div class="bcard-frm-inpb">
-                                        <input placeholder="Mobile No" type="text" class="bcard-frm-inp" />
-                                    </div>
-                                </div>
-                                <div class="bcard-frm-sec bcard-frm-half">
-                                    <div class="bcard-frm-btxt">
-                                        Email
-                                    </div>
-                                    <div class="bcard-frm-inpb">
-                                        <input placeholder="Email" type="text" class="bcard-frm-inp" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="bcard-frm-sec">
-                                <div class="bcard-frm-btxt">
-                                    Message
-                                </div>
-                                <div class="bcard-frm-inpb">
-                                    <input placeholder="Message" type="text" class="bcard-frm-inp" />
-                                </div>
-                            </div>
-                            <div class="bcard-btn">
-                                Submit
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="wt-parent-sec dn" id="about_sec">
-                <div class="wt-sec-title">
-                    About Us
-                </div>
-                <div class="wt-sec ">
-                    <div class="wt-sec-box">
-                        <span class="wt-lg-txt wt-xlg-txt" name="f_title_2" data-field-name="Title" data-multiline="false">
-                            One Stop Solutions Provider
-                        </span>
-                        <span class="wt-sub-txt wt-xsub-txt" name="f_des_2" data-field-name="Description" data-multiline="true">
-                            We are committed to providing our customers with exceptional service while offering our employees the best training.
-                        </span>
-                        <span class="wt-sub-txt wt-xsub-txt" name="f_des_3" data-field-name="Description" data-multiline="true">
-                            Aristos is dedicated to studying about and capable of understanding your business needs, Let it be Digital Marketing, SEO and Content writing, Web Designing, Graphic Designing, App Development, UI and UX design. We can ensure that our marketing strategy and cutting-edge design is built with the sole purpose of solving the problems your businesses face by developing relationships with each of our clients. Each of our marketing campaigns is designed with the client needs in mind, in order to solve the most difficult marketing problems and competition.
-                        </span>
-                        <div>
-                            <span class="wt-sub-txt wt-point" name="f_sec_des__4" data-field-name="Description Title 4" data-multiline="true">
-                                We started from a traditional marketing background and emerged to be a successful Digital Marketing Agency since Digitalisation has begun to evolve.
-                            </span>
-                            <span class="wt-sub-txt wt-point" name="f_sec_des__5" data-field-name="Description Title 5" data-multiline="true">
-                                Aristos is dedicated to studying about and capable of understanding your business needs, Let it be Digital Marketing, SEO and Content writing, Web Designing, Graphic Designing, App Development, UI and UX design.
-                            </span>
-                            <span class="wt-sub-txt wt-point" name="f_sec_des__6" data-field-name="Description Title 6" data-multiline="true">
-                                Our marketing campaigns is designed with the client needs in mind, in order to solve the most difficult marketing problems and competition.
-                            </span>
-                        </div>
-                    </div>
-                    <div class="wt-sec-box">
-                        <div class="wt-sec-imgb">
-                            <img src="../../images/web-1.svg" name="f_hero_2" data-field-name="About Image 1" class="wt-sec-img">
-                             <div class="wt-img-bg2">
-                            </div>
-                        </div>
-                        <div class="wt-sec-imgb wt-sec-imgb-2">
-                            <img src="../../images/web-2.svg" name="f_hero_3" data-field-name="About Image 2" class="wt-sec-img">
-                             <div class="wt-img-bg3">
-                            </div>
-                        </div>
-                       
-                    </div>
-                </div>
-            </div>
-            <div class="wt-ft">
-                <div class="wt-ft-sec">
-                    <div class="wt-hlogo">
-                        <img src="../../images/aristos-tech-logo-color.png" name="f_logo_2" data-field-name="Logo" class="wt-hlogo-img">
-                    </div>
-                    <div class="wt-ft-subsec">
-                        <div class="wt-hlnk" id="home" onclick="loadLink(this)">
-                            Home
-                        </div>
-                        <div class="wt-hlnk" id="services" onclick="loadLink(this)">
-                            Services
-                        </div>
-                        <div class="wt-hlnk" id="about" onclick="loadLink(this)">
-                            About
-                        </div>
-                        <div class="wt-hlnk" id="contact" onclick="loadLink(this)">
-                            Contact
-                        </div>
-                    </div>
-                    <div class="wt-ft-subsec">
-                            <div class="wt-ft-secrow">
-                                <i class="fa-solid fa-location-dot"></i>
-                                <span class="wt-sub-txt" name="f_address" data-field-name="Company Address" data-multiline="true">
-                                    Plot No 18, Ganga Nagar , CHENNAI TAMIL NADU - 602025
-                                </span>
-                            </div>
-                            <a target="_blank" name="f_email" href="mailto:johndoe123@gmail.com" data-sm="true" data-field-name="Company Email" class="wt-ft-secrow">
-                                <i class="fa-solid fa-envelope"></i>
-                                <div>
-                                    johndoe123@gmail.com    
-                                </div>
-                            </a>
-                            <a target="_blank" name="f_ph" href="tel:4353446456544" data-sm="true" data-field-name="Company Contact No" class="wt-ft-secrow">
-                               <i class="fa-solid fa-phone"></i>
-                               <div>
-                                    4353446456544    
-                               </div>
-                            </a>
-                    </div>
-                </div>
-                <span class="wt-ft-txt" name="f_copyrgt_txt" data-field-name="Copyright " data-multiline="false">
-                    CopyRight Reserved &copy; 2022
-                </span>
-            </div>
-        </div>
-        <style>
-            :root {
-                --primary: #3794e9;
-                --primary-lt: #f1f8ff;
-                --primary-dk:  #002f5a;
-                --white:#ffffff;
-                --gry-lt:  #f9f9f9;
-                --gry: #efefef;
-                --gry-dk:  #6e6e6e;
-            }
 
-            * {
-                margin: 0px;
-                padding: 0px;
-                box-sizing: border-box;
-            }
-
-            html {
-                font-size: 15px;
-            }
-
-            body {
-                padding: 0px;
-                margin: 0px;
-            }
-
-            .bcard-temp-4[data-theme="ts_001"]{
-                --primary: #f58646;
-                --primary-dk: #BA4605;
-                --primary-lt: #FFF5EF;
-            }
-            </style>
-        <script type="text/javascript">
-        function loadLink(e) {
-            let links = document.querySelectorAll('.wt-hlnk');
-            for (let j = 0; j < links.length; j++) {
-                links[j].classList.remove('wt-lactive');
-            }
-            console.log(document.querySelectorAll('.wt-hlnk'));
-            console.log(event.currentTarget)
-            event.currentTarget.classList.add('wt-lactive');
-            if (event.currentTarget.attributes[1].value === 'contact') {
-                document.getElementById('contact_sec').classList.remove('dn');
-
-                document.getElementById('main_sec').classList.add('dn');
-                document.getElementById('services_sec').classList.add('dn');
-                document.getElementById('about_sec').classList.add('dn');
-
-            } else if (event.currentTarget.attributes[1].value === 'home') {
-                document.getElementById('main_sec').classList.remove('dn');
-
-                document.getElementById('contact_sec').classList.add('dn');
-                document.getElementById('services_sec').classList.add('dn');
-                document.getElementById('about_sec').classList.add('dn');
-            } else if (event.currentTarget.attributes[1].value === 'services') {
-                document.getElementById('services_sec').classList.remove('dn');
-
-                document.getElementById('contact_sec').classList.add('dn');
-                document.getElementById('main_sec').classList.add('dn');
-                document.getElementById('about_sec').classList.add('dn');
-            } else if (event.currentTarget.attributes[1].value === 'about') {
-                document.getElementById('about_sec').classList.remove('dn');
-
-                document.getElementById('contact_sec').classList.add('dn');
-                document.getElementById('main_sec').classList.add('dn');
-                document.getElementById('services_sec').classList.add('dn');
-            }
-
-        }
-        function openLinkNav(e) {
-            $('.wt-hlnks').toggleClass('df');
-        }
-        </script>
-    </template>
     <template id="ts_001">
         <div class="bcard-parent">
             <div class="bcard-box bcard-temp-4" data-theme="ts_001">
                 <a id="Home"></a>
                 <div class="bcard-profbox">
-                     <div class="bcard-prof bcard-comp">
-                        <img src="../../images/aristos-tech-logo.png" name="f_company_img" data-field-name="Company Logo" class="bcard-profimg bcard-compimg">
-                    </div>
+
                     <div class="bcard-prof">
-                        <img src="../../images/user-prof.png" name="f_prof_img" data-field-name="Profile" class="bcard-profimg">
+                        <img src="../../images/user-prof.png" name="f-prof-img" data-field-name="Company Logo" class="bcard-profimg">
                     </div>
                     <div class="bcard-prof-sec">
                         <div>
-                            <span class="bcard-prof-btxt" name="f_prof_name" data-field-name="Profile Name" data-multiline="false">
-                                Jayakumar.V
-                            </span>
-                            <span class="bcard-prof-smtxt" name="f_prof_profession" data-field-name="Profession" data-multiline="false">
-                                Product Consultant
+                            <span class="bcard-prof-btxt" name="f-company-name" data-field-name="Company Name" data-multiline="false">
+                                ABC Manufacturers
                             </span>
                         </div>
+                        
                     </div>
                     <div class="bcard-act">
-                        <div class="bcard-acticon ico-fb">
-                            <a target="_blank" name="f_fb" href="https://hogwartsecret003@gmail.wizard" data-sm="true" data-field-name='Facebook'>
-                                <i class="fa-brands fa-facebook-f"></i>
-                            </a>
+                            <div class="bcard-acticon ico-fb">
+                                <a target="_blank" name="f-fb" href="https://hogwartsecret003@gmail.wizard" data-sm="true" data-field-name='Facebook'>
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                            </div>
+                            <div class="bcard-acticon ico-whatsapp">
+                                <a target="_blank" name="f-whatsapp" href="https://wa.me/+91343434353" data-sm="true" data-field-name='Whatsapp'>
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </a>
+                            </div>
+                            <div class="bcard-acticon ico-insta">
+                                <a target="_blank" name="f-insta" href="https://hogwartsecret003@gmail.wizard" data-sm="true" data-field-name='Instagram'>
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                            </div>
                         </div>
-                        <div class="bcard-acticon ico-whatsapp">
-                            <a target="_blank" name="f_whatsapp" href="https://wa.me/+91343434353" data-sm="true" data-field-name='Whatsapp'>
-                                <i class="fa-brands fa-whatsapp"></i>
-                            </a>
-                        </div>
-                        <div class="bcard-acticon ico-insta">
-                            <a target="_blank" name="f_insta" href="https://hogwartsecret003@gmail.wizard" data-sm="true" data-field-name='Instagram'>
-                                <i class="fa-brands fa-instagram"></i>
-                            </a>
-                        </div>
-                        <div class="bcard-acticon ico-tw">
-                            <a target="_blank" name="f_twitter" href="https://hogwartsecret003@gmail.wizard" data-sm="true" data-field-name='Twitter'>
-                                <i class="fa-brands fa-twitter"></i>
-                            </a>
-                        </div>
-                    </div>
                 </div>
                 <div class="bcard-cont">
                     <div class="bcard-sec">
+                       
                         <div class="bcard-padd">
                             <div class="bcard-frow-subsec">
-                                <span class="bcard-btxt" name="f_company_name" data-field-name="Company Name" data-multiline="false">
-                                  ARISTOS TECH
+                                <span class="bcard-btxt" name="f-prof-name" data-field-name="Profile Name" data-multiline="false">
+                                    John Doe
                                 </span>
-                                
+                                <span class="bcard-prof-smtxt" name="f-prof-profession" data-field-name="Profession" data-multiline="false">
+                                    Product Consultant
+                                </span>
                             </div>
-                            <a target="_blank" name="f_phone" href="tel:+919344482370" data-sm="true" data-field-name='Phone No' class="bcard-frow-sec">
+                             <a target="_blank" name="f-phone" href="tel:+91343434353" data-sm="true" data-field-name='Phone No' class="bcard-frow-sec">
+
+                                    <div class="bcard-smico-sec">
+                                        <i class="fa-solid fa-phone"></i>
+                                    </div>
+                                    <div class="bcard-sub-txt">
+                                            +91 93843437843
+                                    </div>
+                            </a>
+                            <a target="_blank" name="f-website" href="https://www.hogwartsecret003.wizard" data-sm="true" data-field-name='Website' class="bcard-frow-sec">
                                 <div class="bcard-smico-sec">
-                                    <i class="fa-solid fa-phone"></i>
+                                     <i class="fa-solid fa-globe"></i>
                                 </div>
                                 <div class="bcard-sub-txt">
-                                    +91 9344482370
+                                     https://www.hogwartsecret003.wizard
                                 </div>
                             </a>
-                            <a target="_blank" name="f_website" href="https://www.aristostech.in/" data-sm="true" data-field-name='Website' class="bcard-frow-sec">
-                                <div class="bcard-smico-sec">
-                                    <i class="fa-solid fa-globe"></i>
-                                </div>
-                                <div class="bcard-sub-txt">
-                                    https://www.aristostech.in/
-                                </div>
-                            </a>
-                            <a target="_blank" name="f_email" href="mailto:jayakumarv@ssbcs.in" data-sm="true" data-field-name='Email' class="bcard-frow-sec">
+                            <a target="_blank" name="f-email" href="mailto:johndoe123@email.com" data-sm="true" data-field-name='Email' class="bcard-frow-sec">
                                 <div class="bcard-smico-sec">
                                     <i class="fa-solid fa-envelope"></i>
                                 </div>
                                 <div class="bcard-sub-txt">
-                                    jayakumarv@ssbcs.in
+                                        johndoe123@email.com
                                 </div>
                             </a>
-                            <a target="_blank" name="f_location" href="https://g.co/kgs/K5FDnY" data-sm="true" data-field-name='Location' class="bcard-frow-sec">
+                            <a target="_blank" name="f-location" href="https://gog.lcoation/" data-sm="true" data-field-name='Location' class="bcard-frow-sec">
                                 <div class="bcard-smico-sec">
                                     <i class="fa-sharp fa-solid fa-location-dot"></i>
                                 </div>
                                 <div class="bcard-sub-txt">
-                                    https://g.co/kgs/K5FDnY
+                                    https://gog.lcoation/
                                 </div>
                             </a>
                             <div class="bcard-ph-sec">
@@ -651,20 +207,18 @@
                     </div>
                     <div class="bcard-sec">
                         <a id="About">
-                            <span class="bcard-btxt" name="f_about_title" data-field-name="About Title" data-multiline="false">
+                            <span class="bcard-btxt" name="f-about-title" data-field-name="About Title" data-multiline="false">
                                 About
                             </span>
                             <div class="bcard-sub-sec">
                                 <div>
-                                    <span class="bcard-sub-lbl" name="f_about_txt_1" data-field-name="About Section 1" data-multiline="false">
-                                        We started from a traditional marketing background and emerged to be a successful 
-Digital Marketing Agency since Digitalisation has begun to evolve.
+                                    <span class="bcard-sub-lbl" name="f-about-txt-1" data-field-name="About Section 1" data-multiline="false">
+                                        We are the Wizards!
                                     </span>
                                 </div>
                                 <div>
-                                    <span class="bcard-sub-lbl" name="f_about_txt_2" data-field-name="About Section 2" data-multiline="true">
-                                        Aristos is dedicated to studying about and capable of 
-understanding your business needs, Let it be Digital Marketing, SEO and Content writing
+                                    <span class="bcard-sub-lbl" name="f-about-txt-2" data-field-name="About Section 2" data-multiline="true">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
                                     </span>
                                 </div>
                             </div>
@@ -672,20 +226,18 @@ understanding your business needs, Let it be Digital Marketing, SEO and Content 
                     </div>
                     <div class="bcard-sec">
                         <a id="Services">
-                            <span class="bcard-btxt" name="f_services_title" data-field-name="Services Title" data-multiline="false">
+                            <span class="bcard-btxt" name="f-services-title" data-field-name="Services Title" data-multiline="false">
                                 Services
                             </span>
                             <div class="bcard-sub-sec">
                                 <div>
-                                    <span class="bcard-sub-lbl" name="f_services_txt_1" data-field-name="Services Section 1" data-multiline="false">
-                                        Business Analytics tools help you to perform the tasks 
-at hand and generate reports which may be easy for a layman to understand.
+                                    <span class="bcard-sub-lbl" name="f-services-txt-1" data-field-name="Services Section 1" data-multiline="false">
+                                        We are the Wizards!
                                     </span>
                                 </div>
                                 <div>
-                                    <span class="bcard-sub-lbl" name="f_services_txt_2" data-field-name="Services Section 2" data-multiline="true">
-                                       We do domain registration, business websites, individual 
-websites, online shopping websites, business email, website management, etc.
+                                    <span class="bcard-sub-lbl" name="f-services-txt-2" data-field-name="Services Section 2" data-multiline="true">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
                                     </span>
                                 </div>
                             </div>
@@ -693,15 +245,15 @@ websites, online shopping websites, business email, website management, etc.
                     </div>
                     <div class="bcard-sec">
                         <a id="Products">
-                            <span class="bcard-btxt" name="f_products_title" data-field-name="Products Title" data-multiline="false">
+                             <span class="bcard-btxt" name="f-products-title" data-field-name="Products Title" data-multiline="false">
                                 Our Products
                             </span>
                             <div class="bcard-prod-cont">
                                 <div class="bcard-prod-imgb">
-                                    <img class="bcard-prod-img" name="f_prod_img1" data-field-name="Watches" src='../../images/product-img1.jpg' />
+                                        <img class="bcard-prod-img" name="f-prod-img1" data-field-name="Watches" src='../../images/product-img1.jpg' />
                                 </div>
                                 <div class="bcard-prod-imgb">
-                                    <img class="bcard-prod-img" name="f_prod_img2" data-field-name="Smart Watches" src='../../images/product-img2.jpg' />
+                                        <img class="bcard-prod-img" name="f-prod-img2" data-field-name="Smart Watches" src='../../images/product-img2.jpg' />
                                 </div>
                             </div>
                         </a>
@@ -753,59 +305,59 @@ websites, online shopping websites, business email, website management, etc.
                         </a>
                     </div>
                     <div class="bcard-sec bcard-ft">
-                        <span class="bcard-ft-btxt" name="f_address" data-field-name="Address" data-multiline="true">
-                           Address: Plot No 18, Ganga Nagar , CHENNAI TAMIL NADU - 602025
+                        <span class="bcard-ft-btxt" name="f-address" data-field-name="Address" data-multiline="true">
+                            Address - No:120, ABC Tech, K Street, Chennai,
                         </span>
-                        <span class="bcard-ft-btxt" name="f_phno" data-field-name="Contact" data-multiline="false">
-                            Contact: +919344482370
+                        <span class="bcard-ft-btxt" name="f-phno" data-field-name="Contact" data-multiline="false">
+                            Contact: 91 3234548745
                         </span>
-                        <span class="bcard-ft-lbl" name="f_copyright" data-field-name="Copyright" data-multiline="false">
-                            CopyRights Reserved &copy; Aristos Tech 2022
+                        <span class="bcard-ft-lbl" name="f-copyright" data-field-name="Copyright" data-multiline="false">
+                            CopyRights Reserved &copy; ABC Tech 2022
                         </span>
                     </div>
                     <div class="bcard-copyrgt-ft">
                         Designed & Developed by
-                        <div class="bcard-ft-logo">
+                         <div class="bcard-ft-logo">
                             <div class="bcard-ft-img">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="bcard-opt-fix">
-                <a href="#Home" class="bcard-opt">
-                    <div class="bcard-opt-ico">
-                        <i class="fa-solid fa-house-chimney"></i>
-                    </div>
-                    <div class="bcard-opt-txt">
-                        Home
-                    </div>
-                </a>
-                <a href="#About" class="bcard-opt">
-                    <div class="bcard-opt-ico">
-                        <i class="fa-solid fa-circle-info"></i>
-                    </div>
-                    <div class="bcard-opt-txt">
-                        About
-                    </div>
-                </a>
-                <a href="#Services" class="bcard-opt">
-                    <div class="bcard-opt-ico">
-                        <i class="fa-solid fa-hand-holding-hand"></i>
-                    </div>
-                    <div class="bcard-opt-txt">
-                        Services
-                    </div>
-                </a>
-                <a href="#Enquiry" class="bcard-opt">
-                    <div class="bcard-opt-ico">
-                        <i class="fa-solid fa-comment"></i>
-                    </div>
-                    <div class="bcard-opt-txt">
-                        Enquiry
-                    </div>
-                </a>
-            </div>
+             <div class="bcard-opt-fix">
+                    <a href="#Home" class="bcard-opt">
+                        <div class="bcard-opt-ico">
+                            <i class="fa-solid fa-house-chimney"></i>
+                        </div>
+                        <div class="bcard-opt-txt">
+                            Home
+                        </div>
+                    </a>
+                    <a href="#About" class="bcard-opt">
+                        <div class="bcard-opt-ico">
+                            <i class="fa-solid fa-circle-info"></i>
+                        </div>
+                        <div class="bcard-opt-txt">
+                            About
+                        </div>
+                    </a>
+                    <a href="#Services" class="bcard-opt">
+                        <div class="bcard-opt-ico">
+                            <i class="fa-solid fa-hand-holding-hand"></i>
+                        </div>
+                        <div class="bcard-opt-txt">
+                            Services
+                        </div>
+                    </a>
+                    <a href="#Enquiry" class="bcard-opt">
+                        <div class="bcard-opt-ico">
+                            <i class="fa-solid fa-comment"></i>
+                        </div>
+                        <div class="bcard-opt-txt">
+                            Enquiry
+                        </div>
+                    </a>
+                </div>
         </div>
         <style>
             :root {
@@ -840,51 +392,36 @@ websites, online shopping websites, business email, website management, etc.
                             }
             </style>
     </template>
+    
+
     <template id="sp_001">
         <div class="bcard-parent">
             <div class="bcard-box bcard-temp-3" data-theme="sp_001">
                 <a id="Home"></a>
-                <div class="bcard-prof bcard-comp">
-                        <img src="../../images/aristos-tech-logo.png" name="f_company_img" data-field-name="Company Logo" class="bcard-profimg bcard-compimg">
-                    </div>
                 <div class="bcard-profbox">
-
                     <div class="bcard-prof">
-                        <img src="../../images/user-prof.png" name="f_prof_img" data-field-name="Profile" class="bcard-profimg">
+                        <img src="../../images/user-prof.png" name="f-prof-img" data-field-name="Company Logo" class="bcard-profimg">
                     </div>
                     <div class="bcard-prof-sec">
                         <div>
-                            <span class="bcard-prof-btxt" name="f_prof_name" data-field-name="Profile Name" data-multiline="false">
-                                Jayakumar.V
-                            </span>
-                             <span class="bcard-prof-smtxt" name="f_prof_profession" data-field-name="Profession" data-multiline="false">
-                                Business Consultant
+                            <span class="bcard-prof-btxt" name="f-company-name" data-field-name="Company Name" data-multiline="false">
+                                ABC Manufacturers
                             </span>
                         </div>
                         <div class="bcard-act">
                             <div class="bcard-acticon ico-fb">
-                                <a target="_blank" name="f_fb" href="https://www.facebook.com/Webtoday-Technologies-103827488758307/" data-sm="true" data-field-name='Facebook'>
+                                <a target="_blank" name="f-fb" href="https://hogwartsecret003@gmail.wizard" data-sm="true" data-field-name='Facebook'>
                                     <i class="fa-brands fa-facebook-f"></i>
                                 </a>
                             </div>
                             <div class="bcard-acticon ico-whatsapp">
-                                <a target="_blank" name="f_whatsapp" href="https://wa.me/+919344482370" data-sm="true" data-field-name='Whatsapp'>
+                                <a target="_blank" name="f-whatsapp" href="https://wa.me/+91343434353" data-sm="true" data-field-name='Whatsapp'>
                                     <i class="fa-brands fa-whatsapp"></i>
                                 </a>
                             </div>
                             <div class="bcard-acticon ico-insta">
-                                <a target="_blank" name="f_insta" href="#" data-sm="true" data-field-name='Instagram'>
+                                <a target="_blank" name="f-insta" href="https://hogwartsecret003@gmail.wizard" data-sm="true" data-field-name='Instagram'>
                                     <i class="fa-brands fa-instagram"></i>
-                                </a>
-                            </div>
-                            <div class="bcard-acticon ico-tw">
-                                <a target="_blank" name="f_twitter" href="#" data-sm="true" data-field-name='Twitter'>
-                                    <i class="fa-brands fa-twitter"></i>
-                                </a>
-                            </div>
-                            <div class="bcard-acticon ico-linked">
-                                <a target="_blank" name="f_linked" href="#" data-sm="true" data-field-name='Linked In'>
-                                    <i class="fa-brands fa-linkedin-in"></i>
                                 </a>
                             </div>
                         </div>
@@ -893,43 +430,48 @@ websites, online shopping websites, business email, website management, etc.
                 <div class="bcard-cont">
                     <div class="bcard-sec-full">
                         <div class="bcard-temp-3bg">
+                            
                         </div>
                         <div class="bcard-padd">
                             <div class="bcard-frow-subsec">
-                                <span class="bcard-btxt" name="f_company_name" data-field-name="Company Name" data-multiline="false">
-                                    ARISTOS TECH
+                                <span class="bcard-btxt" name="f-prof-name" data-field-name="Profile Name" data-multiline="false">
+                                    John Doe
+                                </span>
+                                <span class="bcard-prof-smtxt" name="f-prof-profession" data-field-name="Profession" data-multiline="false">
+                                    Product Consultant
                                 </span>
                             </div>
-                            <a target="_blank" name="f_phone" href="tel:+91343434353" data-sm="true" data-field-name='Phone No' class="bcard-frow-sec">
+                             <a target="_blank" name="f-phone" href="tel:+91343434353" data-sm="true" data-field-name='Phone No' class="bcard-frow-sec">
+
+                                    <div class="bcard-smico-sec">
+                                        <i class="fa-solid fa-phone"></i>
+                                    </div>
+                                    <div class="bcard-sub-txt">
+                                            +91 93843437843
+                                    </div>
+                            </a>
+                            <a target="_blank" name="f-website" href="https://www.hogwartsecret003.wizard" data-sm="true" data-field-name='Website' class="bcard-frow-sec">
                                 <div class="bcard-smico-sec">
-                                    <i class="fa-solid fa-phone"></i>
+                                     <i class="fa-solid fa-globe"></i>
                                 </div>
                                 <div class="bcard-sub-txt">
-                                    +919344482370
+                                     https://www.hogwartsecret003.wizard
                                 </div>
                             </a>
-                            <a target="_blank" name="f_website" href="https://www.aristostech.in/" data-sm="true" data-field-name='Website' class="bcard-frow-sec">
-                                <div class="bcard-smico-sec">
-                                    <i class="fa-solid fa-globe"></i>
-                                </div>
-                                <div class="bcard-sub-txt">
-                                    https://www.aristostech.in/
-                                </div>
-                            </a>
-                            <a target="_blank" name="f_email" href="mailto:jayakumarv@ssbcs.in" data-sm="true" data-field-name='Email' class="bcard-frow-sec">
+                            <a target="_blank" name="f-email" href="mailto:johndoe123@email.com" data-sm="true" data-field-name='Email' class="bcard-frow-sec">
                                 <div class="bcard-smico-sec">
                                     <i class="fa-solid fa-envelope"></i>
                                 </div>
                                 <div class="bcard-sub-txt">
-                                    jayakumarv@ssbcs.in
+                                        johndoe123@email.com
                                 </div>
                             </a>
-                            <a target="_blank" name="f_location" href="https://g.co/kgs/K5FDnY" data-sm="true" data-field-name='Location' class="bcard-frow-sec">
+                            <a target="_blank" name="f-location" href="https://gog.lcoation/" data-sm="true" data-field-name='Location' class="bcard-frow-sec">
                                 <div class="bcard-smico-sec">
                                     <i class="fa-sharp fa-solid fa-location-dot"></i>
                                 </div>
                                 <div class="bcard-sub-txt">
-                                    https://g.co/kgs/K5FDnY
+                                    https://gog.lcoation/
                                 </div>
                             </a>
                             <div class="bcard-ph-sec">
@@ -944,20 +486,18 @@ websites, online shopping websites, business email, website management, etc.
                     </div>
                     <div class="bcard-sec">
                         <a id="About">
-                            <span class="bcard-btxt" name="f_about_title" data-field-name="About Title" data-multiline="false">
+                            <span class="bcard-btxt" name="f-about-title" data-field-name="About Title" data-multiline="false">
                                 About
                             </span>
                             <div class="bcard-sub-sec">
                                 <div>
-                                    <span class="bcard-sub-lbl" name="f_about_txt_1" data-field-name="About Section 1" data-multiline="false">
-                                        We started from a traditional marketing background and emerged to be a successful 
-                                        Digital Marketing Agency since Digitalisation has begun to evolve.
+                                    <span class="bcard-sub-lbl" name="f-about-txt-1" data-field-name="About Section 1" data-multiline="false">
+                                        We are the Wizards!
                                     </span>
                                 </div>
                                 <div>
-                                    <span class="bcard-sub-lbl" name="f_about_txt_2" data-field-name="About Section 2" data-multiline="true">
-                                       Aristos is dedicated to studying about and capable of 
-understanding your business needs, Let it be Digital Marketing, SEO and Content writing
+                                    <span class="bcard-sub-lbl" name="f-about-txt-2" data-field-name="About Section 2" data-multiline="true">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
                                     </span>
                                 </div>
                             </div>
@@ -965,26 +505,24 @@ understanding your business needs, Let it be Digital Marketing, SEO and Content 
                     </div>
                     <div class="bcard-sec">
                         <a id="Services">
-                            <span class="bcard-btxt" name="f_services_title" data-field-name="Services Title" data-multiline="false">
+                            <span class="bcard-btxt" name="f-services-title" data-field-name="Services Title" data-multiline="false">
                                 Services
                             </span>
                             <div class="bcard-sub-sec">
                                 <div>
-                                    <span class="bcard-sub-lbl" name="f_services_txt_1" data-field-name="Services Section 1" data-multiline="false">
-                                        Business Analytics tools help you to perform the tasks 
-at hand and generate reports which may be easy for a layman to understand.
+                                    <span class="bcard-sub-lbl" name="f-services-txt-1" data-field-name="Services Section 1" data-multiline="false">
+                                        We are the Wizards!
                                     </span>
                                 </div>
                                 <div>
-                                    <span class="bcard-sub-lbl" name="f_services_txt_2" data-field-name="Services Section 2" data-multiline="true">
-                                        
-We do domain registration, business websites, individual 
-websites, online shopping websites, business email, website management, etc.
+                                    <span class="bcard-sub-lbl" name="f-services-txt-2" data-field-name="Services Section 2" data-multiline="true">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
                                     </span>
                                 </div>
                             </div>
                         </a>
                     </div>
+              
                     <div class="bcard-sec">
                         <a id="Enquiry">
                             <div class="bcard-btxt">
@@ -1032,59 +570,59 @@ websites, online shopping websites, business email, website management, etc.
                         </a>
                     </div>
                     <div class="bcard-sec bcard-ft">
-                        <span class="bcard-ft-btxt" name="f_address" data-field-name="Address" data-multiline="true">
-                           Address: Plot No 18, Ganga Nagar , CHENNAI TAMIL NADU - 602025
+                        <span class="bcard-ft-btxt" name="f-address" data-field-name="Address" data-multiline="true">
+                            Address - No:120, ABC Tech, K Street, Chennai,
                         </span>
-                        <span class="bcard-ft-btxt" name="f_phno" data-field-name="Contact" data-multiline="false">
-                            Contact:+919344482370
+                        <span class="bcard-ft-btxt" name="f-phno" data-field-name="Contact" data-multiline="false">
+                            Contact: 91 3234548745
                         </span>
-                        <span class="bcard-ft-lbl" name="f_copyright" data-field-name="Copyright" data-multiline="false">
-                            CopyRights Reserved &copy; Aristos Tech 2022
+                        <span class="bcard-ft-lbl" name="f-copyright" data-field-name="Copyright" data-multiline="false">
+                            CopyRights Reserved &copy; ABC Tech 2022
                         </span>
                     </div>
                     <div class="bcard-copyrgt-ft">
                         Designed & Developed by
-                        <div class="bcard-ft-logo">
+                          <div class="bcard-ft-logo">
                             <div class="bcard-ft-img">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="bcard-opt-fix">
-                <a href="#Home" class="bcard-opt">
-                    <div class="bcard-opt-ico">
-                        <i class="fa-solid fa-house-chimney"></i>
-                    </div>
-                    <div class="bcard-opt-txt">
-                        Home
-                    </div>
-                </a>
-                <a href="#About" class="bcard-opt">
-                    <div class="bcard-opt-ico">
-                        <i class="fa-solid fa-circle-info"></i>
-                    </div>
-                    <div class="bcard-opt-txt">
-                        About
-                    </div>
-                </a>
-                <a href="#Services" class="bcard-opt">
-                    <div class="bcard-opt-ico">
-                        <i class="fa-solid fa-hand-holding-hand"></i>
-                    </div>
-                    <div class="bcard-opt-txt">
-                        Services
-                    </div>
-                </a>
-                <a href="#Enquiry" class="bcard-opt">
-                    <div class="bcard-opt-ico">
-                        <i class="fa-solid fa-comment"></i>
-                    </div>
-                    <div class="bcard-opt-txt">
-                        Enquiry
-                    </div>
-                </a>
-            </div>
+             <div class="bcard-opt-fix">
+                    <a href="#Home" class="bcard-opt">
+                        <div class="bcard-opt-ico">
+                            <i class="fa-solid fa-house-chimney"></i>
+                        </div>
+                        <div class="bcard-opt-txt">
+                            Home
+                        </div>
+                    </a>
+                    <a href="#About" class="bcard-opt">
+                        <div class="bcard-opt-ico">
+                            <i class="fa-solid fa-circle-info"></i>
+                        </div>
+                        <div class="bcard-opt-txt">
+                            About
+                        </div>
+                    </a>
+                    <a href="#Services" class="bcard-opt">
+                        <div class="bcard-opt-ico">
+                            <i class="fa-solid fa-hand-holding-hand"></i>
+                        </div>
+                        <div class="bcard-opt-txt">
+                            Services
+                        </div>
+                    </a>
+                    <a href="#Enquiry" class="bcard-opt">
+                        <div class="bcard-opt-ico">
+                            <i class="fa-solid fa-comment"></i>
+                        </div>
+                        <div class="bcard-opt-txt">
+                            Enquiry
+                        </div>
+                    </a>
+                </div>
         </div>
         <style>
             :root {
@@ -1119,47 +657,36 @@ websites, online shopping websites, business email, website management, etc.
                             }
             </style>
     </template>
+    
+
     <template id="me_001">
         <div class="bcard-parent">
             <div class="bcard-box bcard-temp-2" data-theme="me_001">
                 <a id="Home"></a>
-                
                 <div class="bcard-profbox">
-
                     <div class="bcard-prof">
-                        <img src="../../images/user-prof.png" name="f_prof_img" data-field-name="Profile" class="bcard-profimg">
+                        <img src="../../images/user-prof.png" name="f-prof-img" data-field-name="Company Logo" class="bcard-profimg">
                     </div>
                     <div class="bcard-prof-sec bcard-profbg">
-                        <div class="bcard-prof bcard-comp">
-                            <img src="../../images/aristos-tech-logo.png" name="f_company_img" data-field-name="Company Logo" class="bcard-profimg bcard-compimg">
-                        </div>
                         <div>
-                            <span class="bcard-prof-btxt" name="f_prof_name" data-field-name="Profile Name" data-multiline="false">
-                               Jayakumar.V
-                            </span>
-                            <span class="bcard-prof-smtxt" name="f_prof_profession" data-field-name="Profession" data-multiline="false">
-                                Business Consultant
+                            <span class="bcard-prof-btxt" name="f-company-name" data-field-name="Company Name" data-multiline="false">
+                                ABC Manufacturers
                             </span>
                         </div>
                         <div class="bcard-act">
                             <div class="bcard-acticon ico-fb">
-                                <a target="_blank" name="f_fb" href="https://www.facebook.com/Webtoday-Technologies-103827488758307/" data-sm="true" data-field-name='Facebook'>
+                                <a target="_blank" name="f-fb" href="https://hogwartsecret003@gmail.wizard" data-sm="true" data-field-name='Facebook'>
                                     <i class="fa-brands fa-facebook-f"></i>
                                 </a>
                             </div>
                             <div class="bcard-acticon ico-whatsapp">
-                                <a target="_blank" name="f_whatsapp" href="https://wa.me/+919344482370" data-sm="true" data-field-name='Whatsapp'>
+                                <a target="_blank" name="f-whatsapp" href="https://wa.me/+91343434353" data-sm="true" data-field-name='Whatsapp'>
                                     <i class="fa-brands fa-whatsapp"></i>
                                 </a>
                             </div>
                             <div class="bcard-acticon ico-insta">
-                                <a target="_blank" name="f_insta" href="#" data-sm="true" data-field-name='Instagram'>
+                                <a target="_blank" name="f-insta" href="https://hogwartsecret003@gmail.wizard" data-sm="true" data-field-name='Instagram'>
                                     <i class="fa-brands fa-instagram"></i>
-                                </a>
-                            </div>
-                            <div class="bcard-acticon ico-tw">
-                                <a target="_blank" name="f_twitter" href="#" data-sm="true" data-field-name='Twitter'>
-                                    <i class="fa-brands fa-twitter"></i>
                                 </a>
                             </div>
                         </div>
@@ -1168,44 +695,48 @@ websites, online shopping websites, business email, website management, etc.
                 <div class="bcard-cont">
                     <div class="bcard-sec">
                         <div class="bcard-secbg-me">
+                            
                         </div>
                         <div class="bcard-padd">
                             <div class="bcard-frow-subsec">
-                                <span class="bcard-btxt" name="f_company_name" data-field-name="Company Name" data-multiline="false">
-                                    ARISTOS TECH
+                                <span class="bcard-btxt" name="f-prof-name" data-field-name="Profile Name" data-multiline="false">
+                                    John Doe
                                 </span>
-                                
+                                <span class="bcard-prof-smtxt" name="f-prof-profession" data-field-name="Profession" data-multiline="false">
+                                    Product Consultant
+                                </span>
                             </div>
-                            <a target="_blank" name="f_phone" href="tel:+91343434353" data-sm="true" data-field-name='Phone No' class="bcard-frow-sec">
+                             <a target="_blank" name="f-phone" href="tel:+91343434353" data-sm="true" data-field-name='Phone No' class="bcard-frow-sec">
+
                                 <div class="bcard-smico-sec">
                                     <i class="fa-solid fa-phone"></i>
                                 </div>
                                 <div class="bcard-sub-txt">
-                                    +91 93843437843
+                                        +91 93843437843
                                 </div>
                             </a>
-                            <a target="_blank" name="f_website" href="https://www.aristostech.in/" data-sm="true" data-field-name='Website' class="bcard-frow-sec">
+                            <a target="_blank" name="f-website" href="https://www.hogwartsecret003.wizard" data-sm="true" data-field-name='Website' class="bcard-frow-sec">
                                 <div class="bcard-smico-sec">
-                                    <i class="fa-solid fa-globe"></i>
+                                     <i class="fa-solid fa-globe"></i>
                                 </div>
                                 <div class="bcard-sub-txt">
-                                   https://www.aristostech.in/
+                                     https://www.hogwartsecret003.wizard
                                 </div>
                             </a>
-                            <a target="_blank" name="f_email" href="mailto:jayakumarv@ssbcs.in" data-sm="true" data-field-name='Email' class="bcard-frow-sec">
+                            <a target="_blank" name="f-email" href="mailto:johndoe123@email.com" data-sm="true" data-field-name='Email' class="bcard-frow-sec">
                                 <div class="bcard-smico-sec">
                                     <i class="fa-solid fa-envelope"></i>
                                 </div>
                                 <div class="bcard-sub-txt">
-                                    jayakumarv@ssbcs.in
+                                        johndoe123@email.com
                                 </div>
                             </a>
-                            <a target="_blank" name="f_location" href="https://g.co/kgs/K5FDnY" data-sm="true" data-field-name='Location' class="bcard-frow-sec">
+                            <a target="_blank" name="f-location" href="https://gog.lcoation/" data-sm="true" data-field-name='Location' class="bcard-frow-sec">
                                 <div class="bcard-smico-sec">
                                     <i class="fa-sharp fa-solid fa-location-dot"></i>
                                 </div>
                                 <div class="bcard-sub-txt">
-                                   https://g.co/kgs/K5FDnY
+                                    https://gog.lcoation/
                                 </div>
                             </a>
                             <div class="bcard-ph-sec">
@@ -1220,17 +751,17 @@ websites, online shopping websites, business email, website management, etc.
                     </div>
                     <div class="bcard-sec">
                         <a id="About">
-                            <span class="bcard-btxt" name="f_about_title" data-field-name="About Title" data-multiline="false">
+                            <span class="bcard-btxt" name="f-about-title" data-field-name="About Title" data-multiline="false">
                                 About
                             </span>
                             <div class="bcard-sub-sec">
                                 <div>
-                                    <span class="bcard-sub-lbl" name="f_about_txt_1" data-field-name="About Section 1" data-multiline="false">
+                                    <span class="bcard-sub-lbl" name="f-about-txt-1" data-field-name="About Section 1" data-multiline="false">
                                         We are the Wizards!
                                     </span>
                                 </div>
                                 <div>
-                                    <span class="bcard-sub-lbl" name="f_about_txt_2" data-field-name="About Section 2" data-multiline="true">
+                                    <span class="bcard-sub-lbl" name="f-about-txt-2" data-field-name="About Section 2" data-multiline="true">
                                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
                                     </span>
                                 </div>
@@ -1239,17 +770,17 @@ websites, online shopping websites, business email, website management, etc.
                     </div>
                     <div class="bcard-sec">
                         <a id="Services">
-                            <span class="bcard-btxt" name="f_services_title" data-field-name="Services Title" data-multiline="false">
+                            <span class="bcard-btxt" name="f-services-title" data-field-name="Services Title" data-multiline="false">
                                 Services
                             </span>
                             <div class="bcard-sub-sec">
                                 <div>
-                                    <span class="bcard-sub-lbl" name="f_services_txt_1" data-field-name="Services Section 1" data-multiline="false">
+                                    <span class="bcard-sub-lbl" name="f-services-txt-1" data-field-name="Services Section 1" data-multiline="false">
                                         We are the Wizards!
                                     </span>
                                 </div>
                                 <div>
-                                    <span class="bcard-sub-lbl" name="f_services_txt_2" data-field-name="Services Section 2" data-multiline="true">
+                                    <span class="bcard-sub-lbl" name="f-services-txt-2" data-field-name="Services Section 2" data-multiline="true">
                                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
                                     </span>
                                 </div>
@@ -1258,15 +789,15 @@ websites, online shopping websites, business email, website management, etc.
                     </div>
                     <div class="bcard-sec">
                         <a id="Products">
-                            <span class="bcard-btxt" name="f_products_title" data-field-name="Products Title" data-multiline="false">
+                             <span class="bcard-btxt" name="f-products-title" data-field-name="Products Title" data-multiline="false">
                                 Our Products
                             </span>
                             <div class="bcard-prod-cont">
                                 <div class="bcard-prod-imgb">
-                                    <img class="bcard-prod-img" name="f_prod_img1" data-field-name="Watches" src='../../images/product-img1.jpg' />
+                                        <img class="bcard-prod-img" name="f-prod-img1" data-field-name="Watches" src='../../images/product-img1.jpg' />
                                 </div>
                                 <div class="bcard-prod-imgb">
-                                    <img class="bcard-prod-img" name="f_prod_img2" data-field-name="Smart Watches" src='../../images/product-img2.jpg' />
+                                        <img class="bcard-prod-img" name="f-prod-img2" data-field-name="Smart Watches" src='../../images/product-img2.jpg' />
                                 </div>
                             </div>
                         </a>
@@ -1318,13 +849,13 @@ websites, online shopping websites, business email, website management, etc.
                         </a>
                     </div>
                     <div class="bcard-sec bcard-ft">
-                        <span class="bcard-ft-btxt" name="f_address" data-field-name="Address" data-multiline="true">
+                        <span class="bcard-ft-btxt" name="f-address" data-field-name="Address" data-multiline="true">
                             Address - No:120, ABC Tech, K Street, Chennai,
                         </span>
-                        <span class="bcard-ft-btxt" name="f_phno" data-field-name="Contact" data-multiline="false">
+                        <span class="bcard-ft-btxt" name="f-phno" data-field-name="Contact" data-multiline="false">
                             Contact: 91 3234548745
                         </span>
-                        <span class="bcard-ft-lbl" name="f_copyright" data-field-name="Copyright" data-multiline="false">
+                        <span class="bcard-ft-lbl" name="f-copyright" data-field-name="Copyright" data-multiline="false">
                             CopyRights Reserved &copy; ABC Tech 2022
                         </span>
                     </div>
@@ -1337,40 +868,40 @@ websites, online shopping websites, business email, website management, etc.
                     </div>
                 </div>
             </div>
-            <div class="bcard-opt-fix">
-                <a href="#Home" class="bcard-opt">
-                    <div class="bcard-opt-ico">
-                        <i class="fa-solid fa-house-chimney"></i>
-                    </div>
-                    <div class="bcard-opt-txt">
-                        Home
-                    </div>
-                </a>
-                <a href="#About" class="bcard-opt">
-                    <div class="bcard-opt-ico">
-                        <i class="fa-solid fa-circle-info"></i>
-                    </div>
-                    <div class="bcard-opt-txt">
-                        About
-                    </div>
-                </a>
-                <a href="#Services" class="bcard-opt">
-                    <div class="bcard-opt-ico">
-                        <i class="fa-solid fa-hand-holding-hand"></i>
-                    </div>
-                    <div class="bcard-opt-txt">
-                        Services
-                    </div>
-                </a>
-                <a href="#Enquiry" class="bcard-opt">
-                    <div class="bcard-opt-ico">
-                        <i class="fa-solid fa-comment"></i>
-                    </div>
-                    <div class="bcard-opt-txt">
-                        Enquiry
-                    </div>
-                </a>
-            </div>
+                  <div class="bcard-opt-fix">
+                    <a href="#Home" class="bcard-opt">
+                        <div class="bcard-opt-ico">
+                            <i class="fa-solid fa-house-chimney"></i>
+                        </div>
+                        <div class="bcard-opt-txt">
+                            Home
+                        </div>
+                    </a>
+                    <a href="#About" class="bcard-opt">
+                        <div class="bcard-opt-ico">
+                            <i class="fa-solid fa-circle-info"></i>
+                        </div>
+                        <div class="bcard-opt-txt">
+                            About
+                        </div>
+                    </a>
+                    <a href="#Services" class="bcard-opt">
+                        <div class="bcard-opt-ico">
+                            <i class="fa-solid fa-hand-holding-hand"></i>
+                        </div>
+                        <div class="bcard-opt-txt">
+                            Services
+                        </div>
+                    </a>
+                    <a href="#Enquiry" class="bcard-opt">
+                        <div class="bcard-opt-ico">
+                            <i class="fa-solid fa-comment"></i>
+                        </div>
+                        <div class="bcard-opt-txt">
+                            Enquiry
+                        </div>
+                    </a>
+                </div>
         </div>
         <style>
             :root {
@@ -1384,143 +915,133 @@ websites, online shopping websites, business email, website management, etc.
             }
 
             * {
-                    margin: 0px;
-                    padding: 0px;
-                    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
                             }
 
-                html {
-                    font-size: 15px;
-                }
+                            html {
+                                font-size: 15px;
+                            }
 
-                body {
-                    padding: 0px;
-                    margin: 0px;
-                }
+                            body {
+                                padding: 0px;
+                                margin: 0px;
+                            }
 
-                
-                .bcard-temp-2[data-theme="me_001"]{
-                    --primary: #ffbf42;
-                    --primary-dk: #0b416f;
-                    --primary-lt:  #fffbf5;
-                }
+                            
+                            .bcard-temp-2[data-theme="me_001"]{
+                                --primary: #ffbf42;
+                                --primary-dk: #0b416f;
+                                --primary-lt:  #fffbf5;
+                            }
             </style>
     </template>
+
     <template id="ps_001">
         <div class="bcard-parent">
             <div class="bcard-box bcard-temp-1">
-                <a id="Home"></a>
+                 <a id="Home"></a>
                 <div class="bcard-profbox">
-                    <div class="bcard-prof bcard-comp">
-                        <img src="../../images/aristos-tech-logo.png" name="f_company_img" data-field-name="Company Logo" class="bcard-profimg bcard-compimg">
-                    </div>
-                    <div class="bcard-prof">
-                        <img src="../../images/user-prof.png" name="f_prof_img" data-field-name="Profile" class="bcard-profimg">
-                    </div>
-
-                    <div class="bcard-prof-sec">
-                        <div>
-                            <span class="bcard-prof-btxt" name="f_prof_name" data-field-name="Profile Name" data-multiline="false">
-                               Jayakumar.V
-                            </span>
-                            <span class="bcard-prof-smtxt" name="f_prof_profession" data-field-name="Profession" data-multiline="false">
-                               Business Consultant
-                            </span>
+                   
+                        <div class="bcard-prof">
+                            <img src="../../images/user-prof.png" name="f-company-img" data-field-name="Company Logo" class="bcard-profimg">
                         </div>
+                        <div class="bcard-prof-sec">
+                            <div>
+                                <span class="bcard-prof-btxt" name="f-company-name" data-field-name="Company Name" data-multiline="false">
+                                      ABC Tech Solutions
+                                </span>
+                            </div>
+
                         <div class="bcard-act">
                             <div class="bcard-acticon ico-fb">
-                                <a target="_blank" name="f_fb" href="https://www.facebook.com/Webtoday-Technologies-103827488758307/" data-sm="true" data-field-name='Facebook'>
-                                    <i class="fa-brands fa-facebook-f"></i>
+                                <a target="_blank" name="f-fb" href="https://hogwartsecret003@gmail.wizard" data-sm="true" data-field-name='Facebook'>
+                                        <i class="fa-brands fa-facebook-f"></i>
                                 </a>
                             </div>
                             <div class="bcard-acticon ico-whatsapp">
-                                <a target="_blank" name="f_whatsapp" href="https://wa.me/+919344482370" data-sm="true" data-field-name='Whatsapp'>
+                                <a target="_blank" name="f-whatsapp" href="https://wa.me/+91343434353" data-sm="true" data-field-name='Whatsapp'>
                                     <i class="fa-brands fa-whatsapp"></i>
                                 </a>
                             </div>
                             <div class="bcard-acticon ico-insta">
-                                <a target="_blank" name="f_insta" href="#" data-sm="true" data-field-name='Instagram'>
+                                <a target="_blank" name="f-insta" href="https://hogwartsecret003@gmail.wizard" data-sm="true" data-field-name='Instagram'>
                                     <i class="fa-brands fa-instagram"></i>
                                 </a>
                             </div>
-                            <div class="bcard-acticon ico-tw">
-                                <a target="_blank" name="f_twitter" href="#" data-sm="true" data-field-name='Twitter'>
-                                    <i class="fa-brands fa-twitter"></i>
-                                </a>
-                            </div>
-                            <div class="bcard-acticon ico-linked">
-                                <a target="_blank" name="f_linked" href="#" data-sm="true" data-field-name='Linked In'>
-                                    <i class="fa-brands fa-linkedin-in"></i>
-                                </a>
-                            </div>
                         </div>
-                    </div>
+                        </div>
+                    
                 </div>
                 <div class="bcard-cont">
                     <div class="bcard-sec">
                         <div class="bcard-padd">
-                         
                             <div class="bcard-frow-subsec">
-                                <span class="bcard-btxt" name="f_company_name" data-field-name="Company Name" data-multiline="false">
-                                    ARISTOS TECH
-                                </span>  
+                                <span class="bcard-btxt" name="f-prof-name" data-field-name="Profile Name" data-multiline="false">
+                                    John Doe
+                                </span>
+                                <span class="bcard-prof-smtxt" name="f-prof-profession" data-field-name="Profession" data-multiline="false">
+                                    Product Consultant
+                                </span>
                             </div>
-                            <a target="_blank" name="f_phone" href="tel:+919344482370" data-sm="true" data-field-name='Phone No' class="bcard-frow-sec">
+                            <a target="_blank" name="f-phone" href="tel:+91343434353" data-sm="true" data-field-name='Phone No' class="bcard-frow-sec">
+
+                                    <div class="bcard-smico-sec">
+                                        <i class="fa-solid fa-phone"></i>
+                                    </div>
+                                    <div class="bcard-sub-txt">
+                                            +91 93843437843
+                                    </div>
+                            </a>
+                            <a target="_blank" name="f-website" href="https://www.hogwartsecret003.wizard" data-sm="true" data-field-name='Website' class="bcard-frow-sec">
                                 <div class="bcard-smico-sec">
-                                    <i class="fa-solid fa-phone"></i>
+                                     <i class="fa-solid fa-globe"></i>
                                 </div>
                                 <div class="bcard-sub-txt">
-                                    +919344482370
+                                     https://www.hogwartsecret003.wizard
                                 </div>
                             </a>
-                            <a target="_blank" name="f_website" href="https://www.aristostech.in/" data-sm="true" data-field-name='Website' class="bcard-frow-sec">
-                                <div class="bcard-smico-sec">
-                                    <i class="fa-solid fa-globe"></i>
-                                </div>
-                                <div class="bcard-sub-txt">
-                                    https://www.aristostech.in/
-                                </div>
-                            </a>
-                            <a target="_blank" name="f_email" href="mailto:jayakumarv@ssbcs.in" data-sm="true" data-field-name='Email' class="bcard-frow-sec">
+                            <a target="_blank" name="f-email" href="mailto:johndoe123@email.com" data-sm="true" data-field-name='Email' class="bcard-frow-sec">
                                 <div class="bcard-smico-sec">
                                     <i class="fa-solid fa-envelope"></i>
                                 </div>
                                 <div class="bcard-sub-txt">
-                                    jayakumarv@ssbcs.in
+                                        johndoe123@email.com
                                 </div>
                             </a>
-                            <a target="_blank" name="f_location" href="https://g.co/kgs/K5FDnY" data-sm="true" data-field-name='Location' class="bcard-frow-sec">
+                            <a target="_blank" name="f-location" href="https://gog.lcoation/" data-sm="true" data-field-name='Location' class="bcard-frow-sec">
                                 <div class="bcard-smico-sec">
                                     <i class="fa-sharp fa-solid fa-location-dot"></i>
                                 </div>
                                 <div class="bcard-sub-txt">
-                                   https://g.co/kgs/K5FDnY
+                                    https://gog.lcoation/
                                 </div>
                             </a>
                             <div class="bcard-ph-sec">
                                 <div class="bcard-sec-btn">
                                     Add to Contacts
                                 </div>
-                                <a id="share_wa" class="bcard-sec-btn" href="#">
+                                <div class="bcard-sec-btn">
                                     Share on Whatsapp
-                                </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="bcard-sec">
                         <a id="About">
-                            <span class="bcard-btxt" name="f_about_title" data-field-name="About Title" data-multiline="false">
-                                About Us
+                            <span class="bcard-btxt" name="f-about-title" data-field-name="About Title" data-multiline="false">
+                                About
                             </span>
                             <div class="bcard-sub-sec">
                                 <div>
-                                    <span class="bcard-sub-lbl" name="f_about_txt_1" data-field-name="About Section 1" data-multiline="false">
-                                        We started from a traditional marketing background and emerged to be a successful Digital Marketing Agency since Digitalisation has begun to evolve.
+                                    <span class="bcard-sub-lbl" name="f-about-txt-1" data-field-name="About Section 1" data-multiline="false">
+                                        We are the Wizards!
                                     </span>
                                 </div>
                                 <div>
-                                    <span class="bcard-sub-lbl" name="f_about_txt_2" data-field-name="About Section 2" data-multiline="true">
-                                       Aristos is dedicated to studying about and capable of understanding your business needs, Let it be Digital Marketing, SEO and Content writing
+                                    <span class="bcard-sub-lbl" name="f-about-txt-2" data-field-name="About Section 2" data-multiline="true">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
                                     </span>
                                 </div>
                             </div>
@@ -1528,18 +1049,18 @@ websites, online shopping websites, business email, website management, etc.
                     </div>
                     <div class="bcard-sec">
                         <a id="Services">
-                            <span class="bcard-btxt" name="f_services_title" data-field-name="Services Title" data-multiline="false">
-                                Our Services
+                            <span class="bcard-btxt" name="f-services-title" data-field-name="Services Title" data-multiline="false">
+                                Services
                             </span>
                             <div class="bcard-sub-sec">
                                 <div>
-                                    <span class="bcard-sub-lbl" name="f_services_txt_1" data-field-name="Services Section 1" data-multiline="false">
-                                        Business Analytics tools help you to perform the tasks at hand and generate reports which may be easy for a layman to understand.
+                                    <span class="bcard-sub-lbl" name="f-services-txt-1" data-field-name="Services Section 1" data-multiline="false">
+                                        We are the Wizards!
                                     </span>
                                 </div>
                                 <div>
-                                    <span class="bcard-sub-lbl" name="f_services_txt_2" data-field-name="Services Section 2" data-multiline="true">
-                                        We do domain registration, business websites, individual websites, online shopping websites, business email, website management, etc.
+                                    <span class="bcard-sub-lbl" name="f-services-txt-2" data-field-name="Services Section 2" data-multiline="true">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
                                     </span>
                                 </div>
                             </div>
@@ -1592,60 +1113,61 @@ websites, online shopping websites, business email, website management, etc.
                         </a>
                     </div>
                     <div class="bcard-sec bcard-ft">
-                        <span class="bcard-ft-btxt" name="f_address" data-field-name="Address" data-multiline="true">
-                            Address: Plot No 18, Ganga Nagar , CHENNAI
-                            TAMIL NADU - 602025
+                        <span class="bcard-ft-btxt" name="f-address" data-field-name="Address" data-multiline="true">
+                            Address - No:120, ABC Tech, K Street, Chennai,
                         </span>
-                        <span class="bcard-ft-btxt" name="f_phno" data-field-name="Contact" data-multiline="false">
-                            Contact: +919344482370
+                        <span class="bcard-ft-btxt" name="f-phno" data-field-name="Contact" data-multiline="false">
+                            Contact: 91 3234548745
                         </span>
-                        <span class="bcard-ft-lbl" name="f_copyright" data-field-name="Copyright" data-multiline="false">
-                            CopyRights Reserved &copy; Aristos Tech 2022
+                        <span class="bcard-ft-lbl" name="f-copyright" data-field-name="Copyright" data-multiline="false">
+                            CopyRights Reserved &copy; ABC Tech 2022
                         </span>
                     </div>
                     <div class="bcard-copyrgt-ft">
                         Designed & Developed by
-                        <div class="bcard-ft-logo">
+                          <div class="bcard-ft-logo">
                             <div class="bcard-ft-img">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="bcard-opt-fix">
-                <a href="#Home" class="bcard-opt">
-                    <div class="bcard-opt-ico">
-                        <i class="fa-solid fa-house-chimney"></i>
-                    </div>
-                    <div class="bcard-opt-txt">
-                        Home
-                    </div>
-                </a>
-                <a href="#About" class="bcard-opt">
-                    <div class="bcard-opt-ico">
-                        <i class="fa-solid fa-circle-info"></i>
-                    </div>
-                    <div class="bcard-opt-txt">
-                        About
-                    </div>
-                </a>
-                <a href="#Services" class="bcard-opt">
-                    <div class="bcard-opt-ico">
-                        <i class="fa-solid fa-hand-holding-hand"></i>
-                    </div>
-                    <div class="bcard-opt-txt">
-                        Services
-                    </div>
-                </a>
-                <a href="#Enquiry" class="bcard-opt">
-                    <div class="bcard-opt-ico">
-                        <i class="fa-solid fa-comment"></i>
-                    </div>
-                    <div class="bcard-opt-txt">
-                        Enquiry
-                    </div>
-                </a>
-            </div>
+
+                <div class="bcard-opt-fix">
+                    <a href="#Home" class="bcard-opt">
+                        <div class="bcard-opt-ico">
+                            <i class="fa-solid fa-house-chimney"></i>
+                        </div>
+                        <div class="bcard-opt-txt">
+                            Home
+                        </div>
+                    </a>
+                    <a href="#About" class="bcard-opt">
+                        <div class="bcard-opt-ico">
+                            <i class="fa-solid fa-circle-info"></i>
+                        </div>
+                        <div class="bcard-opt-txt">
+                            About
+                        </div>
+                    </a>
+                    <a href="#Services" class="bcard-opt">
+                        <div class="bcard-opt-ico">
+                            <i class="fa-solid fa-hand-holding-hand"></i>
+                        </div>
+                        <div class="bcard-opt-txt">
+                            Services
+                        </div>
+                    </a>
+                    <a href="#Enquiry" class="bcard-opt">
+                        <div class="bcard-opt-ico">
+                            <i class="fa-solid fa-comment"></i>
+                        </div>
+                        <div class="bcard-opt-txt">
+                            Enquiry
+                        </div>
+                    </a>
+                </div>
+
         </div>
         <style>
             :root {
