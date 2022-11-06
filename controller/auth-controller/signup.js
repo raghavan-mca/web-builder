@@ -13,35 +13,35 @@ class signupcls {
         }
         else if (payload) {
             const user_signup = await signup_service_.signup(payload)
-            console.log(user_signup)
-            if (user_signup.code === 500) {
+            if (user_signup.statuscode === 500) {
                 next(apiError.internal({
-                    'statusCode': 500,
-                    'ErrorMessage': user_signup.ErrorMessage,
-                    'Error': 'badImplementation'
+                    'statuscode': 500,
+                    'errormessage': user_signup.errormessage,
+                    'message': 'badImplementation'
 
                 }))
                 return
 
-            } else if (user_signup.code === 400) {
+            } else if (user_signup.statuscode === 400) {
                 next(apiError.badRequest({
-                    'statusCode': 400,
-                    'ErrorMessage': 'invalid data',
-                    'Error': 'badRequest'
-
+                    'statuscode': 400,
+                    'errormessage': 'invalid_data',
+                    'message': 'badRequest'
 
                 }))
                 return
             } else if (user_signup.length === 0) {
                 return res.status(200).send({
                     'statuscode': 204,
-                    'data': user_signup
+                    'data': user_signup,
+                    'message': 'success'
                 })
             }
             else {
                 return res.status(200).send({
                     'statuscode': 200,
-                    'data': user_signup
+                    'data': user_signup,
+                    'message': 'success'
                 })
             }
         }
