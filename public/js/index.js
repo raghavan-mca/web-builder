@@ -1,7 +1,5 @@
-// let url = "http://localhost:2022/";
-// let furl = "http://localhost:7071/";
-let furl = "https://w3.frienddey.co.in/";
-let url = "https://webbuilderjayakumar.herokuapp.com/";
+let url = "http://localhost:2022/";
+let furl = "http://localhost:7071/";
 
 let tcCheck;
 let business_nature_val;
@@ -167,7 +165,8 @@ function createPassword(e) {
                             auth_sub_message = 'Redirecting to Sign In...';
                             generateAuthNotification('bg-green', auth_message, auth_sub_message);
                             setTimeout(() => {
-                                window.location.assign(`${url}signin-auth`);
+                                // window.location.href(`${url}signin-auth`);
+                                $(location).attr('href', `${url}signin-auth`);
                             }, 3000)
                         }
                         else if(res.statuscode == 400) {
@@ -392,7 +391,8 @@ function resetPassword(e) {
 
                             generateAuthNotification('bg-green', auth_message, auth_sub_message);
                             setTimeout(() => {
-                                window.location.assign('signin-auth');
+                                // window.location.assign('signin-auth');
+                                $(location).attr('href', `${url}signin-auth`);
                             }, 3000);
 
                         }
