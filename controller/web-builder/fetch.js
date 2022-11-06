@@ -12,21 +12,20 @@ class company_listing {
 
             }
             else if (query) {
-                console.log(query)
                 const company_listing_fetch = await company_listing_services.fetchcompanylisting(query)
-                if (company_listing_fetch.code === 500) {
+                if (company_listing_fetch.statuscode === 500) {
                     next(apiError.internal({
-                        'statusCode': 500,
-                        'ErrorMessage': company_listing_fetch.ErrorMessage,
+                        'statuscode': 500,
+                        'errormessage': company_listing_fetch.errormessage,
                         'Error': 'badImplementation'
 
                     }))
                     return
                 
-                } else if (company_listing_fetch.code === 400) {
+                } else if (company_listing_fetch.statuscode === 400) {
                     next(apiError.badRequest({
-                        'statusCode': 400,
-                        'ErrorMessage':'invalid data' ,
+                        'statuscode': 400,
+                        'errormessage':'invalid_data' ,
                         'Error': 'badRequest'
 
 

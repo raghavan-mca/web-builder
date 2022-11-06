@@ -16,19 +16,19 @@ class company_listing {
             } else if (params) {
                 const company_listing_delete = await company_Services.deletecompanylisting(params)
 
-                if (company_listing_delete.code === 500) {
+                if (company_listing_delete.statuscode === 500) {
                     next(apiError.internal({
-                        'statusCode': 500,
-                        'ErrorMessage': company_listing_delete.ErrorMessage,
+                        'statuscode': 500,
+                        'errormessage': company_listing_delete.errormessage,
                         'Error': 'badImplementation'
 
                     }))
                     return
-                } else if (company_listing_delete.code === 11000) {
+                } else if (company_listing_delete.statuscode === 11000) {
                     next(apiError.conflict({
                         'statuscode': 409,
                         'Error': 'conflict',
-                        'ErrorMessage': 'duplicate data'
+                        'errormessage': 'duplicate data'
                     }))
                     return
                 }
@@ -43,17 +43,17 @@ class company_listing {
 
         } catch (err) {
             
-            if (err.code === 11000) {
+            if (err.statuscode === 11000) {
                 next(apiError.conflict({
                     'statuscode': 409,
                     'Error': 'conflict',
-                    'ErrorMessage': 'duplicate data'
+                    'errormessage': 'duplicate data'
                 }))
                 return
             }
             next(apiError.internal({
-                'statusCode': 500,
-                'ErrorMessage': 'undefine error',
+                'statuscode': 500,
+                'errormessage': 'undefine error',
                 'Error': 'badImplementation'
 
             }))
