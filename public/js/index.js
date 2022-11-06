@@ -1,4 +1,6 @@
 let url = "http://localhost:2022/";
+let furl = "http://localhost:7071/";
+
 let tcCheck;
 let business_nature_val;
 let user_terms = "false";
@@ -160,9 +162,11 @@ function createPassword(e) {
                             buttonLoader(e, 'remove_load');
 
                             auth_message = 'Account Created Successfully';                            
-                            auth_sub_message = '';
+                            auth_sub_message = 'Redirecting to Sign In...';
                             generateAuthNotification('bg-green', auth_message, auth_sub_message);
-
+                            setTimeout(() => {
+                                window.location.assign(`${url}signin-auth`);
+                            }, 3000)
                         }
                         else if(res.statuscode == 400) {
                             buttonLoader(e, 'remove_load');
@@ -252,11 +256,13 @@ function signIn(e) {
                             buttonLoader(e, 'remove_load');
 
                             auth_message = 'Account Logged in Successfully';
-                            auth_sub_message = '';
+                            auth_sub_message = 'Logging In Now...';
 
                             generateAuthNotification('bg-green', auth_message, auth_sub_message);
+                            setTimeout(() => {
+                                window.location.replace(`${furl}aristos-business-card/card/product-html/card-templates.html#${btoa(JSON.stringify(res))}`);
+                            }, 500)
                             // window.location.assign('file:///F:/my_projects/Business%20Cards/aristos-business-card/card/product-html/card-templates.html');
-                            window.location.assign(`http://localhost:7070/aristos-business-card/card/product-html/card-templates.html#${btoa(JSON.stringify(res))}`);
                         }
                         else{
                             buttonLoader(e, 'remove_load');
@@ -458,6 +464,7 @@ function selectBoxOptionSelected(e) {
     business_nature_val = $(e).children('.auth-sel-txt').text();
     $('#business_nature').attr('value', business_nature_val);
     $('#business_nature_val').text(business_nature_val);
+    $('#business_nature').addClass('auth-bgreen');
     business_nature_valid = true;
     signUpValidate();
 }
@@ -485,7 +492,7 @@ let email_valid, user_name_valid, business_name_valid, business_nature_valid, pa
 
 
 // $('.auth-fld-inp').on('keyup',  function() {});
-$('.auth-fld-inp').on('keyup',  validateFields);
+$('.auth-fld-inp').on('keyup change',  validateFields);
 
 function validateFields() {
     targetInput = event.target.value;
@@ -497,22 +504,72 @@ function validator(targetInput, targetInputName) {
     let currentInput = $(event.target).parents('.auth-fld').children('.auth-fld-inp');
     if(targetInputName == 'user_username' || targetInputName == 'user_business_name' || targetInputName == 'user_business_nature') {
 
-        if(targetInput == '' || (targetInput.length < 3)) {
-            $(event.target).parents('.auth-fld').children('.auth-ired').remove();       
-            $(event.target).parents('.auth-fld').append("<div class='auth-ired'>Miniumum 3 Characters Required</div>");
-            currentInput.removeClass('auth-bgreen');
-            currentInput.addClass('auth-bred');
-            if(targetInputName == 'user_username') {
-                user_name_valid = false;
-            }
-            else if(targetInputName == 'user_business_name') {
+        // if(targetInputName != 'user_business_name') {
+
+       
+        // }
+        if(targetInputName == 'user_business_name') {
+            if(targetInput == '' || (targetInput.length < 1)) {
+                $(event.target).parents('.auth-fld').children('.auth-ired').remove();       
+                $(event.target).parents('.auth-fld').append("<div class='auth-ired'>Miniumum 1 Character Required</div>");
+                currentInput.removeClass('auth-bgreen');
+                currentInput.addClass('auth-bred');
+
                 business_name_valid = false;
             }
-            else if(targetInputName == 'user_business_nature') {
-                business_nature_valid = false;
+            else {
+                 $(event.target).parents('.auth-fld').children('.auth-ired').remove();       
+                currentInput.addClass('auth-bgreen');
+                currentInput.removeClass('auth-bred');
+                business_name_valid = true;
             }
         }
+        else if(targetInputName == 'user_username') {
+            let userNameRegex = /^[a-zA-Z0-9]+[a-zA-Z0-9-]+[a-zA-Z0-9]+$/;
 
+            if(targetInput == '' || (targetInput.length < 3)) {
+                $(event.target).parents('.auth-fld').children('.auth-ired').remove();       
+                $(event.target).parents('.auth-fld').append("<div class='auth-ired'>Miniumum 3 Characters Required</div>");
+                currentInput.removeClass('auth-bgreen');
+                currentInput.addClass('auth-bred');
+
+                user_name_valid = false;
+                // else if(targetInputName == 'user_business_nature') {
+                //     business_nature_valid = false;
+                // }
+            }
+            else if(targetInput.includes(' ')) {
+                $(event.target).parents('.auth-fld').children('.auth-ired').remove();       
+                $(event.target).parents('.auth-fld').append("<div class='auth-ired'>UserName Can't Contain Spaces, Use Hyphens</div>");
+                currentInput.removeClass('auth-bgreen');
+                currentInput.addClass('auth-bred');
+                user_name_valid = false;
+            }
+
+            else if(userNameRegex.test(targetInput) === false) {
+                if(targetInput[0] === '-' || targetInput[targetInput.length - 1] === '-') {
+                    $(event.target).parents('.auth-fld').children('.auth-ired').remove();       
+                    $(event.target).parents('.auth-fld').append("<div class='auth-ired'>Hyphens Can't be Included in Start or End</div>");
+                    currentInput.removeClass('auth-bgreen');
+                    currentInput.addClass('auth-bred');
+                    user_name_valid = false;    
+                }
+                else {
+                    $(event.target).parents('.auth-fld').children('.auth-ired').remove();       
+                    $(event.target).parents('.auth-fld').append("<div class='auth-ired'>UserName Can't Contain Special Characters</div>");
+                    currentInput.removeClass('auth-bgreen');
+                    currentInput.addClass('auth-bred');
+                    user_name_valid = false;    
+                }
+            }
+            else {
+               $(event.target).parents('.auth-fld').children('.auth-ired').remove();       
+                // $(event.target).parents('.auth-fld').append("<div class='auth-ired'>Spaces Can't be Entered. Use Hyphens</div>");
+                currentInput.addClass('auth-bgreen');
+                currentInput.removeClass('auth-bred');
+                user_name_valid = true;
+            }
+        }
         else {
             if(targetInputName == 'user_username') {
                 user_name_valid = true;
@@ -536,6 +593,13 @@ function validator(targetInput, targetInputName) {
         if(targetInput == '' || (targetInput.length < 3)) {
             $(event.target).parents('.auth-fld').children('.auth-ired').remove();       
             $(event.target).parents('.auth-fld').append("<div class='auth-ired'>Miniumum 3 Characters Required</div>");     
+            currentInput.removeClass('auth-bgreen');
+            currentInput.addClass('auth-bred');
+            email_valid = false;   
+        }
+        else if(targetInput.includes(' ')) {
+            $(event.target).parents('.auth-fld').children('.auth-ired').remove();       
+            $(event.target).parents('.auth-fld').append("<div class='auth-ired'>Spaces Can't be Included</div>");     
             currentInput.removeClass('auth-bgreen');
             currentInput.addClass('auth-bred');
             email_valid = false;   

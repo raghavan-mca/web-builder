@@ -38,22 +38,18 @@ class forget_mail_validate {
                 })
             }
             else {
+                
                 if(forget_mail.message == 'verification_link_expired') {
-                    return res.render('forgot-password-link', {link_expired: "db", user_exists: "dn", page_title: "Sign Up"});
+                    return res.render('forgot-password-link', {link_expired: "db", user_exists: "dn", page_lnk: 'fp', page_title: "Sign Up"});
                 }
                 else if(forget_mail.message == 'user_already_exist') {
-                    return res.render('forgot-password-link', {link_expired: "dn", user_exists: "db", page_title: "Sign In"});
+                    return res.render('sign-in', {link_expired: "dn", user_exists: "db", page_lnk: 'signin', page_title: "Sign In"});
                 }
                 else {
-                    return res.render('create-password', {create_password: "dn", reset_password: "", email: forget_mail.data[0].email, page_title: "Create Password"});
-                    
+                    return res.render('create-password', {create_password: "dn", reset_password: "", email: forget_mail.data[0].email, page_title: "Change Password"});
                 }
-                // return res.render('create-password', {create_password: "dn", reset_password: ""});
+                return res.render('create-password', {create_password: "dn", reset_password: ""});
 
-                // return res.status(200).send({
-                //     'statuscode': 200,
-                //     'data': forget_mail
-                // })
             }
         }
     }

@@ -13,8 +13,6 @@
           <div class="auth-logo"> 
                     <img src="../images/aristos-tech-logo-color.png" class="auth-logo-img" />
                 </div>
-            
-
             	<div class="auth-info-box bg-red <%= link_expired %>" name="auth_notify">
 	                <div class="auth-close">
 	                </div>
@@ -44,15 +42,17 @@
 <script type="text/javascript">
 setTimeout(() => {
     $(".auth-notify").removeClass("auth-notify-show");
-    let db = '', dn;
-    // console.log(user_exists);
+    let auth_true_check = '';
+    console.log('<%=page_lnk%>');
 
-    db = <%= user_exists %>;
-    if(db === 'db') {
-    	window.location.assign('/signup-auth');
+    auth_true_check = '<%= page_lnk %>';
+    if(auth_true_check === 'signup') {
+        console.log('signup');
+    	// window.location.assign('/signup-auth');
     }
     else {
-    	window.location.assign('/signin-auth');
+        console.log('signin');
+    	// window.location.assign('/signin-auth');
     }
 }, 3000)
 </script>

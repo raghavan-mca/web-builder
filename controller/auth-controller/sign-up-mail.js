@@ -44,12 +44,12 @@ class signupMail {
             else {
                 if(user_signup_mail.message == 'verification_link_expired') {
                     console.log(user_signup_mail);
-                    return res.render('signup-link', {link_expired: "db", user_exists: "dn", page_title: "Sign Up"});
+                    return res.render('signup-link', {link_expired: "db", user_exists: "dn", page_lnk: 'signup', page_title: "Sign Up"});
                 }
                 else if(user_signup_mail.message == 'user_already_exist') {
                     console.log(user_signup_mail);
 
-                    return res.render('signup-link', {link_expired: "dn", user_exists: "db", page_title: "Sign In"});
+                    return res.render('signin', {link_expired: "dn", user_exists: "db", page_lnk: 'signin', page_title: "Sign In"});
                 }
                 else {
                     console.log(user_signup_mail);
