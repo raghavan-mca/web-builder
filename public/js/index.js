@@ -1,5 +1,7 @@
-let url = "http://localhost:2022/";
-let furl = "http://localhost:7071/";
+// let url = "http://localhost:2022/";
+// let furl = "http://localhost:7071/";
+let furl = "https://w3.frienddey.co.in/";
+let url = "https://webbuilderjayakumar.herokuapp.com/";
 
 let tcCheck;
 let business_nature_val;
@@ -261,7 +263,7 @@ function signIn(e) {
 
                             generateAuthNotification('bg-green', auth_message, auth_sub_message);
                             setTimeout(() => {
-                                window.location.replace(`${furl}aristos-business-card/card/product-html/card-templates.html#${btoa(JSON.stringify(res))}`);
+                                window.location.attr('href', `${furl}aristos-business-card/card/product-html/card-templates.html#${btoa(JSON.stringify(res))}`);
                             }, 500)
                             // window.location.assign('file:///F:/my_projects/Business%20Cards/aristos-business-card/card/product-html/card-templates.html');
                         }
