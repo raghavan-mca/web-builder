@@ -1,7 +1,7 @@
 // let url = "http://localhost:2022/";
 // let furl = "http://localhost:7071/";
 let furl = "https://w3.frienddey.co.in/";
-let url = "https://testingwebbuilder.herokuapp.com/";
+let url = "https://testingwebbuilder.herokuapp.com";
 
 let tcCheck;
 let business_nature_val;
