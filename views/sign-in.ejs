@@ -1,0 +1,83 @@
+<%- include('header.ejs') %>
+
+	<div class="auth-box">
+		<div class="auth-lft">
+			<div class="auth-lft-imgb">
+				<img src="../images/auth-bg.svg" class="auth-lft-img">
+			</div>
+			<div class="auth-lft-txt">
+				Sign In Now to get your Business Card
+			</div>
+		</div>
+
+		<div class="auth-rgt">
+			<div class="auth-container">
+				<div class="auth-logo"> 
+					<img src="../images/aristos-tech-logo-color.png" class="auth-logo-img" />
+				</div>
+				<div class="auth-sec">
+							<span>
+								New User ?								
+							</span>
+							<a href="/signup-auth" class="clnk">
+								Sign Up Now
+							</a>
+						</div>
+				<div class="auth-head">
+					Sign In
+				</div>
+				<div>
+					<form >
+						<div class="auth-fld">
+								<input id="email" type="text" name="user_email" class="auth-fld-inp" required autocomplete="off">
+								<label for="email" class="auth-fld-lbl">
+									<span class="auth-fld-txt">
+										Email
+									</span>
+									<span class="auth-req">
+										*
+									</span>
+								</label>
+								<div class="auth-fld-close dn" onclick="fldClear(this);">
+								</div>
+							</div>
+							
+							<div class="auth-fld">
+								<input id="password" type="password" name="password" class="auth-fld-inp" required autocomplete="off">
+								<label for="password" class="auth-fld-lbl">
+									<span class="auth-fld-txt">
+										Password
+									</span>
+									<span class="auth-req">
+										*
+									</span>
+								</label>
+								<div class="auth-fld-close auth-fld-eye" onclick="togglePasswordFld(this);">
+									
+								</div>
+								<div class="auth-fld-sec auth-fp-sec">
+									<a href="/forgot-password-auth" class="clnk">
+										Forgot Password
+									</a>
+								</div>
+							</div>
+
+							
+						
+						</div>
+						<div class="auth-btn auth-disable" onclick="signIn(this);">
+							<span>
+								Sign In
+							</span>
+						</div>
+
+						
+					</form>
+
+			</div>
+			<div class="auth-notify" id="auth_notify">
+			</div>
+		</div>
+
+	</div>
+<%- include('footer.ejs') %>
