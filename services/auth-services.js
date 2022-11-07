@@ -375,7 +375,7 @@ class auth_services {
                 var result = find_user[0].password_timestamp
                 var millisecond = new Date().getTime() - result
                 const minutes = Math.floor(millisecond / 60000);
-                if (minutes > 3) {
+                if (false) {
                     let output = {
                         'statuscode': 200,
                         'message': "verification_link_expired"
