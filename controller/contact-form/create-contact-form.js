@@ -1,28 +1,30 @@
-const signup_service = require('../../services/auth-services')
-const signup_service_ = new signup_service()
+const contact_service = require('../../services/contact-form-service')
+const contact_service_ = new contact_service()
 const apiError = require('../../error/api-error')
 
-class forgetMail {
-    async forgetpasswordmail(req, res, next) {
-        let payload = req.body
 
-        if (!payload) {
+class createContactForm {
+    async createForm(req, res, next) {
+        let payload = req.body
+        let params = req.params
+
+        if (!payload && !params) {
             next(apiError.badRequest('error'))
             return
 
         }
-        else if (payload) {
-            const forget_main_ = await signup_service_.forget_password_mail(payload)
-            if (forget_main_.statuscode === 500) {
+        else if (payload && params) {
+            const createForm = await contact_service_.createContact(payload,params)
+            if (createForm.statuscode === 500) {
                 next(apiError.internal({
                     'statuscode': 500,
-                    'errormessage': forget_main_.errormessage,
+                    'errormessage': createForm.errormessage,
                     'message': 'badImplementation'
 
                 }))
                 return
 
-            } else if (forget_main_.statuscode === 400) {
+            } else if (createForm.statuscode === 400) {
                 next(apiError.badRequest({
                     'statuscode': 400,
                     'errormessage': 'invalid_data',
@@ -31,17 +33,17 @@ class forgetMail {
 
                 }))
                 return
-            } else if (forget_main_.length === 0) {
+            } else if (createForm.length === 0) {
                 return res.status(200).send({
                     'statuscode': 204,
-                    'data': forget_main_,
+                    'data': createForm,
                     'message': 'success'
                 })
             }
             else {
                 return res.status(200).send({
                     'statuscode': 200,
-                    'data': forget_main_,
+                    'data': createForm,
                     'message': 'success'
                 })
             }
@@ -49,4 +51,4 @@ class forgetMail {
     }
 }
 
-module.exports = forgetMail
+module.exports = createContactForm

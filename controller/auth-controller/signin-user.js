@@ -13,21 +13,20 @@ class signin_user {
         }
         else if (payload) {
             const usersignin = await signup_service_.signinuser(payload)
-            console.log(usersignin)
-            if (usersignin.code === 500) {
+            if (usersignin.statuscode === 500) {
                 next(apiError.internal({
-                    'statusCode': 500,
-                    'ErrorMessage': usersignin.ErrorMessage,
-                    'Error': 'badImplementation'
+                    'statuscode': 500,
+                    'errormessage': usersignin.errormessage,
+                    'message': 'badImplementation'
 
                 }))
                 return
 
-            } else if (usersignin.code === 400) {
+            } else if (usersignin.statuscode === 400) {
                 next(apiError.badRequest({
-                    'statusCode': 400,
-                    'ErrorMessage': 'invalid data',
-                    'Error': 'badRequest'
+                    'statuscode': 400,
+                    'errormessage': 'invalid_data',
+                    'message': 'badRequest'
 
 
                 }))
@@ -35,13 +34,15 @@ class signin_user {
             } else if (usersignin.length === 0) {
                 return res.status(200).send({
                     'statuscode': 204,
-                    'data': usersignin
+                    'data': usersignin,
+                    'message': 'success'
                 })
             }
             else {
                 return res.status(200).send({
                     'statuscode': 200,
-                    'data': usersignin
+                    'data': usersignin,
+                    'message': 'success'
                 })
             }
         }

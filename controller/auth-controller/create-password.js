@@ -2,6 +2,7 @@ const signup_service = require('../../services/auth-services')
 const signup_service_ = new signup_service()
 const apiError = require('../../error/api-error')
 
+
 class passwordcreate {
     async passwordCreate(req, res, next) {
         let payload = req.body
@@ -13,21 +14,20 @@ class passwordcreate {
         }
         else if (payload) {
             const newPassword = await signup_service_.createPassword(payload)
-            console.log(newPassword)
-            if (newPassword.code === 500) {
+            if (newPassword.statuscode === 500) {
                 next(apiError.internal({
-                    'statusCode': 500,
-                    'ErrorMessage': newPassword.ErrorMessage,
-                    'Error': 'badImplementation'
+                    'statuscode': 500,
+                    'errormessage': newPassword.errormessage,
+                    'message': 'badImplementation'
 
                 }))
                 return
 
-            } else if (newPassword.code === 400) {
+            } else if (newPassword.statuscode === 400) {
                 next(apiError.badRequest({
-                    'statusCode': 400,
-                    'ErrorMessage': 'invalid data',
-                    'Error': 'badRequest'
+                    'statuscode': 400,
+                    'errormessage': 'invalid_data',
+                    'message': 'badRequest'
 
 
                 }))
@@ -35,13 +35,15 @@ class passwordcreate {
             } else if (newPassword.length === 0) {
                 return res.status(200).send({
                     'statuscode': 204,
-                    'data': newPassword
+                    'data': newPassword,
+                    'message': 'success'
                 })
             }
             else {
                 return res.status(200).send({
                     'statuscode': 200,
-                    'data': newPassword
+                    'data': newPassword,
+                    'message': 'success'
                 })
             }
         }
