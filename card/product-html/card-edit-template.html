@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        Card Edit Template
+    </title>
+    <link rel="stylesheet" type="text/css" href="../product-styles/card-left-nav.css">
+    <link rel="stylesheet" type="text/css" href="../product-styles/card-templates.css">
+    <link rel="stylesheet" type="text/css" href="../product-styles/card-general.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="abc-gabs">
+         <div class="abc-lnav">
+            <div style="height: 50px;">
+                Logo
+            </div>
+            <div>
+                <ul id="abc_left_nav">
+
+                </ul>
+            </div>
+        </div>
+        <div class="abc-rgt-cont">
+            <div class="abc-ghead">
+                <div>
+                    John Doe
+                </div>
+            </div>
+            <div class="abc-gbody p0">
+                <div class="abc-edit-flex">
+                    <div class="abc-edit-lft">
+                        <div class="abc-edit-head">
+                            <div class="abc-head-sec">
+                                <div class="abc-gback">
+                                    <div class="darr larr">
+                                    </div>
+                                </div>
+                                <div class="abc-hbtxt">
+                                    Fill Your Details
+                                </div>
+                            </div>
+                        </div>
+                        <div class="abc-edit-body" id="abc_edit_form">
+
+                        </div>
+                    </div>
+                    <div class="abc-edit-rgt">
+                        <div class="abc-edit-tempbox" id="edit_template_box">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+  <template id="template_generala">
+            <div class="bcard-parent">
+                <div class="bcard-box">
+                    <div class="bcard-profbox">
+                        <a id="Home">
+                            <div class="bcard-prof">
+                                <img src="../../images/user-prof.png" name="f-prof-img" data-field-name="Profile Image" class="bcard-profimg">
+                            </div>
+                            <div class="bcard-prof-sec">
+                                <span class="bcard-prof-btxt" name="f-prof-name" data-field-name="Profile Name" data-multiline="false">
+                                    Harry Potter
+                                </span>
+                                <span class="bcard-prof-smtxt" name="f-prof-profession" data-field-name="Profession" data-multiline="false">
+                                    Wizard
+                                </span>
+                                
+                            </div>
+                            <div class="bcard-act">
+                                <div class="bcard-acticon">
+                                    <a name="f-phone" target="_blank" href="tel:+91343434353">
+                                        <i class="fa-solid fa-phone"></i>
+                                    </a>
+                                </div>
+                                <div class="bcard-acticon">
+                                    <a name="f-whatsapp" target="_blank" href="https://wa.me/+91343434353">
+                                        <i class="fa-brands fa-whatsapp"></i>
+                                    </a>
+                                </div>
+                                <div class="bcard-acticon">
+                                    <a name="f-email" target="_blank" href="mailto:hogwartsecret003@gmail.wizard">
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <span class="bcard-prof-smtxt" name="f-prof-description" data-field-name="Description" data-multiline="true" style="color: black;">
+                        Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
+                    </span>
+                    </div>
+                </div>
+            </div>
+           
+            <style>
+                @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+.bcard-parent {
+    background-color: #f5f5f5;
+    padding: 30px;
+    padding-bottom: 90px;
+}
+
+.bcard-box {
+    background-color: #ffffff;
+    border: 1px solid #efefef;
+    max-width: 400px;
+    margin: 0px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.04);
+}
+
+.bcard-cont {
+    padding: 10px 15px;
+}
+
+.bcard-profbox {
+    width: 100%;
+    height: auto;
+    padding-bottom: 50px;
+    background-color: #5d00ff;
+    border-bottom-left-radius: 300px;
+    border-bottom-right-radius: 300px;
+    text-align: center;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.bcard-profbox::after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 50px;
+    background-color: #432578;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 200px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+
+.bcard-prof {
+    width: 120px;
+    height: 120px;
+    background-color: #ffffff;
+    display: inline-block;
+    margin: 10px auto;
+    border-radius: 150px;
+}
+
+.bcard-profimg {
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+    display: inline-block;
+    background-color: #ffffff;
+    padding: 7px;
+    border: 2px solid #9800ff;
+}
+
+.bcard-act {
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    gap: 15px;
+    position: absolute;
+    bottom: 7px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+
+.bcard-acticon {
+    width: 25px;
+    height: 25px;
+    border-radius: 100px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    cursor: pointer;
+    user-select: none;
+}
+
+.bcard-acticon i {
+    color: #5d00ff;
+}
+
+.bcard-acticon:hover {
+    transform: scale(1.1);
+}
+
+.bcard-sec {
+    padding: 0px 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.bcard-btxt {
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+    color: #432578;
+    padding-bottom: 4px;
+}
+
+.bcard-btxt::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: #5d00ff;
+    border-radius: 15px;
+    position: absolute;
+    bottom: -5px;
+    left: 0px;
+}
+
+.bcard-btxt::before {
+    content: "";
+    display: block;
+    width: 7px;
+    height: 4px;
+    background-color: #5d00ff;
+    border-radius: 15px;
+    position: absolute;
+    bottom: -5px;
+    left: 35px;
+
+}
+
+.bcard-smico {
+    width: 25px;
+    height: 25px;
+    border-radius: 200px;
+    margin: 0px 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.bcard-smico i {
+    color: #ffffff;
+}
+
+.bcard-smico-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.bcard-smico:hover {
+    transform: scale(1.1);
+}
+
+.bcard-frow {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 5px;
+    padding: 5px 10px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    margin: 15px 0px;
+}
+
+.bcard-sub-txt {
+    font-size: 12px;
+    color: #383838;
+    padding-left: 10px;
+}
+
+.bcard-sub-sec {
+    padding: 10px 0px;
+}
+
+.bcard-sub-lbl {
+    font-size: 14px;
+    color: #383838;
+    padding-bottom: 10px;
+}
+
+.bcard-prof-btxt {
+    font-size: 17px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.bcard-prof-smtxt {
+    font-size: 14px;
+    color: #ffffff;
+    opacity: 0.8;
+}
+
+.bcard-prof-sec {
+    padding: 5px 0px;
+    padding-bottom: 15px;
+}
+
+.bcard-frow-sec {
+    background-color: #f9f9f9;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 5px;
+    height: 32px;
+    position: relative;
+    cursor: pointer;
+}
+
+.bcard-frow-sec:hover {
+    background-color: #f0f0f0;
+}
+
+.bcard-smico-sec {
+    width: 25px;
+    height: 25px;
+    border-radius: 200px;
+    margin-right: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bcard-smico-sec i {
+    position: relative;
+    z-index: 1;
+    color: #ffffff;
+}
+
+.bcard-smico-sec::after {
+    content: "";
+    display: block;
+    width: 28px;
+    height: 32px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    /* bottom: 0px; */
+    border-radius: 7px;
+    background-color: #5d00ff;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 20px;
+}
+
+.bcard-padd {
+    padding-top: 14px;
+}
+
+.bcard-header-txt {
+    font-size: 14px;
+    font-weight: 600;
+    padding-bottom: 5px;
+}
+
+.bcard-frm-sec {
+    padding: 5px 0px;
+}
+
+.bcard-frm-btxt {
+    font-size: 12px;
+    color: #7a7a7a;
+    padding-bottom: 3px;
+}
+
+.bcard-frm-inpb {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.bcard-frm-inp {
+    width: 100%;
+    height: 100%;
+    background-color: #efefef;
+    border: 1px solid #efefef;
+    border-radius: 5px;
+    outline: none;
+    padding: 6px;
+}
+
+.bcard-frm-inp:hover {
+    background-color: #ffffff;
+    border: 1px solid #d8c1ff;
+}
+
+.bcard-frm-inp::placeholder {
+    color: #b5b5b5;
+}
+
+.bcard-frm-inp:hover::placeholder {
+    color: #926bd3;
+}
+
+.bcard-frm-inp:focus {
+    background-color: #ffffff;
+    border: 1px solid #9557ff;
+}
+
+.bcard-frm-inp:focus::placeholder {
+    color: #926bd3;
+}
+
+.bcard-frm-half {
+    width: 47%;
+}
+
+.bcard-btn {
+    width: 100%;
+    height: 40px;
+    background-color: #5d00ff;
+    border: 1px solid #5d00ff;
+    color: #ffffff;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    text-align: center;
+    align-self: center;
+    margin: 10px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.bcard-btn:hover {
+    background-color: #49228d;
+    border: 1px solid #49228d;
+}
+
+.bcard-inp-sec {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.bcard-ft-lbl {
+    text-align: center;
+    padding: 10px 0px;
+    color: #cccccc;
+    font-size: 14px;
+}
+
+.bcard-sec-inpb {
+    width: 60%;
+    height: 40px;
+}
+
+.bcard-sec-inp {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: 0px;
+    background-color: #f9f9f9;
+    padding: 7px;
+}
+
+.bcard-sec-inp:hover {
+    background-color: #f0f0f0;
+    /*border: 1px solid #d8c1ff;*/
+}
+
+.bcard-sec-inp::placeholder {
+    color: #b5b5b5;
+}
+
+.bcard-sec-inp:hover::placeholder {
+    color: #926bd3;
+}
+
+.bcard-sec-inp:focus {
+    background-color: #f0f0f0;
+    /*border: 1px solid #9557ff;*/
+}
+
+.bcard-sec-inp:focus::placeholder {
+    color: #926bd3;
+}
+
+.bcard-sec-btn {
+    width: 40%;
+    font-size: 12px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #5d00ff;
+    color: #ffffff;
+    cursor: pointer;
+    user-select: none;
+}
+
+.bcard-sec-btn:hover {
+    background-color: #3f2370;
+}
+
+.bcard-ph-sec {
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 15px 0px;
+}
+
+.bcard-lnk {
+    color: blue;
+    text-decoration: none;
+}
+
+.bcard-lnk:hover {
+    color: blue;
+}
+
+.bcard-lnk:active {
+    color: blue;
+}
+
+.bcard-opt-fix {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+    column-gap: 4px;
+    background-color: #ffffff;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 100px;
+    padding: 5px 10px;
+}
+
+.bcard-opt {
+    background-color: #f0f0f0;
+    border-radius: 100px;
+    width: 80px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 7px;
+    cursor: pointer;
+    user-select: none;
+    text-decoration: none;
+}
+
+.bcard-opt-ico {
+    width: 20px;
+    height: 25px;
+    margin-right: 6px;
+}
+
+.bcard-opt-ico i {
+    width: 100%;
+    height: 100%;
+    color: #686868;
+}
+
+.bcard-opt-txt {
+    color: #686868;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.bcard-opt:hover {
+    background-color: #5d00ff;
+}
+
+.bcard-opt:hover i {
+    color: #ffffff;
+}
+
+.bcard-opt:hover .bcard-opt-txt {
+    color: #ffffff;
+}
+
+.jc-center {
+    justify-content: center;
+}
+
+.ico-yt {
+    background-color: #ff0000;
+}
+
+.ico-fb {
+    background-color: #3b5998;
+}
+
+.ico-tw {
+    background-color: #1da1f2;
+}
+
+.ico-insta {
+    background-color: #c32aa3;
+}
+
+.ico-linked {
+    background-color: #0a66c2;
+}
+
+.ico-email {
+    background-color: #db4437;
+}
+            </style>
+
+    </template>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js" integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../product-js/card-template.js"></script>
+</body>
+
+</html>

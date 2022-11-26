@@ -1,0 +1,461 @@
+#admin2022
+
+friendd1_node_db
+friendd1_aristos_user
+$W}aFXM{)B[q
+
+
+
+
+{z.N*[G14&wa
+friendd1_vcard_frienddey
+friendd1_vcards_admin
+
+Free
+DIGITAL BUSINESS CARD
+
+
+karthickshiva10pls2@gmail.com
+
+friendd1_vcard_frienddey
+friendd1_vcards_admin
+<span class="bcard-btxt" name="f_prof_name" data-field-name="Profile Name" data-multiline="false">
+                                    ARISTOS TECH
+                                </span>  
+                            <div class="abc-fld-box">
+                                <div class="abc-fld-lbl">
+                                    First Name
+                                </div>
+                                <div class="abc-fld-inpb">
+                                    <input type="text" class="abc-ginp" />
+                                </div>
+                            </div>
+                            <div class="abc-fld-box">
+                                <div class="abc-fld-lbl">
+                                    First Name
+                                </div>
+                                <div class="abc-fld-inpb">
+                                    <textarea class="abc-gml">
+               	  				</textarea>
+                                </div>
+                            </div>
+                            <div class="abc-fld-box">
+                                <div class="abc-fld-lbl">
+                                    Profile
+                                </div>
+                                <div class="abc-fld-inpb">
+                                    <div class="abc-fld-subsec">
+                                        <div class="abc-fld-prof">
+                                            <img src="" class="abc-fld-profimg" />
+                                        </div>
+                                        <div class="abc-gbtn abc-sec-btn">
+                                            Change
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="abc-fld-box">
+                                <div class="abc-fld-lbl">
+                                    Social Platforms
+                                </div>
+                                <div class="abc-fld-inpb">
+                                    <div class="abc-fld-subsec">
+                                        <div class="abc-fld-icob">
+                                            <img src="" class="abc-fld-ico">
+                                        </div>
+                                        <input type="text" class="abc-ginp" />
+                                    </div>
+                                </div>
+                            </div>
+function loadEditTemplate(tid) {
+    event.stopPropagation();
+    console.log(tid);
+    fetch(backend_url + 'fetch/user/template?uid=' + cUid, { method: 'GET' })
+        .then((res) => {
+            console.log(res);
+            res.json()
+                .then((res) => {
+                    console.log(res);
+                    myCards = res.data.domain;
+
+                    let currentUid = localStorage.getItem('udata');
+                    let currentUidObj = JSON.parse(currentUid).data.data[0];
+
+                    if (Array.isArray(tid)) {
+                        cTid = tid[0];
+                        cTemplate = tid[1];
+                        console.log(cTid);
+                        tempCopy = cTemplate;
+                        // console.log(tempCopy);
+                        currentTemplateId = '#' + tid[0];
+                        window.location.replace(currentTemplateId);
+                    } else {
+                        cTid = tid;
+                        console.log(cTid);
+                        currentTemplateId = "#" + tid;
+                        // console.log(tid);
+                        tempCopy = $(currentTemplateId).html();
+                        window.location.replace(currentTemplateId);
+                    }
+
+                    if (myCards != undefined) {
+
+                        $.each(myCards, (i, v) => {
+
+                            if (myCards[i].template_name === tid) {
+                                console.log('temp created');
+                                generateAlert('bg-red', 'Template Already Created !!!', 'Check My Cards Menu');
+                            } else if (Array.isArray(tid)) {
+                                editTemplatePreview(tid);
+                            } else if (currentUidObj.template_count === 1 && currentUidObj.template_limit === 1) {
+                                let templateLimit = `
+                                <div class='abc-gpop-cont abc-slideout' id='contact_pop'>
+                                    <div class='abc-gpop-box abc-gsm-pop'>
+                                        <div class="abc-gpop-head">
+                                            <div class="abc-gpop-htxt">
+                                                Template Limit Reached
+                                            </div>
+                                            <div class="abc-hrgt">
+                                                <div class="abc-gclose" onclick="closePopup(this);">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="abc-gpop-body abc-gpop-content">
+                                            <div class="abc-ginfo-txt">
+                                                <span class="abc-ired abc-badge">
+                                                    Template Limit Reached.
+                                                </span>
+                                                You Can't Edit this Template. Please Contact the Administrator.
+                                            </div>
+                                            <div class='abc-ginfo-box'>
+                                                <div class='abc-ginfo-sec'>
+                                                    <div>
+                                                        <i class="fa-solid fa-phone"></i>
+                                                    </div>
+                                                    <div>
+                                                        <a href='tel:+9193444 82370'>
+                                                            +9193444 82370
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class='abc-ginfo-sec'>
+                                                    <div>
+                                                       <i class="fa-solid fa-envelope"></i>
+                                                    </div>
+                                                    <div>
+                                                         <a href="mailto:contact@aristostech.in">
+                                                            contact@aristostech.in
+                                                         </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                `;
+                                $('#contact_page').append(templateLimit);
+                                setTimeout(() => {
+                                    $('#contact_pop').addClass('abc-slidein');
+                                }, 200);
+                            }
+
+                        });
+
+                    } else {
+                        editTemplatePreview(tid);
+                    }
+
+                })
+                .catch((err) => {
+                    console.log(err);
+                });
+        })
+        .catch((err) => {
+            console.log(err);
+        });
+    console.log(myCards);
+}
+
+
+        fetch(backend_url + 'fetch/domain', { method: 'GET' })
+            .then((res) => {
+                res.json()
+                    .then((res) => {
+                        if (res.data.length != 0) {
+                            if (templateUpdateMode === true) {
+                                let tempFormDataOpt = {
+                                    method: 'PUT',
+                                    body: JSON.stringify(tempFormData),
+                                    headers: {
+                                        'Content-Type': 'application/json'
+                                    }
+                                }
+
+                                fetch(backend_url + 'update/user/template', tempFormDataOpt)
+                                    .then((res) => {
+                                        res.json()
+                                            .then((res) => {
+                                                
+                                                currentDomains = res.data.domain;
+                                                if (res.data.statuscode === 200 && res.data.message === 'success') {
+                                                    fetch(backend_url + 'fetch/user/template?uid=' + cUid, { method: 'GET' })
+                                                        .then((res) => {
+                                                            res.json()
+                                                                .then((res) => {
+                                                                    myCards = res.data.domain;
+                                                                    loadMyCards(myCards);
+                                                                    generateAlert('bg-green', 'Data Updated Successfully.', '');
+                                                                    let currentUidData = localStorage.getItem('udata');
+                                                                    let currentUidObj = JSON.parse(currentUidData).data.data[0];
+
+                                                                    if (currentUidObj.template_limit === currentUidObj.template_count) {
+                                                                       
+                                                                    } 
+                                                                    else {
+                                                                        domainCreate();
+                                                                    }
+                                                                })
+                                                                .catch((err) => {
+                                                                    console.log(err);
+                                                                });
+                                                        })
+                                                        .catch((err) => {
+                                                            console.log(err);
+                                                        });
+
+                                                }
+                                            })
+                                            .catch((err) => {
+                                                console.log(err)
+                                            });
+                                    })
+                                    .catch((err) => {
+                                        console.log(err)
+                                    });
+                            } 
+                            else {
+
+                                fetch(backend_url + 'user?uid=' + cUid, { method: 'GET' })
+                                    .then((res) => {
+                                        res.json()
+                                            .then((res) => {
+                                                localStorage.setItem('udata', JSON.stringify(res));
+                                                let currentUidData = localStorage.getItem('udata');
+                                                let currentUidObj = JSON.parse(currentUidData).data.data[0];
+
+                                                if (currentUidObj.template_limit === currentUidObj.template_count) {
+                                                    let templateLimit = `
+                                                        <div class='abc-gpop-cont abc-slideout' id='contact_pop'>
+                                                            <div class='abc-gpop-box abc-gsm-pop'>
+                                                                <div class="abc-gpop-head">
+                                                                    <div class="abc-gpop-htxt">
+                                                                        Template/ Domain Creation Limit Reached
+                                                                    </div>
+                                                                    <div class="abc-hrgt">
+                                                                        <div class="abc-gclose" onclick="closePopup(this);">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="abc-gpop-body abc-gpop-content">
+                                                                    <div class="abc-ginfo-txt">
+                                                                        <span class="abc-ired abc-badge">
+                                                                            Template/ Domain Creation Limit Reached
+                                                                        </span>
+                                                                        You Can't Create this Template. Please Contact the Administrator.
+                                                                        or Delete the Template in My Cards
+                                                                    </div>
+                                                                    <div class='abc-ginfo-box'>
+                                                                        <div class='abc-ginfo-sec'>
+                                                                            <div>
+                                                                                <i class="fa-solid fa-phone"></i>
+                                                                            </div>
+                                                                            <div>
+                                                                                <a href='tel:+9193444 82370'>
+                                                                                    +9193444 82370
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class='abc-ginfo-sec'>
+                                                                            <div>
+                                                                               <i class="fa-solid fa-envelope"></i>
+                                                                            </div>
+                                                                            <div>
+                                                                                 <a href="mailto:contact@aristostech.in">
+                                                                                    contact@aristostech.in
+                                                                                 </a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                        `;
+                                                    $('#contact_page').append(templateLimit);
+                                                    setTimeout(() => {
+                                                        $('#contact_pop').addClass('abc-slidein');
+                                                    }, 10);
+                                                } 
+                                                else {
+                                                    if (templateUpdateMode === true) {
+                                                        let tempFormDataOpt = {
+                                                            method: 'PUT',
+                                                            body: JSON.stringify(tempFormData),
+                                                            headers: {
+                                                                'Content-Type': 'application/json'
+                                                            }
+                                                        }
+
+                                                        fetch(backend_url + 'update/user/template', tempFormDataOpt)
+                                                            .then((res) => {
+                                                                res.json()
+                                                                    .then((res) => {
+                                                                        currentDomains = res.data.domain;
+                                                                        console.log(res);
+                                                                        if (res.data.statuscode === 200 && res.data.message === 'success') {
+                                                                            generateAlert('bg-green', 'Data Updated Successfully.', '');
+                                                                            domainCreate();
+                                                                        }
+                                                                    })
+                                                                    .catch((err) => {
+                                                                        console.log(err)
+                                                                    });
+                                                            })
+                                                            .catch((err) => {
+                                                                console.log(err)
+                                                            });
+                                                    } 
+                                                    else {
+
+                                                        fetch(backend_url + 'createwebsite', tempFormDataOpt)
+                                                            .then((res) => {
+                                                                res.json()
+                                                                    .then((res) => {
+                                                                        
+                                                                        currentDomains = res.data.domain;
+
+                                                                        if (res.data.statuscode === 200 && res.data.message === 'success') {
+                                                                            generateAlert('bg-green', 'Template Created Successfully.', 'Please Check My Cards.');
+                                                                            domainCreate();
+                                                                            fetch(backend_url + 'user?uid=' + cUid, { method: 'GET' })
+                                                                                .then((res) => {
+                                                                                    res.json()
+                                                                                        .then((res) => {
+                                                                                            localStorage.setItem('udata', JSON.stringify(res));
+                                                                                            
+                                                                                        })
+                                                                                        .catch((err) => {
+                                                                                            console.log(err)
+                                                                                        });
+                                                                                })
+                                                                                .catch((err) => {
+                                                                                    console.log(err)
+                                                                                });
+                                                                        } else if (res.data.statuscode === 200 && res.data.message === 'already_exit') {
+                                                                            generateAlert('bg-green', 'Template Already Exists !!!', 'Please Check My Cards.');
+                                                                        }
+
+                                                                    })
+                                                                    .catch((err) => {
+                                                                        console.log(err)
+                                                                    });
+                                                            })
+                                                            .catch((err) => {
+                                                                console.log(err)
+                                                            });
+                                                    }
+                                                }
+                                                
+                                            })
+                                            .catch((err) => {
+                                                console.log(err)
+                                            });
+                                    })
+                                    .catch((err) => {
+                                        console.log(err)
+                                    });
+                            }
+
+                        } 
+                        else {
+                            if (templateUpdateMode === true) {
+                                let tempFormDataOpt = {
+                                    method: 'PUT',
+                                    body: JSON.stringify(tempFormData),
+                                    headers: {
+                                        'Content-Type': 'application/json'
+                                    }
+                                }
+
+                                fetch(backend_url + 'update/user/template', tempFormDataOpt)
+                                    .then((res) => {
+                                        res.json()
+                                            .then((res) => {
+                                                
+                                                if (res.data.statuscode === 200 && res.data.message === 'success') {
+                                                    currentDomains = res.data.domain;
+
+                                                    generateAlert('bg-green', 'Data Updated Successfully.', '');
+
+                                                    domainCreate();
+                                                }
+                                            })
+                                            .catch((err) => {
+                                                console.log(err)
+                                            });
+                                    })
+                                    .catch((err) => {
+                                        console.log(err)
+                                    });
+                            } 
+                            else {
+
+                                fetch(backend_url + 'createwebsite', tempFormDataOpt)
+                                    .then((res) => {
+                                        res.json()
+                                            .then((res) => {
+                                                currentDomains = res.data.domain;
+
+                                                if (res.data.statuscode === 200 && res.data.message === 'success') {
+                                                    generateAlert('bg-green', 'Template Created Successfully.', 'Please Check My Cards.');
+                                                    domainCreate();
+                                                    fetch(backend_url + 'user?uid=' + cUid, { method: 'GET' })
+                                                        .then((res) => {
+                                                            res.json()
+                                                                .then((res) => {
+                                                                    localStorage.setItem('udata', JSON.stringify(res));
+                                                                })
+                                                                .catch((err) => {
+                                                                    console.log(err)
+                                                                });
+                                                        })
+                                                        .catch((err) => {
+                                                            console.log(err)
+                                                        });
+                                                } else if (res.data.statuscode === 200 && res.data.message === 'already_exit') {
+                                                    generateAlert('bg-green', 'Template Already Exists !!!', 'Please Check My Cards.');
+                                                }
+
+                                            })
+                                            .catch((err) => {
+                                                console.log(err)
+                                            });
+                                    })
+                                    .catch((err) => {
+                                        console.log(err)
+                                    });
+                            }
+
+                        }
+                    })
+                    .catch((err) => {
+                        console.log(err);
+                    });
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+

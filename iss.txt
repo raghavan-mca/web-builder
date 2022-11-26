@@ -1,0 +1,5 @@
+hero image check
+signin, signup homepage links redirect
+web builder contact validate, form reset
+messages check all
+domain mapping check
