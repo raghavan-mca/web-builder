@@ -1,6 +1,6 @@
 class apiError{
     constructor(code,message){
-        this.code = code;
+        this.statuscode = code;
         this.message = message
     }
 

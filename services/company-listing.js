@@ -3,7 +3,6 @@ let db = require('../configurations/dbConnection')
 
 class company_listing_services {
     async fetchcompanylisting(query) {
-        console.log(query)
         try {
             const fetch_company = await db.raw('SELECT * from tutorials').then(function (resp) {
                 return resp[0]
@@ -15,8 +14,8 @@ class company_listing_services {
             let err_function = new Error(err)
             if (err_function.name === 'Error') {
                 let error = {
-                    "code": 500,
-                    "ErrorMessage": err_function.message
+                    "statuscode": 500,
+                    "errormessage": err_function.message
                 }
                 return error
             }
@@ -40,8 +39,8 @@ class company_listing_services {
             let err_function = new Error(err)
             if (err_function.name === 'Error') {
                 let error = {
-                    "code": 500,
-                    "ErrorMessage": err_function.message
+                    "statuscode": 500,
+                    "errormessage": err_function.message
                 }
                 return error
             }
@@ -66,15 +65,15 @@ class company_listing_services {
 
             if (err_message_arr[0] === 'ReferenceError') {
                 let error = {
-                    "code": 500,
-                    "ErrorMessage": err_message
+                    "statuscode": 500,
+                    "errormessage": err_message
                 }
                 return error
             }
             if (err_message_arr[0] === 'MongoServerError') {
                 let error = {
-                    "code": 11000,
-                    "ErrorMessage": err_message
+                    "statuscode": 11000,
+                    "errormessage": err_message
                 }
                 return error
             }
@@ -94,15 +93,15 @@ class company_listing_services {
 
             if (err_message_arr[0] === 'ReferenceError') {
                 let error = {
-                    "code": 500,
-                    "ErrorMessage": err_message
+                    "statuscode": 500,
+                    "errormessage": err_message
                 }
                 return error
             }
             if (err_message_arr[0] === 'MongoServerError') {
                 let error = {
-                    "code": 11000,
-                    "ErrorMessage": err_message
+                    "statuscode": 11000,
+                    "errormessage": err_message
                 }
                 return error
             }

@@ -13,22 +13,20 @@ class forgetMail {
         }
         else if (payload) {
             const forget_main_ = await signup_service_.forget_password_mail(payload)
-            console.log(forget_main_)
-            console.log(forget_main_)
-            if (forget_main_.code === 500) {
+            if (forget_main_.statuscode === 500) {
                 next(apiError.internal({
-                    'statusCode': 500,
-                    'ErrorMessage': forget_main_.ErrorMessage,
-                    'Error': 'badImplementation'
+                    'statuscode': 500,
+                    'errormessage': forget_main_.errormessage,
+                    'message': 'badImplementation'
 
                 }))
                 return
 
-            } else if (forget_main_.code === 400) {
+            } else if (forget_main_.statuscode === 400) {
                 next(apiError.badRequest({
-                    'statusCode': 400,
-                    'ErrorMessage': 'invalid data',
-                    'Error': 'badRequest'
+                    'statuscode': 400,
+                    'errormessage': 'invalid_data',
+                    'message': 'badRequest'
 
 
                 }))
@@ -36,13 +34,15 @@ class forgetMail {
             } else if (forget_main_.length === 0) {
                 return res.status(200).send({
                     'statuscode': 204,
-                    'data': forget_main_
+                    'data': forget_main_,
+                    'message': 'success'
                 })
             }
             else {
                 return res.status(200).send({
                     'statuscode': 200,
-                    'data': forget_main_
+                    'data': forget_main_,
+                    'message': 'success'
                 })
             }
         }
